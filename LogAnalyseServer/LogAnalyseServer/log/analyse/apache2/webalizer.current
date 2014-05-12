@@ -1,0 +1,162 @@
+# Webalizer V2.23-08 Incremental Data - 01/07/2014 23:30:04
+2014 1 7 23 30 4
+3916 3903 1 9 5 7 2114329 3905 1 0
+1 44 72 5 7
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+1029 1029 546392 1 1029 1
+1444 1440 766552 1 1444 1
+1443 1434 801385 1 1432 1
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+120 120 63720 120
+120 120 63720 120
+120 120 63720 120
+120 120 63720 120
+122 120 64700 122
+122 120 64700 122
+129 129 68246 129
+181 181 96104 181
+180 180 95580 180
+180 180 95580 180
+180 180 95580 180
+180 180 95580 180
+180 180 95580 180
+180 180 95580 180
+179 179 95049 179
+180 180 95580 180
+183 181 97036 183
+182 182 103508 182
+180 180 95580 180
+180 180 95580 180
+180 180 95580 180
+192 189 108398 188
+182 181 96595 181
+164 161 109313 158
+0
+0
+0
+3903
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+10
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# -urls- 
+/analyse_log/nginx/daily_usage_201401.png
+1 1 0 3216 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/101项目/版本管理/补丁包/2014/PATCHES1115-0112
+0 3 0 468 0 0
+/analyse_log/
+0 3 0 4965 0 0
+/analyse_log/nginx/hourly_usage_201401.png
+1 1 0 2363 0 0
+/analyse_log/nginx/ctry_usage_201401.png
+1 1 0 2571 0 0
+/analyse_log/nginx/usage_201401.html
+0 1 0 8909 0 0
+/analyse_log/nginx/usage.png
+1 6 0 10388 0 0
+/
+0 3881 0 2060530 1 0
+/analyse_log/nginx/
+0 9 0 16127 0 0
+# End Of Table - urls
+# -sites- (monthly)
+127.0.0.1
+0 3916 3903 2114329 1 1389137404
+/analyse_log/
+# End Of Table - sites (monthly)
+# -sites- (daily)
+127.0.0.1
+0 1443 1434 801385 1 1389137404
+/analyse_log/
+# End Of Table - sites (daily)
+# -referrers- 
+http://124.207.205.87/analyse/nginx/index.html
+0 2
+- (Direct Request)
+0 3903
+http://124.207.205.87/analyse/nginx/
+0 2
+http://124.207.205.87/analyse/nginx/usage_201401.html
+0 3
+http://124.207.205.87/analyse/
+0 6
+# End Of Table - referrers
+# -agents- 
+Wget/1.13.4 (linux-gnu)
+0 3
+SVN/1.6.15 (r1038135)/TortoiseSVN-1.6.12.20536 neon/0.29.5
+0 3
+monit/5.6
+0 3876
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 2
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36
+0 10
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.3
+0 13
+curl/7.26.0
+0 4
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames

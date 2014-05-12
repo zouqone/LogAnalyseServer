@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+/* ======================主页面============================ */
+* {margin:0px; padding: 0;font-family: Arial,Helvetica,sans-serif;}
+.page_div{text-align: center;margin:0;padding-top:3px;background-color: #F1E9D1;;width: 99.8%;height: auto;border: 1px solid #BBBBBB;}
+.repository_color_samples{background: none repeat scroll 0 0 #452C0A;width: 100%;height:10px;}
+.log_context{background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);}
+.svn_table{width: 100%;border-collapse:collapse;margin: 0 auto;padding-top: 2px;border: 1px solid #BBBBBB;}
+.log_tr{height: auto;}
+.log_item_td{width: 200px;vertical-align: top;}
+.log_item{margin:5px;width: 190px;border: 0 solid #EA5490;cursor:pointer;display: table; table-layout: fixed;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25); border-radius: 7px;}
+.buttonbk{background-color:#DBE5E5;}
+.select_buttonbk{background-color:#FF4400;}
+.log_item p{height: auto;vertical-align:middle;padding-top:3px;padding-bottom: 5px; }
+.log_page{width: auto;padding: 3px;}
+.log_page iframe{width: 100%; height: 550px;text-align: center;background-color:#FFFFFF }
+
+/* ========================登录页面============================ */
+.login_div{top:0px;left:px;width: 300px;height: 200px;position: absolute;
+z-index: 1000;border: 7px solid #BBBEEE;background-color: #FFFFFF;
+vertical-align: middle;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.login_table{width:250px;height:110px;margin-left:auto;margin-right:auto;
+margin-top:20px;
+border: 1px solid #BBBBBB;border-collapse:collapse;}
+.input_text{ border: 1px solid #BBBBBB;width: 150px;margin-left: 10px;height: 22px;
+}
+.input_button{ border: 1px solid #BBBBBB;width: 50px;height: 26px;
+}
+.show_clock_shade{position: absolute;background-color: #B2B2B2;z-index: 2;}
+
+
+
+
+
+
+
+

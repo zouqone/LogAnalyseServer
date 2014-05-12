@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+
+/* ======================主页面============================ */
+.auth_info_textarea{
+	margin: 0;width: 400px;height: 200px;
+}
+.auth_checkbox{width: 30px;text-align: center;}
+.auth_group_table{
+	margin:5px;width: 400px;height: 500px;border: 2px solid #BBBBBB;
+	border-collapse:collapse;
+}
+.auth_group_table_tool{
+	height: 40px;margin:0px;padding:0px;
+	background-color: #FFFFFF;
+}
+.auth_group_table_tool input{
+	height: 26px;margin:0px;padding:0px;
+	background-color:  #DBE5E5;
+}
+.auth_group_div_tool{
+	padding-left: 3px;
+}
+.auth_group_table_head{
+	height: 30px;
+	border: 1px solid #BBBBBB;
+	text-align: center;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: bolder;
+	background-color: #CAD4E0;
+}
+.auth_group_name{width: 80px;padding-right: 5px;}
+.auth_group_table_tr{
+	border: 1px solid #BBBBBB;
+	height: 400px;
+}
+.auth_group_table_td{
+	border: 1px solid #BBBBBB;
+}
+.group_table_td{
+	padding: 0px;
+	vertical-align: top;
+}
+.svn_group_div{
+	
+}
+.svn_group_table{
+	border: 1px solid #BBBBBB;
+	width: 100%;
+	height: 430px;
+	overflow: auto;
+	border-collapse:collapse;
+}
+.svn_group_table_tr{
+	height: 26px;
+	border: 1px solid #BBBBBB;
+}
+.svn_group_table_tr_td{
+	
+}
+.group_name_input{
+	border: 0;
+	border-bottom: 1px solid #BBBBBB;
+	width: 80%;
+	/* cursor: pointer; */
+}
+.select_group_name{
+	border: 0;
+	width: 98%;
+}
+.user_div{
+	width: auto;
+	height: 430px;
+	overflow: auto;
+	padding: 0px;
+	margin: 0px;
+}
+.user_group_table{
+	border: 1px solid #BBBBBB;
+	width: auto;
+	height: 430px;
+	border-collapse:collapse;
+}
+.user_group_table_tr{
+	height: 26px;
+	border: 1px solid #BBBBBB;
+}
+.user_group_table_tr_td{
+	
+}
+.user_group_name{
+	width: 100px;
+	border-right: 1px solid #BBBBBB;
+}
+.user_group_detail{
+	width: 150px;
+}
+.user_name_input{
+	border: 0;
+	border-bottom: 1px solid #BBBBBB;
+	width: 80%;
+	overflow: visible;
+}
+.select_input{background-color: #99CC00}
+
+.user_group_td{width: 30px;}
+.auth_dir_name{
+	width: 150px;padding-right: 5px;
+}
+
+

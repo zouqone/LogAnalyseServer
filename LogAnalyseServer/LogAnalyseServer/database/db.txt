@@ -1,0 +1,10 @@
+D:/java/workspace/LogAnalyseServer/LogAnalyseServer/database
+
+JDBC URL: jdbc:h2:~/test
+
+jdbc:h2:D:/java/workspace/LogAnalyseServer/LogAnalyseServer/database/h2/test
+
+D:/java/workspace/LogAnalyseServer/LogAnalyseServer/database/h2/test
+
+
+

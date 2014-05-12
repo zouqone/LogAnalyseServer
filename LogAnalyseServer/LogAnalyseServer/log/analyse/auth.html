@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="common.js"></script>
+<title>login</title>
+<style type="text/css">
+.auth_div{}
+</style>
+<script type="text/javascript">
+function getParameter(param){
+	if(param==null||param==""){
+		return null;
+	}
+	var query = window.location.search;
+	var param_length = param.length;
+	var index = query.indexOf(param);
+	if(index == -1){
+		return null;
+	}
+	var end = query.indexOf("&",index);
+	var start = index+param_length+1;
+	if(end == -1){
+		return query.substring(start);
+	}
+	return query.substring(start,end);
+}
+
+
+function initPage(){
+	alert("ss");
+	var username = getParameter("username");
+	var password = getParameter("password");
+	var auth_div_obj = document.getElementById("auth_div_id");
+	//alert(username+" "+password);
+	var info = getAuthInfo();
+	//alert(info);
+	if(username == info.username && password == info.password){
+		window.location.href = "index.html"; 
+	}else{
+		window.location.href = "login.html"; 
+	}
+	
+}
+
+function getAuthInfo(){
+	var path = "pw.txt";
+	var str = getFile(path);
+	if(str==null){
+		return null;
+	}
+	str = trim(str);
+	var params = str.split("\r\n");
+	var json = {};
+	if(params!=null&&params.length>0){
+		for(var i = 0 ; i < params.length; i++){
+			var data = params[i].split("=");
+			var key =  trim(data[0]);
+			var value = trim(data[1]);
+			json[key]=value;
+		}
+	}
+	return json;
+}
+function getFile(sUrl) {
+    var ie = navigator.userAgent.indexOf('MSIE') > 0;
+    var o = ie ? new ActiveXObject('Microsoft.XMLHTTP') : new XMLHttpRequest();
+    o.open('get', sUrl, false);
+    o.send(null);
+    return  o.responseText ;
+}
+
+initPage();
+</script>
+</head>
+<body>
+hello
+<div id="auth_div_id" class="auth_div"></div>
+<input type="button" value="getParam" onclick="">
+<form name="AuthForm">
+	
+</form>
+</body>
+</html>
