@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<aop:aspectj-autoproxy />
+	<!-- <context:annotation-config /> <context:component-scan base-package="(填写)" 
+		/> -->
+
+	<!-- Dao -->
+	<bean id="userDao" class="cn.log.user.dao.impl.UserDaoImpl">
+		<!-- <property name="sessionFactory"> <ref bean="sessionFactory" /> </property> -->
+	</bean>
+
+	<!-- Service -->
+	<bean id="userService" class="cn.log.user.service.impl.UserServiceImpl">
+		<property name="userDao">
+			<ref bean="userDao" />
+		</property>
+	</bean>
+
+	<!-- Action -->
+	<bean id="loginAction" class="cn.log.user.action.UserAction"
+		scope="session">
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+	</bean>
+
+	<!-- Dao -->
+	<bean id="functionDao" class="cn.log.function.dao.impl.FunctionDaoImpl">
+		<!-- <property name="sessionFactory"> <ref bean="sessionFactory" /> </property> -->
+	</bean>
+
+	<!-- Service -->
+	<bean id="functionService" class="cn.log.function.service.impl.FunctionServiceImpl">
+		<property name="functionDao">
+			<ref bean="functionDao" />
+		</property>
+	</bean>
+
+	<!-- Action -->
+	<bean id="functionAction" class="cn.log.function.action.FunctionAction"
+		scope="session">
+		<property name="functionService">
+			<ref bean="functionService" />
+		</property>
+	</bean>
+
+</beans>

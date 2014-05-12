@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+/* winBox */
+.win_div{display: block;border: 1px solid #AAAAAA; width: 300px;height: auto;position: absolute;z-index: 100; background-color: #FFFFFF;}
+.win_font{font-family: Verdana,Arial,sans-serif;font-size: 16px;}
+.winBoxDiv{display: none;}
+/* winhead */
+.win_titlebar{padding: 2px 2px;position: relative;}
+.win_draggable{cursor: move;}
+.win_header{border: 1px solid #AAAAAA;color: #222222;font-weight: bold;background-color: #CCCCCC}
+.win_box_title{margin: 1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width: 90%;display: inline-block;}
+.win_button{
+    border: 1px solid #D3D3D3; height: 20px; margin: -10px 0 0; padding: 1px;
+    position: absolute; right: 3px;top: 50%;width: 20px;cursor: pointer;display: inline-block;}
+.win_button_icon{
+	background-image: url("../../images/win_close.png");background-position: -96px -128px;background-repeat: no-repeat;
+	left: 50%;top: 50%; margin: -8px -8px;position: absolute;display: block; overflow: hidden;
+    height: 16px;width: 16px;text-indent: -99999px; cursor: pointer;}
+
+/* wincontent */
+.win_box{color: #222222;}
+.win_content{background: none repeat scroll 0 0 rgba(0, 0, 0, 0);border: 0 none;overflow: auto; padding: 0.5em 1em;position: relative}
+    
+/* winbottom */
+.win_bottom{height: 28px;border: 0px solid #BBBBBB;text-align: center;}
+.win_input_button{padding-top: 3px;padding-bottom: 3px;border: 1px solid #D3D3D3;cursor: pointer;color: #555555;font-weight: normal;background-color: #E6E6E6;}
+
+/* winborder */
+.win_resizable_handle{display: block;font-size: 0.1px;position: absolute;}
+.win_resizable_n{cursor: n-resize;height: 7px;left: 0;top: -5px;width: 100%;}
+.win_resizable_e{cursor: e-resize;height: 100%;right: -5px;top: 0px;width: 7px;}
+.win_resizable_s{cursor: s-resize;bottom: -5px;height: 7px;left: 0;width: 100%;}
+.win_resizable_w{cursor: w-resize; height: 100%;left: -5px;top: 0;width: 7px;}
+   
+    
+    
+/* search select box */    
+.search_div{border: 1px solid #D3D3D3;height: 25px;padding-top: 5px;}
+
+
+.list_div{border: 1px solid #D3D3D3;height: 200px;padding: 0px; }
+
+
+.select_div{border: 1px solid #D3D3D3;height: 100px;}
+.selectedRecordDiv{text-align:center;vertical-align:middle;padding-top:3px;
+border: 1px solid #BBBBBB;margin:3px;float: left;
+width: 140px;height: 20px;font-size: 12px;
+color: #000000;background-color: #F5F0A9}
+.selectedRecordDiv a{font-size: 12px;cursor: pointer;color: red}
+.record_name{display: inline-block;width: 90px;}
+
+
+
+
+
+
+
+
+
+
+
+
+

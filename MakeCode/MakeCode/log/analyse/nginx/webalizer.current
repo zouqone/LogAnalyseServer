@@ -1,0 +1,3067 @@
+# Webalizer V2.23-08 Incremental Data - 01/07/2014 21:31:03
+2014 1 7 21 31 3
+26460 5443 113 1054 48 83 2480321922 20228 268 65
+38 187 2487 3 7
+0 0 0 0 0 0
+0 0 0 0 0 0
+10575 2097 925591304 36 8345 59
+1475 299 778662019 24 1200 34
+918 188 305006436 24 676 25
+6043 1154 405781507 34 4727 74
+7449 1705 65280656 38 5280 76
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+90 9 25424 88
+303 150 1576705 166
+283 132 866890 268
+555 94 155411106 407
+79 12 17426 52
+4 1 864 4
+7 1 1508 1
+6 1 1211 6
+306 36 130656610 250
+2453 479 191186537 2069
+3681 829 555404340 2640
+1938 382 79719047 1495
+234 77 278294 189
+2652 523 314234522 2030
+2336 449 148399599 1641
+5183 881 281693386 4043
+2132 433 309160246 1706
+1763 503 306720018 1237
+1325 212 1348193 1225
+116 22 42688 52
+444 86 2982804 233
+314 67 447329 176
+159 37 108441 156
+97 27 38734 94
+14851
+0
+0
+5443
+1434
+0
+0
+667
+0
+0
+0
+19
+8
+0
+2
+0
+0
+262
+2576
+0
+29
+630
+0
+0
+0
+0
+4
+0
+328
+0
+6
+0
+0
+0
+0
+77
+0
+117
+0
+7
+0
+# -urls- 
+/mobile/!svn/bc/13926/30LiaoN/NC_CMCC_LNTD/src/public/接口/nc/vo/cmer/pfxx/h20120/ItfOrderHeaderVO.java
+0 1 0 4580 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/soa/impl/supp/suppmdmcode/dao/impl
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/概要设计/网上竞价评标
+0 2 0 269 0 0
+/ctccss/doc/doc02/2项目管理文档/06合同信息
+0 2 0 270 0 0
+/doc/!svn/bc/64715/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile/suppUpLoadAnswerprice.jsp
+0 6 0 11934 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/private/nc/impl/hrwa/cost/dev2
+0 6 0 715 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/bs
+0 2 0 286 0 0
+/cmccmt/dev/03_branches/57SCM_CMCCMT_FORMAL/src/scmpub
+0 2 0 290 0 0
+/doc/!svn/bc/64638/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/main/home.jsp
+0 5 0 2781 0 0
+/dynamicform
+0 5 0 726 0 0
+/dynamicform/dev/sample/dfStudyProject/WebContent/DF_control
+0 3 0 729 0 0
+/doc/!svn/bc/64667/ehr/ChinaTelMSS/code/nc_hrss/hi/src/public/nc/vo/hrss/empaccount/dev2/EmpAccountVO.java
+0 1 0 1828 0 0
+/doc/!svn/bc/64715/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/dwr.xml
+0 6 0 11313 0 0
+/svn/jsp/funcTree.jsp
+0 4 0 27328 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud
+0 3 0 588 0 0
+/hzf/dev/partner/WebRoot/ucloud/tpartnerregbaseinfo
+0 10 0 1669 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/WEB-INF/lib
+0 3 0 416 0 0
+/ctccss/doc/doc01/3开发过程文档/01需求文档
+0 1 0 144 0 0
+/doc/!svn/bc/63689/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/purcprojimprove/perf2purcprojimprove/insertPerf2PurcProj.jsp
+0 1 0 21341 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/supplinkman/bs
+0 1 0 143 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/01招标文档
+0 17 0 2295 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/impl/uap/pf
+0 1 0 0 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/111项目管理规范
+0 5 0 681 0 0
+/hzf/dev/partner/WebRoot/WEB-INF
+0 3 0 414 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/conf/jdbc/jdbc.properties
+0 1 0 143 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/centredpurcresult/centredpurcresult/bs/impl/CentredPurcResultBs.java
+0 1 0 27551 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/psncost
+0 2 0 286 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/asscorp/view/dev2
+0 2 0 286 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_cm
+0 8 0 538 0 0
+/mobile/40JiL/chinaMobile0214/src/client/uap/nc/ui/sm/login
+0 3 0 534 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档
+0 59 0 9724 2 0
+/dynamicform/doc/2项目管理文档
+0 2 0 276 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/esb_erp_fa_importareainfosrv/ESBERPFAImportAreaInfoSrv_ESBERPFAImportAreaInfoSrvPort_Client.java
+0 1 0 145 0 0
+/hzf/dev/partner/WebRoot/ucloud/tmptbaseinfo
+0 4 0 576 0 0
+/doc/!svn/bc/64635/ehr/ChinaTelMSS/code/wbsite/wbsite/css/bg/style_j.css
+0 2 0 1888 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/sof/tpartnermodbaseinfo/web
+0 4 0 812 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/index_new/watch
+0 3 0 429 0 0
+/ctccss/dev
+0 2 0 126 0 0
+/doc/!svn/bc/63658/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/scrapmaterialsdis/recyclerslinkman/insertRecyclerslinkman.jsp
+0 2 0 13926 0 0
+/scd/06 学习资料
+0 2 0 269 0 0
+/svn/jsp/include/header.jsp
+0 4 0 20216 0 0
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/nc_hr_cm/.project
+0 4 0 1100 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom
+0 4 0 839 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/ucloud/pageapi/location
+0 2 0 290 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontlisttransmit/action
+0 1 0 143 0 0
+/svn/tomcat.png
+1 1 0 5103 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/工作流替换需求文档
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/.project
+0 2 0 286 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl/BidServiceFeeBs.java
+0 1 0 11362 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/suppMaintenance/listLinkMan.jsp
+0 1 0 4494 0 0
+/mobile/40JiL
+0 2 0 271 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/METADATA
+0 13 0 1690 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src
+0 5 0 687 0 0
+/mobile/!svn/vcc/default
+0 255 0 109711258 1 5
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/nc_uap/.project
+0 2 0 482 0 0
+/doc/ChinaUnicom/CNCWuLiu/20开发
+0 4 0 555 0 0
+/mobile/40JiL/chinaMobile0214/src/private/单据/nc/impl/cmer/bill
+0 2 0 540 0 0
+/mobile/40JiL/chinaMobile0214
+0 1 0 0 0 0
+/hzf/dev/partner/WebRoot/ucloud/tpartnerapplyemps
+0 1 0 144 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/include/fusionmaps
+0 3 0 429 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/sof/pageapi/web
+0 1 0 145 0 0
+/mobile/50GanS/GSChinaM/src/public
+0 2 0 0 0 0
+/ctccss/doc/doc02/2项目管理文档/07上线文档/参考模板
+0 2 0 270 0 0
+/dynamicform/doc/3开发过程文档
+0 2 0 276 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/概要设计/竞评一体化
+0 2 0 269 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/corpchange/model/dev2
+0 2 0 286 0 0
+/mobile/60HeiLJ/cmccbz_hlj/.project
+0 1 0 186 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/soa/impl/supp/importPartnerinfo/util
+0 1 0 143 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/单据设置
+0 2 0 271 0 0
+/svn/bg-middle.png
+1 1 0 1918 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf
+0 13 0 1505 0 0
+/fitm/chinamobile_xz/src/private/接口/nc/bs/cmer/pfxx
+0 2 0 611 0 0
+/ctccss/doc/doc03/2项目管理文档
+0 2 0 288 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_pub/resources
+0 3 0 525 0 0
+/doc/!svn/bc/60194/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/moreinandoutstorages/allMoreInAndOutStorages.jsp
+0 1 0 2361 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/.project
+0 3 0 286 0 0
+/doc/ehr/pltdev/V55/nc_hr_ss_sp1
+0 2 0 269 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/conf/struts-config
+0 5 0 971 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/交互设计文档/3G手机VI规范
+0 2 0 269 0 0
+/ctccss/doc/doc01
+0 5 0 702 0 0
+/doc/!svn/bc/9705/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src.gap.rm/gap/rm/tools/helper/RmXmlHelper.java
+0 1 0 6119 0 0
+/hzf/dev/partner/WebRoot/ucloud/website
+0 4 0 576 0 0
+/doc/!svn/bc/64620/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00
+0 1 0 2278 0 0
+/mobile/!svn/bc/13966/70NingX/NXmobile/src/client/单据公共/nc/ui/cmer/billbase/AbstractMyEventHandler.java
+0 1 0 38367 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/界面原型
+0 2 0 269 0 0
+/ctccss/doc/doc02/3开发过程文档/05初验文档/补充协议扫描件
+0 2 0 270 0 0
+/cloudfound/dev/myProject/public
+0 2 0 432 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/pub/msg
+0 1 0 0 0 0
+/ncuams/!svn/bc/6137/dev/EAM/UCloud_AAR/WebRoot/ucloud/aar/report/tEamAssetyonyouObjectsDetailUseful.jsp
+0 1 0 1890 0 0
+/mobile/20XiZ
+0 2 0 271 0 0
+/doc/ehr/pltdev/V55
+0 2 0 269 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontlistmate/bs/impl/PurContListMateBs.java
+0 1 0 7364 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/soa/conf/socket_conf.xml
+0 1 0 1418 0 0
+/doc/!svn/bc/64691/ehr/ChinaTelMSS/code/nc_hr_pub/META-INF/data_dictionary.upm
+0 1 0 240 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/101项目/版本管理/补丁包/2014/PATCHES1115-0112
+0 31 0 9048 1 0
+/cloudfound/dev/myProject/RubyMine-6.0.1.tar.gz
+0 6 0 888 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile/suppUpLoadAnswerprice.jsp
+0 8 0 1144 0 0
+/doc/!svn/bc/64618/ehr/ChinaTelMSS/code/nc_hr_cm/.project
+0 1 0 275 0 0
+/svn/jsp/support/verify/buildVerifyCode.jsp
+0 16 0 22571 0 0
+/doc/!svn/bc/64635/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/main/home.jsp
+0 1 0 2543 0 0
+/public/Projectfile/M-移动/甘肃移动报账四期/-02蓝图设计
+0 2 0 727 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/soa/impl/supp/importpartnerempinfo/util
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/.project
+0 2 0 0 0 0
+/mobile/50GanS/GSChinaM/src
+0 1 0 0 0 0
+/doc/!svn/vcc/default
+0 610 0 133305867 12 35
+/ncuams/dev/EAM/UCloud_AAR/WebRoot/ucloud/aar/report/tEamSoftDetail.jsp
+0 1 0 145 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程技术方案建议书-财务核算部分_V 1.2_20121217.doc
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/contpo/purorderpo/action
+0 1 0 143 0 0
+/mobile/!svn/bc/13968/60HeiLJ/hljmobile/src/private/接口/nc/bs/cmer/pfxx/h20111/page/BDProjectInfoPageAxis2DMO.java
+0 2 0 802956 0 0
+/hzf/!svn/bc/1385/dev/partner/WebRoot/WEB-INF/config/spring/rm.public.applicationContext.xml
+0 1 0 1112 0 0
+/doc/ehr/ChinaTelMSS/code/mss_sso/src
+0 2 0 126 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/pub/wfengine
+0 2 0 0 0 0
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/nc_hr_hrp/.project
+0 2 0 484 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档
+0 13 0 3146 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/scrapmaterialsdis/recyclerslinkman/insertRecyclerslinkman.jsp
+0 1 0 6964 0 0
+/svn/js/jquery.js
+0 11 0 864611 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/数据库设计
+0 4 0 1491 0 0
+/ncuams/!svn/bc/6125/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/ucloud/pageapi/location/insertTEamLocationByPageApi.jsp
+0 1 0 4000 0 0
+/doc/!svn/bc/64649/ehr/ChinaTelMSS/code/wbsite/wbsite/css/bg/style_j.css
+0 1 0 5287 0 0
+/mobile/!svn/bc/13968/60HeiLJ/tdbz/.project
+0 2 0 1388 0 0
+/doc/!svn/bc/64691/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/om/hrdept/view/DeptCardForm.java
+0 1 0 3186 0 0
+/ctccss/doc/doc02/3开发过程文档/04上线文档/补丁管理
+0 2 0 270 0 0
+/scd/!svn/bc/559/01 售前项目管理/2013-062中国邮政ERP投标/04交流文档/邮ERP政大集中汇报方案V1.4_20131210.pptx
+0 1 0 5377738 0 0
+/ncuams/!svn/bc/6125/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/esb_erp_fa_importareainfosrv/ESBERPFAImportAreaInfoSrv_ESBERPFAImportAreaInfoSrvPort_Client.java
+0 1 0 2086 0 0
+/cmccmt/dev/03_branches
+0 1 0 145 0 0
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/nc_hr_trn/.project
+0 2 0 484 0 0
+/mobile/60HeiLJ/HLJmobile20101104
+0 2 0 372 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/frameagreement/framagreementmate/bs/impl
+0 2 0 0 0 0
+/mobile/mobile20101104Bak/50GanS/
+0 1 0 260 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_wa
+0 8 0 967 1 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/过程文档
+0 3 0 412 0 0
+/mobile/30LiaoN/NC_CMCC_LNBZ
+0 1 0 145 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/hi/src/public
+0 3 0 126 0 0
+/svn/js/json2.js
+0 11 0 196482 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/协议订单需求变更跟踪
+0 2 0 269 0 0
+/svn/
+0 22 0 110106 0 1
+/mobile/
+0 6 0 2442 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/hi/src/public/nc/bs/hrss/hi/empaccountlist
+0 8 0 656 1 0
+/dynamicform/!svn/bc/4273/dev/sample/dfStudyProject/WebContent/DF_control/button.jsp
+0 1 0 599 0 0
+/doc/!svn/bc/64732/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/base/prodclass/condition/insertNewProdMaterials.jsp
+0 2 0 530845 0 0
+/cloudfound/dev/myProject/test
+0 2 0 296 0 0
+/mobile/30LiaoN/DOC
+0 2 0 271 0 0
+/fitm/chinamobile_xz/src/private/单据/nc/bs/cmer/pub
+0 2 0 526 0 0
+/doc/!svn/bc/64652/ehr/ChinaTelMSS/code/mss_data_itf/src/public/nc/itf/unitydir
+0 1 0 2397 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/cmer/pfxx/xmlTools/MsgHeadConfigXml.java
+0 4 0 580 0 0
+/ctccss/doc/iprodoc
+0 5 0 1207 0 0
+/mobile/20XiZ/20131031TD/chinamobile_xzTD/src/private/接口/nc/bs/cmer/pfxx/h20105
+0 4 0 1117 0 0
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/mss_sso/.project
+0 2 0 482 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/asscorp/action/dev2
+0 3 0 429 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/frameagreement/frameagreement/bs/impl
+0 3 0 429 0 0
+/hzf/dev/partner/WebRoot/WEB-INF/config/spring/rm.public.applicationContext.xml
+0 1 0 144 0 0
+/scd/!svn/bc/562/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-20140102（合版）.doc
+0 3 0 181130366 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/centredpurcresult/centredpurcresult/bs/impl
+0 10 0 1396 0 0
+/svn/css/custom/css.jsp
+0 29 0 394980 0 0
+/ctccss/dev/3source/nc_ctccss_std/src/private
+0 4 0 576 0 0
+/doc/ehr/ChinaTelMSS/code/mss_sso/.project
+0 3 0 0 0 0
+/mobile/qhbzv63
+0 2 0 271 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/单据外系统接口
+0 2 0 271 0 0
+/svn/images/login_bg.jpg
+1 5 0 53625 0 0
+/analyse/
+0 3 0 4697 0 0
+/ncuams/dev/EAM/UCloud_AAR/WebRoot/ucloud/aar/report/tEamAssetyonyouObjectsDetailUseful.jsp
+0 1 0 145 0 0
+/doc/!svn/bc/64731/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/mtrl/moreStorageSum.jsp
+0 3 0 1274 0 0
+/svn/js/datepicker/WdatePicker.js
+0 11 0 83479 0 0
+/fitm/chinamobile_xz/src/client/单据公共/nc/ui/cmer/billbase
+0 4 0 1069 1 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2purcfile/assignSupp.jsp
+0 1 0 5070 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/unicom/mss/sb_eip_eip_importpartnerinfosrv
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/交互设计文档/打印
+0 1 0 143 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/bin
+0 2 0 271 0 0
+/dynamicform/doc/5培训文档/CloudFoundry V2
+0 11 0 1886 0 0
+/dynamicform/dev/sample/dfStudyProject/WebContent/css/DF/df.css
+0 1 0 150 0 0
+/mobile/60HeiLJ/tdbz/.project
+0 5 0 930 0 0
+/doc/!svn/bc/64696/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile/suppUploadFile.jsp
+0 1 0 11049 0 0
+/ctccss/doc/doc02/2项目管理文档/08龙计划二期补录文档
+0 1 0 144 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程技术方案建议书-模版-V1.1-pjg-4.doc
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_pub/META-INF/data_dictionary.upm
+0 1 0 143 0 0
+/public/Projectfile/M-移动/M-陕西移动报账五期/-03系统建设
+0 2 0 615 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/sof/tpartnermodbaseinfo/util
+0 4 0 813 0 0
+/hzf/dev/partner/WebRoot/ucloud
+0 4 0 867 0 0
+/monit/sshd
+0 2 0 9754 0 0
+/hzf/dev/partner/src/org/quickbundle/tools/helper
+0 4 0 794 0 0
+/doc/ehr/ChinaTelMSS/code/com.yonyou.plugin.screenguide
+0 2 0 126 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口工具
+0 2 0 271 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/cont/purcontbaseinfo/detailPurContInfo.jsp
+0 1 0 7144 0 0
+/ncuams/!svn/bc/6137/dev/EAM/UCloud_AAR/WebRoot/ucloud/aar/report/tEamSoftDetail.jsp
+0 1 0 1856 0 0
+/mobile/20XiZ/20131031TD/chinamobile_xzTD/src/public/接口/nc/vo/cmer/pfxx/h20105
+0 2 0 555 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui
+0 4 0 708 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/scrapmaterialsdis/recyclerslinkman
+0 5 0 698 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/ordeform/po/bs/impl/PoBs.java
+0 1 0 71412 0 0
+/mobile/xinjiang20131028
+0 2 0 271 0 0
+/ctccss/doc/doc02/3开发过程文档
+0 6 0 2398 0 0
+/cmccmt/dev/03_branches/57SCM_CMCCMT_FORMAL/resources/arapworkflowconfig/default
+0 2 0 625 0 0
+/svn/images/left_bgb.jpg
+1 2 0 29286 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/框架协议会议纪要
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/include/topBySSo.jsp
+0 1 0 143 0 0
+/ctccss/dev/3source/nc_ctccss_std/src/public
+0 4 0 576 0 0
+/mobile/!svn/bc/13959/60HeiLJ/cmccbz_hlj/.project
+0 1 0 1029 0 0
+/doc/!svn/bc/63468/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/moreinandoutstorages/allMoreInAndOutStorages.jsp
+0 1 0 235 0 0
+/svn/js/datepicker/My97DatePicker.htm
+0 5 0 6895 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/cmer
+0 3 0 0 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_hi
+0 5 0 412 0 0
+/ctccss/doc/doc01/3开发过程文档/03测试文档
+0 1 0 144 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontbaseinfo/bs/impl
+0 4 0 572 0 0
+/mobile/100Analysis
+0 2 0 271 0 0
+/cmccmt/dev/02_branches/branches_2.00/NC_LT_RM5.7/src/ic/private/nc/bs
+0 2 0 642 0 0
+/svn/images/09.gif
+1 1 0 279 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/cont/purcontbaseinfo/detailPurContInfo.jsp
+0 1 0 143 0 0
+/doc/!svn/bc/64618/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/main/home.jsp
+0 1 0 2189 0 0
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/nc_hr_wa/.project
+0 2 0 484 0 0
+/doc/ChinaUnicom/CNCWuLiu/60培训
+0 2 0 269 0 0
+/doc/!svn/bc/63468/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/mtrl/moreStorageSum.jsp
+0 1 0 219 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/public/nc/itf/hrwa/cost/dev2
+0 1 0 143 0 0
+/scd/01 售前项目管理/
+0 1 0 3139 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/sof/pageapi/web/LocationPageApiController.java
+0 1 0 145 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/ucloud/pageapi/location/insertTEamLocationByPageApi.jsp
+0 1 0 145 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/WEB-INF/config/spring
+0 1 0 145 0 0
+/ctccss/doc/doc02/3开发过程文档/04上线文档
+0 3 0 414 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontbaseinfo/bs/impl/PurContBaseInfoBs.java
+0 1 0 59773 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/public/nc/itf/hrjf/assigndept/service/dev2
+0 5 0 819 0 0
+/doc/!svn/bc/62056/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl/BidServiceFeeBs.java
+0 1 0 11133 0 0
+/mobile/11cmdx
+0 2 0 271 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/purcprojimprove/perf2purcprojimprove
+0 5 0 972 0 0
+/scd/01 售前项目管理
+0 31 0 6394 4 0
+/mobile/20XiZ/20131031TD/chinamobile_xzTD/src/private/接口/nc/bs/cmer/pfxx/h20121/page
+0 8 0 2265 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/assigndept/model/dev2
+0 3 0 429 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontbaseinfo/action
+0 6 0 1102 0 0
+/doc/!svn/bc/64649/ehr/ChinaTelMSS/code/nc_hr_wa/.project
+0 1 0 242 0 0
+/doc/!svn/bc/63396/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/ordeform/po/insertPoDetlPage.jsp
+0 4 0 900 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/cont/purcontbaseinfo/listPurContMateForChangeMatePrice.jsp
+0 1 0 0 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/hi/src/private
+0 3 0 126 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/cont/changecont
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/scrapmaterialsdis
+0 2 0 873 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/bs/impl
+0 2 0 286 0 0
+/cloudfound/dev/myProject/public/ruby-1.9.3-p448.tar.gz
+0 1 0 148 0 0
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/hr_wb/.project
+0 2 0 500 0 0
+/ctccss/dev/3source/nc_ctccss_std/src/public/d3/nc/itf/d3
+0 2 0 535 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontbaseinfo/util
+0 3 0 429 0 0
+/ctccss/doc/iprodoc/3开发过程文档
+0 2 0 270 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/dao/impl/SuppBaseInfoModDao.java
+0 1 0 143 0 0
+/svn/images/bg_mcontentL.gif
+1 1 0 813 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/交互设计文档/可用性工作规划
+0 2 0 269 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/public
+0 2 0 271 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/public/nc/itf/hrjf/asscorp/dev2
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102新建需求
+0 4 0 555 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src.gap.rm/gap/rm/tools
+0 3 0 286 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/contpo/purorderpo/bs/impl
+0 3 0 429 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/resource/excel/template
+0 2 0 286 0 0
+/dynamicform/doc
+0 5 0 726 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/purcprojimprove/perf2purcprojimprove/insertPerf2PurcProj.jsp
+0 1 0 21344 0 0
+/doc/!svn/bc/64725/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/util/ISuppBaseInfoModConstants.java
+0 1 0 2502 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/概要设计/采购合同管控
+0 2 0 269 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/uap
+0 2 0 271 0 0
+/doc/ChinaUnicom/CNCWuLiu/code
+0 2 0 286 0 0
+/doc/!svn/bc/64618/ehr/ChinaTelMSS/code/nc_hr_hrp/.project
+0 1 0 242 0 0
+/svn/js/datepicker/skin/whyGreen/bg.jpg
+1 5 0 1535 0 0
+/scd/!svn/bc/561/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-模版-V 2.1_20131230-预算.doc
+0 3 0 18702462 0 0
+/hzf/!svn/bc/1376/dev/partner/WebRoot/ucloud/tpartnerregbaseinfo/insertTPartnerRegBaseInfo.jsp
+0 1 0 10424 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/邮政ERP系统-项目管理-20131227.pptx
+0 1 0 143 0 0
+/ctccss/doc/iprodoc/7系统集团
+0 1 0 144 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/private/nc/impl/hrjf/assigndept/dev2
+0 7 0 1210 0 0
+/fm/
+0 1 0 358 0 0
+/ctccss/doc/doc02/3开发过程文档/02设计文档
+0 2 0 270 0 0
+/doc/!svn/bc/64724/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2purcfile/insertPerf2PurcFile.jsp
+0 1 0 14740 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/public/nc/itf/hrwa/proandsub/service/dev2
+0 2 0 286 0 0
+/ctccss/dev/3source/nc_ctccss_std/src/public/d3/nc/ui/d3
+0 2 0 542 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/109设计（临时）/数据库设计
+0 2 0 269 0 0
+/scd/!svn/bc/561/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-20140103（最新合版）.doc
+0 1 0 79933241 0 0
+/ctccss/!svn/vcc/default
+0 22 0 150382367 0 3
+/scd
+0 40 0 5584 9 2
+/fm/资金二期/6-二期初验文档/
+0 1 0 298 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/概要设计
+0 6 0 824 0 0
+/mobile/yzfa/yzfa0726
+0 6 0 832 1 0
+/mobile/ydbzv61
+0 2 0 271 0 0
+/doc/!svn/bc/64667/ehr/ChinaTelMSS/code/wbsite/.project
+0 2 0 714 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss
+0 51 0 2016 7 0
+/svn/images/default/top_bg1.jpg
+1 2 0 22998 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/impl
+0 1 0 0 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/dao
+0 2 0 286 0 0
+/doc/!svn/bc/64639/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/perf2/purcproj/perf2purcstage/bs/impl/Perf2PurcStageBs.java
+0 1 0 265572 0 0
+/doc/ehr/ChinaTelMSS/code/nc_uap/src/public
+0 2 0 539 0 0
+/ctccss/doc/doc02/2项目管理文档/05人员简历
+0 1 0 144 0 0
+/cmccmt/dev/02_branches/branches_2.00/NC_LT_RM5.7
+0 5 0 725 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/wfwebservice/business/workflowleaderdept/action
+0 3 0 429 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf
+0 50 0 2925 2 0
+/svn/js/tree/folderDocTree.js
+0 2 0 33898 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计
+0 12 0 2357 0 0
+/scd/!svn/bc/563/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-20140103（最新合版）.doc
+0 1 0 41776241 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/soa/impl/supp/importpartnerempinfo/vo
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2purcfile/insertPerf2PurcFile.jsp
+0 3 0 429 0 0
+/crfit/chinatt1214/src/client/nc/ui/gl/pubreconcile
+0 1 0 126 0 0
+/mobile/mobile20101104Bak/50GanS/chinamobileTD
+0 4 0 542 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/src/main/java/mss/webservice/supplieruser
+0 1 0 143 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/impl/uap
+0 1 0 0 0 0
+/fitm/gd_yq/NC_TM_EBANK/src/public/中国移动/nc/ui/cmcc
+0 2 0 670 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102新建需求/最终版需求文档/日常工作跟踪表/2013年问题跟踪表
+0 9 0 1597 1 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/ucloud/teamproject
+0 1 0 145 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD
+0 4 0 561 0 0
+/cloudfound/dev/myProject/yarn-site.xml
+0 2 0 296 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/cont/purcontbaseinfo
+0 17 0 2145 0 0
+/svn/images/tree_bg_footer.gif
+1 2 0 408 0 0
+/svn/js/rm-tools.js
+0 11 0 756195 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/pf/pub
+0 1 0 0 0 0
+/doc/!svn/bc/63277/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/scrapmaterialsdis/recyclerslinkman/insertRecyclerslinkman.jsp
+0 2 0 13604 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/界面原型采购方案多标段
+0 2 0 269 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/bs
+0 2 0 286 0 0
+/mobile/!svn/bc/13926/30LiaoN/NC_CMCC_LNTD/src/public/接口/nc/vo/cmer/pfxx/h20111/BDQuiryProjectVO.java
+0 1 0 1266 0 0
+/mobile/!svn/bc/13927/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/cmer/pfxx/xmlTools/EndPointConfigXml.java
+0 1 0 2238 0 0
+/ctccss/doc/doc02/4实施过程文档
+0 3 0 414 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/hi/src/public/nc/bs/hrss/hi/empaccountcard
+0 24 0 2618 2 0
+/svn/JobTypeAction.do
+0 1 0 14935 0 0
+/ctccss/doc/doc02/3开发过程文档/05初验文档
+0 4 0 558 0 0
+/mobile/!svn/bc/13968/60HeiLJ/hljmobile/src/client/单据公共/nc/ui/cmer/billbase/BaseBillUI.java
+0 1 0 215179 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/pub/taskmanager
+0 1 0 0 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/ucloud/locationhelper
+0 2 0 516 0 0
+/dynamicform/dev/sample/dfStudyProject/WebContent/css/DF
+0 1 0 150 0 0
+/ctccss/doc/doc02/3开发过程文档/03测试文档
+0 2 0 270 0 0
+/fm/资金二期/
+0 1 0 468 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/doc/表结构
+0 5 0 715 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/dbscript
+0 1 0 145 0 0
+/svn/images/icon/expand_all.gif
+1 2 0 328 0 0
+/mobile/60HeiLJ/hljmobile/src/public
+0 8 0 984 0 0
+/doc/ChinaUnicom/CNCWuLiu/40客户交流
+0 3 0 412 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/purcproj/perf2purcprojsupp
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/108接口
+0 1 0 143 0 0
+/doc/!svn/bc/64731/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/moreinandoutstorages/allMoreInAndOutStorages.jsp
+0 2 0 1381 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/ordeform/po/bs/impl
+0 11 0 1783 0 0
+/doc/!svn/bc/64618/ehr/ChinaTelMSS/code/nc_hr_rm/.project
+0 1 0 242 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/base/basecompanyresttime/util/testcase/BaseCompanyRestTimeTestCase.java
+0 1 0 16820 0 0
+/public/Projectfile/T-电信/T-中国电信人力资源大集中/-04上线切换
+0 2 0 796 0 0
+/fitm/chinamobile_xz/src/private/单据/nc/bs/cmer/pub/ImportToERPUtil.java
+0 3 0 432 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_bm/.project
+0 2 0 0 0 0
+/ncuams/!svn/bc/6125/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/WEB-INF/config/spring/rm.webService.server.xml
+0 1 0 2477 0 0
+/ctccss/doc/doc01/3开发过程文档/06合同内维护
+0 1 0 144 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/public/nc/vo/hrjf/assign/dev2
+0 1 0 143 0 0
+/svn/js/tree/icon//ftv2lastnode.gif
+1 2 0 130 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/vo
+0 1 0 145 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/contpo/purorderpo/action/PurOrderPoAction.java
+0 1 0 143 0 0
+/mobile/20XiZ/20131031TD/chinamobile_xzTD/src/public/接口/nc/vo/cmer/pfxx/h20142
+0 2 0 612 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/pub
+0 7 0 0 0 0
+/svn/jsp/welcome.jsp
+0 4 0 8680 0 0
+/ctccss/doc/doc01/3开发过程文档/02设计文档
+0 1 0 144 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/ordeform/po/insertPo.jsp
+0 2 0 0 0 0
+/svn/js/datepicker/config.js
+0 5 0 1115 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/public/nc/itf/unitydir
+0 4 0 126 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/index_new
+0 12 0 1716 0 0
+/ctccss/dev/3source/nc_ctccss_std/src/client/d3/nc/ui/d3/resetPwd
+0 4 0 1098 0 0
+/doc/ChinaUnicom/CNCWuLiu/70patch
+0 5 0 681 0 0
+/mobile/!svn/bc/13963/60HeiLJ/tdbz/.project
+0 2 0 1388 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/public/nc/itf/unitydir/client/TestService.java
+0 2 0 0 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/public/nc/util/hrwa/proandsub/excel/dev2
+0 3 0 429 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontbaseinfo/bs/impl/PurContBaseInfoBs.java
+0 4 0 572 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/contpo/purorderpo
+0 2 0 286 0 0
+/doc/ehr/pltdev/V55/jxdx/META-INF/module.xml
+0 1 0 143 0 0
+/dynamicform/doc/5培训文档/CloudFoundry V2/nise bosh安装部署
+0 1 0 150 0 0
+/doc/!svn/bc/64732/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00
+0 2 0 5347 0 0
+/ctccss/doc/doc02/3开发过程文档/01需求文档
+0 2 0 1817 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/private/nc/impl/om/post
+0 4 0 674 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2purcfile/assignSupp.jsp
+0 1 0 143 0 0
+/hzf/!svn/bc/1387/dev/partner/src/org/quickbundle/tools/helper/RmVoHelper.java
+0 3 0 55457 0 0
+/public/Projectfile/U-联通/U-中国联通微信营业厅一阶段/-04上线切换
+0 4 0 1230 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/psnmanage
+0 2 0 286 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/101项目/版本管理
+0 5 0 715 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontlistmate/bs/impl/PurContListMateBs.java
+0 1 0 143 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/cmer/pfxx
+0 4 0 561 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/lib
+0 2 0 637 0 0
+/mobile/80QingH/mobile/src/private/单据/nc/bs/cmer/pub
+0 3 0 669 0 0
+/ctccss/doc/doc02/4实施过程文档/01一期
+0 2 0 270 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/sof/website/web
+0 2 0 288 0 0
+/mobile/20XiZ/20131031TD/chinamobile_xzTD/src/public/接口/nc/vo/cmer/pfxx/h20143
+0 2 0 553 0 0
+/ctccss/doc/doc02/4实施过程文档/03渠道申请初始化
+0 1 0 144 0 0
+/doc/!svn/bc/64713/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/gap/authority/helper/LoginHelper.java
+0 1 0 4909 0 0
+/doc/!svn/bc/64732/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/ordeform/po/insertPoDetlPage.jsp
+0 2 0 9224 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/cmer/alert
+0 1 0 0 0 0
+/svn/js/tree/icon//diffFolder.gif
+1 2 0 476 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/交互设计文档/未整理
+0 2 0 269 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-汇总-V 2.1_20131230.doc
+0 1 0 143 0 0
+/cloudfound/dev/myProject/.git
+0 6 0 822 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/common/excel
+0 2 0 286 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/assigndept/ref/dev2
+0 4 0 673 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/.project
+0 2 0 0 0 0
+/fitm/gd_yq/NC_TM_EBANK/src/public/中国移动/nc/vo/cmcc
+0 2 0 738 0 0
+/ctccss/dev/3source/nc_ctccss_std/src/client/d3/nc/ui/d3/resetPwd/command
+0 1 0 144 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/client/nc
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/conf/applicationContext
+0 5 0 975 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果
+0 5 0 681 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_wa/src/client/nc/ui/wa/itemassign/dev2/model/WaItemAssignModelService.java
+0 2 0 286 0 0
+/mobile/60HeiLJ/hljmobile/src/public/uap/nc/bs/ufida/sso/messageInfo
+0 4 0 2502 0 0
+/cmccmt/!svn/vcc/default
+0 4 0 47014 1 1
+/hzf/dev/partner/src/com/unicom/ucloud/sof/tpartnerregbaseinfo/web
+0 5 0 956 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/其他/财务过账
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/进度
+0 2 0 269 0 0
+/doc/!svn/bc/64717/ehr/pltdev/V55/jxdx/META-INF/module.xml
+0 1 0 112 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/deptchange/model/dev2
+0 2 0 286 0 0
+/mobile/50GanS/GSChinaM/src/client
+0 7 0 0 0 0
+/scd/!svn/bc/561/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程技术方案建议书-m.doc
+0 3 0 4923518 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/105实施
+0 4 0 555 0 0
+/mobile/80QingH
+0 2 0 271 0 0
+/doc/ChinaUnicom/CNCWuLiu/20开发/编码
+0 1 0 143 0 0
+/analyse/usage.png
+1 2 0 2208 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/conf/oid.xml
+0 1 0 14435 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/114工作交接
+0 2 0 269 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/协议方案及界面原型
+0 2 0 269 0 0
+/ctccss/doc/doc04/1售前文档
+0 7 0 1814 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/perf2/purcproj/perf2suppauditlog/bs/impl
+0 2 0 286 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/gen
+0 2 0 271 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/base/attachment/baseattachfile/dao/impl/BaseAttachFileDao.java
+0 1 0 143 0 0
+/mobile/mobile20101104Bak/
+0 1 0 415 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112报表
+0 2 0 269 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/css/bg/style_j.css
+0 3 0 429 0 0
+/doc/!svn/bc/64649/ehr/ChinaTelMSS/code/nc_hr_wa/src/client/nc/ui/wa/itemassign/dev2/model/WaItemAssignModelService.java
+0 1 0 221 0 0
+/doc/!svn/bc/64620/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontbaseinfo/bs/impl/PurContBaseInfoBs.java
+0 1 0 59804 0 0
+/dynamicform/!svn/vcc/default
+0 7 0 4140 0 1
+/ctccss/doc/doc03
+0 3 0 414 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/uap/pf/alert
+0 1 0 0 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/概要设计/系统全量
+0 8 0 1110 0 0
+/doc/!svn/bc/64618/ehr/ChinaTelMSS/code/mss_sso/.project
+0 1 0 241 0 0
+/svn/images/default/m_home.gif
+1 2 0 2066 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/20140104文档
+0 2 0 628 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/建议书模板
+0 14 0 1900 0 0
+/mobile/!svn/bc/13925
+0 1 0 996133 0 0
+/fitm/!svn/bc/4006/chinamobile_xz/src/private/单据/nc/bs/cmer/pub/ImportAPInvoiceToERP.java
+0 1 0 9649 0 0
+/doc/!svn/bc/64649/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl/BidServiceFeeBs.java
+0 8 0 19418 0 0
+/mobile/40JiL/chinaMobile0214/src/client/单据公共/nc/ui/sm/login
+0 3 0 534 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程技术方案建议书-m.doc
+0 1 0 143 0 0
+/svn/js/datepicker/skin/default/datepicker.css
+0 5 0 24230 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/bs/ITenderFeeBs.java
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/109设计（临时）
+0 5 0 681 0 0
+/mobile/60HeiLJ/cmccbz_hlj/WebContent/jsp
+0 2 0 504 0 0
+/hzf/dev/partner/WebRoot/jsp/support/service/workflow/cordys
+0 4 0 804 0 0
+/doc/!svn/bc/64732/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/cont/purcontbaseinfo
+0 1 0 2303 0 0
+/mobile/70NingX/NXmobile/src/private/接口/nc/bs/cmer/pfxx
+0 2 0 626 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_trn
+0 5 0 412 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/bid
+0 2 0 286 0 0
+/doc/!svn/bc/64696/ehr/ChinaTelMSS/code/mss_data_itf/.project
+0 2 0 538 0 0
+/ctccss/doc/iprodoc/4实施过程文档
+0 2 0 270 0 0
+/hzf/dev/partner/WebRoot/js/common
+0 4 0 576 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/wfengine/engine
+0 3 0 0 0 0
+/doc/!svn/bc/64699/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/purcprojimprove/perf2purcprojimprove/insertPerf2PurcProj.jsp
+0 4 0 5619 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/事故报告
+0 2 0 269 0 0
+/doc/!svn/bc/58418/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00
+0 5 0 948 0 0
+/mobile/!svn/bc/13959/60HeiLJ/hljmobile
+0 1 0 9943 0 0
+/cmccmt/dev/02_branches/branches_2.00/NC_LT_U8RM
+0 3 0 435 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求
+0 7 0 950 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/service/workflow/properties/cordys.properties
+0 1 0 144 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/交互设计文档/交互设计改进
+0 2 0 269 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-模版-V 2.1_20131230-预算.doc
+0 1 0 143 0 0
+/doc/!svn/bc/64242/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile/suppUpLoadAnswerprice.jsp
+0 1 0 3239 0 0
+/svn/js/datepicker/calendar.js
+0 5 0 90305 0 0
+/mobile/mobile20101104Bak/100Analysis
+0 2 0 271 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/deptchange/view/dev2
+0 7 0 1205 0 0
+/svn/RmUserAction.do
+0 1 0 35989 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/uap/pf
+0 2 0 0 0 0
+/ctccss/doc/doc02/3开发过程文档/05初验文档/天翼电信集约化销售系统二期应用软件-系统操作手册
+0 2 0 270 0 0
+/ncuams/!svn/vcc/default
+0 83 0 305754 6 9
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/wfengine/engine/ext
+0 1 0 0 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/client/nc/ui
+0 3 0 696 0 0
+/svn/js/rm-behavior.js
+0 11 0 287056 0 0
+/doc/!svn/bc/64731/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/ordeform/po/insertPo.jsp
+0 2 0 17201 0 0
+/scd/
+0 1 0 468 0 0
+/doc/!svn/bc/63700/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/ordeform/po/insertPo.jsp
+0 4 0 876 0 0
+/mobile/60HeiLJ/hljmobile/src/public/uap/nc/bs/pub/pf
+0 2 0 1024 0 0
+/mobile/90ShanX
+0 2 0 271 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src.gap.rm/gap/rm/tools/helper/RmXmlHelper.java
+0 3 0 429 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/104测试
+0 1 0 143 0 0
+/mobile/50GanS/GSChinaM/src/private/uap
+0 2 0 0 0 0
+/svn/asf-logo.png
+1 1 0 17811 0 0
+/doc/!svn/bc/64637/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontbaseinfo/bs/impl/PurContBaseInfoBs.java
+0 3 0 2318 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/hi/src/public/nc/itf/hrss/empaccount/dev2
+0 3 0 528 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/public/nc/itf/hrwa/syncvoucher/dev2
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/conf/spring
+0 2 0 286 0 0
+/svn/jsp/index0.jsp
+0 1 0 491 0 0
+/mobile/60HeiLJ/hljmobile/src/client
+0 7 0 861 0 0
+/doc/!svn/bc/64649/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/main/home.jsp
+0 1 0 2477 0 0
+/doc/!svn/bc/62746/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontbaseinfo/bs/impl/PurContBaseInfoBs.java
+0 1 0 59034 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标
+0 52 0 7283 3 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/110交互设计
+0 2 0 269 0 0
+/hzf/!svn/bc/1388/dev/partner/src/com/unicom/ucloud/service/workflow/properties/cordys.properties
+0 1 0 1293 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/pub/wfengine/impl
+0 1 0 0 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/base/basecompanyresttime/util/testcase
+0 3 0 429 0 0
+/ncuams/!svn/bc/6137/dev/EAM/UCloud_AAR/WebRoot/ucloud/aar/raq/yonyou_t_eam_asset_soft_list_20140106.raq
+0 1 0 6773 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/单据类型
+0 2 0 271 0 0
+/svn/js/datepicker/lang/zh-cn.js
+0 5 0 5445 0 0
+/mobile/60HeiLJ/hljmobile/src/private/uap/nc/bs/pf/pub
+0 2 0 1388 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/out
+0 2 0 271 0 0
+/doc/!svn/bc/64633/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/main/home.jsp
+0 1 0 2351 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/hi/src
+0 16 0 1534 1 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_pub/.project
+0 3 0 0 0 0
+/ctccss/dev/3source/nc_ctccss_std/src/client/d3/nc/ui/d3/appAccount
+0 2 0 535 0 0
+/mobile/!svn/bc/13968/60HeiLJ/hljmobile
+0 1 0 8858 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/soa/conf/socket_conf.xml
+0 1 0 143 0 0
+/cmccmt/!svn/bc/6328/dev/02_branches/branches_2.00/NC_LT_U8RM
+0 1 0 15433 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/pub/pf
+0 2 0 0 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/paymentlisth/action
+0 2 0 286 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_hrp
+0 5 0 412 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/action
+0 5 0 698 0 0
+/doc/!svn/bc/64618/ehr/ChinaTelMSS/code/wbsite/.project
+0 1 0 357 0 0
+/ctccss/doc/doc02/6穿越测试汇总
+0 1 0 144 0 0
+/monit/_viewlog
+0 14 0 149742 1 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfo/dao
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/101项目
+0 5 0 715 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/CNC-ERP-EX_界面原型2010-01-29
+0 2 0 269 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/概要设计/工作流替换
+0 2 0 269 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/cmer/salary
+0 2 0 271 0 0
+/doc/ehr/pltdev/V55/nc_hr_ss_jiangxi/.project
+0 2 0 286 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/sof/tpartnermodbaseinfo/dao/impl
+0 2 0 288 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_wa/src/private/nc/impl/wa/itemassign/dev2
+0 2 0 532 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/suppMaintenance/detailBaseInfo.jsp
+0 1 0 143 0 0
+/doc/!svn/bc/64726/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl/BidServiceFeeBs.java
+0 3 0 2264 0 0
+/svn/jsp/info.jsp
+0 4 0 2756 0 0
+/mobile/!svn/bc/12950/50GanS/GSChinaM/src/public/接口/com/cmcc/mss/sb_fi_eas_inquiryclaimdocnuminfosrv/SB_FI_EAS_InquiryClaimDocNumInfoSrvSkeletonInterface.java
+0 1 0 353 0 0
+/scd/01 售前项目管理/2013-060内蒙古移动公司手机与微信营业厅项目
+0 4 0 1455 0 0
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/nc_hrss/.project
+0 2 0 562 0 0
+/hzf/dev/partner/WebRoot/ucloud/tpartnerregbaseinfo/insertTPartnerRegBaseInfo.jsp
+0 1 0 144 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/sof/tpartnervalidinfo/web
+0 3 0 432 0 0
+/fm/日常工作文档/1-测试
+0 12 0 1716 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_rm/.project
+0 3 0 0 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/client
+0 2 0 271 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/base/prodclass/condition/insertNewProdMaterials.jsp
+0 2 0 0 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2purcfile
+0 13 0 2079 0 0
+/mobile/70NingX
+0 2 0 271 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_hrp/.project
+0 3 0 0 0 0
+/mobile/60HeiLJ/tdbz
+0 10 0 1797 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/perf2/purcproj/perf2purcstage/bs/impl/Perf2PurcStageBs.java
+0 1 0 143 0 0
+/ctccss/dev/3source/nc_ctccss_std
+0 1 0 144 0 0
+/scd/!svn/bc/561/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-汇总-V 2.1_20131230.doc
+0 3 0 1747070 0 0
+/ctccss/doc
+0 7 0 4763 0 0
+/doc/!svn/bc/60659/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/mtrl/moreStorageSum.jsp
+0 1 0 3448 0 0
+/hzf/dev/partner/src/org/quickbundle/tools/helper/RmVoHelper.java
+0 3 0 432 0 0
+/ctccss/doc/doc02/2项目管理文档/07上线文档
+0 5 0 684 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile
+0 38 0 6103 0 0
+/svn/JobDeployAction.do
+0 1 0 20542 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/ucloud/pageapi/location/listLocationForPageApi.jsp
+0 1 0 145 0 0
+/doc/!svn/bc/64579/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/main/home.jsp
+0 1 0 2189 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private
+0 5 0 687 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/bs/impl/TenderFeeBs.java
+0 1 0 143 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/sm
+0 3 0 0 0 0
+/mobile/yzfa/yzfa0726/src/public/nc/pub/fa/report/deptdep
+0 9 0 1305 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontbaseinfo/vo
+0 3 0 429 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/centredpurcresult/centredpurcresult/bs/impl/CentredPurcResultBs.java
+0 1 0 143 0 0
+/ctccss/doc/iprodoc/1售前文档
+0 2 0 776 0 0
+/ctccss/doc/doc02/4实施过程文档/02全量销售数据
+0 2 0 270 0 0
+/ncuams/dev/EAM/UCloud_AAR/WebRoot/ucloud/aar
+0 7 0 1042 0 0
+/fitm/chinamobile_xz/src/private/单据/nc/bs/cmer/pub/ImportAPInvoiceToERP.java
+0 3 0 432 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/cmer
+0 1 0 145 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/public
+0 5 0 1189 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/pub/pf/pfframe
+0 1 0 0 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/impl/uap/rbac/function/FuncPowerImpl.java
+0 1 0 0 0 0
+/dynamicform/doc/5培训文档
+0 4 0 576 0 0
+/monit/
+0 501 0 2195732 3 2
+/doc/!svn/bc/62967/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/purcprojimprove/perf2purcprojimprove/insertPerf2PurcProj.jsp
+0 1 0 20773 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/113系统管理
+0 1 0 143 0 0
+/mobile/yzfa
+0 2 0 271 0 0
+/hzf/!svn/vcc/default
+0 69 0 112077 1 0
+/ctccss/doc/doc02/5客户其他业务规划
+0 1 0 144 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/om/hrdept/view/DeptCardForm.java
+0 1 0 143 0 0
+/svn/RmUserSvnAction.do
+0 1 0 36634 0 0
+/mobile/!svn/bc/13968/60HeiLJ/tdbz/src/client/单据/nc/ui/cmer/stockmartbill/StockmartUI.java
+0 1 0 26310 0 0
+/fitm/gd_yq/NC_TM_EBANK/src/client/中国移动/nc/ui/cmcc
+0 2 0 1192 0 0
+/ncuams/!svn/bc/6125/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/esb_erp_fa_importassetssiteinfosrv/NoteFaAdapterVo.java
+0 1 0 579 0 0
+/doc/ChinaUnicom/CNCWuLiu/20开发/VPN客户端新
+0 1 0 143 0 0
+/doc/ehr/pltdev/V55/nc_hr_ss
+0 2 0 269 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/om/poststd/action
+0 3 0 529 0 0
+/ctccss/doc/doc02/1售前文档
+0 1 0 144 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-20140103（最新合版）.doc
+0 2 0 286 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode
+0 2 0 655 0 0
+/mobile/110Interface
+0 2 0 271 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src.gap.rm/gap/rm/tools/helper
+0 4 0 837 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfo/bs
+0 1 0 143 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/单据公共
+0 2 0 271 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfo/bs/impl
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wb
+0 14 0 1505 1 0
+/fitm/!svn/vcc/default
+0 4 0 104366 0 0
+/fitm/!svn/bc/4100/chinamobile_xz/src/private/单据/nc/bs/cmer/pub/ImportToERPUtil.java
+0 3 0 92724 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/private/org/tempuri
+0 1 0 0 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/public/nc/vo/financial/assistant
+0 3 0 552 0 0
+/cmccmt/!svn/bc/6329/dev/02_branches/branches_2.00/NC_LT_RM
+0 1 0 12224 0 0
+/doc/ehr/pltdev/V55/jxdx/META-INF
+0 2 0 269 0 0
+/mobile/60HeiLJ/hljmobile/src/private/接口/nc/bs/cmer/pfxx/h20121/page
+0 6 0 3342 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/scrapmaterialsdis
+0 2 0 832 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/corpapp/model/dev2
+0 2 0 286 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/include/top.jsp
+0 1 0 3572 0 0
+/mobile/60HeiLJ/tdbz/src/client/单据/nc/ui/cmer/stockmartbill/StockmartUI.java
+0 1 0 186 0 0
+/ctccss/doc/doc01/1售前文档
+0 1 0 144 0 0
+/mobile/!svn/bc/13959/60HeiLJ/HLJmobile20101104
+0 1 0 5165274 0 0
+/mobile/70NingX/TD/src/private/接口/nc/bs/cmer/pfxx
+0 2 0 656 0 0
+/mobile/!svn/bc/13946/40JiL/chinaMobile0214/src/private/单据/nc/impl/cmer/bill/PubBullUpdateImp.java
+0 1 0 36042 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/src/test/java/com/ufida/test
+0 1 0 143 0 0
+/svn/images/default/m_logout.gif
+1 2 0 2090 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/base/attachment/baseattachfile/dao/impl/BaseAttachFileDao.java
+0 1 0 4491 0 0
+/ncuams/dev/EAM/UCloud_AAR/WebRoot/ucloud/aar/raq
+0 28 0 6314 3 0
+/hzf/dev/partner/src/com/unicom/ucloud/service/workflow/web
+0 5 0 948 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/public/接口/nc/vo/cmer/pfxx/h20105
+0 2 0 593 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/main
+0 7 0 1440 0 0
+/scd/!svn/bc/558/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-20140102（合版）.doc
+0 1 0 90524672 0 0
+/svn/RmLoginAction.do
+0 4 0 18943 0 0
+/mobile/60HeiLJ/tdbz/src/client/单据/nc/ui/cmer/stockmartbill
+0 2 0 372 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口
+0 5 0 687 0 0
+/ctccss/doc/doc01/8.系统巡检
+0 1 0 144 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00
+0 54 0 12954 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/public/nc/vo
+0 3 0 585 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_pub/hrpub/src/client/nc
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/suppMaintenance/listLinkMan.jsp
+0 1 0 143 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/esb_erp_fa_importareainfosrv
+0 1 0 145 0 0
+/doc/!svn/bc/64725/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/dao/impl/SuppBaseInfoModDao.java
+0 1 0 3422 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/ordeform/po/insertPoDetlPage.jsp
+0 2 0 0 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/public/hr/mss/telecom
+0 16 0 2126 1 0
+/ncuams/!svn/bc/6125/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/sof/pageapi/web/LocationPageApiController.java
+0 1 0 3932 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/esb_erp_fa_importassetssiteinfosrv
+0 1 0 145 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/dao/ITenderFeeDao.java
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/soa/impl/supp/importpartnerempinfo/bs/impl
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/ordeform/po
+0 4 0 269 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-20140102（合版）.doc
+0 2 0 286 0 0
+/dynamicform/doc/4发布区
+0 1 0 150 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_rm
+0 6 0 555 0 1
+/doc/ChinaUnicom/CNCWuLiu/20开发/204开发人员认证
+0 2 0 269 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_pub/hrpub/src/private
+0 1 0 143 0 0
+/mobile/!svn/bc/11935/60HeiLJ/hljmobile/src/private/接口/nc/bs/cmer/pfxx/h20111/page/BDProjectInfoPageAxis2DMO.java
+0 1 0 18642 0 0
+/mobile/80QingH/chinaMoibl_TD
+0 2 0 664 0 0
+/cloudfound/dev/myProject/test/ruby-1.9.3-p448.tar.gz
+0 2 0 296 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/gap/authority/helper
+0 3 0 429 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src
+0 6 0 832 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_wa/src
+0 2 0 971 0 0
+/ncuams/dev/EAM/UCloud_AAR/WebRoot/ucloud/aar/report
+0 11 0 2844 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/邮政ERP投标建议书-应用架构、接口示意图-模板.pptx
+0 1 0 143 0 0
+/svn/images/bg_mcontentM.gif
+1 1 0 144 0 0
+/mobile/20XiZ/20131031TD/chinamobile_xzTD/src/public/接口/nc/vo/cmer/pfxx/resmessage
+0 2 0 554 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1
+0 78 0 5526 0 0
+/ctccss/doc/doc02/3开发过程文档/04上线文档/上线工单
+0 2 0 270 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/report/projtimeremind/util
+0 3 0 412 0 0
+/doc/!svn/bc/64673/ehr/ChinaTelMSS/code/nc_hr_pub/.project
+0 2 0 506 0 0
+/doc/!svn/bc/64618/ehr/ChinaTelMSS/code/nc_hr_trn/.project
+0 1 0 242 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/deptapp/model/dev2
+0 2 0 286 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/交互设计文档/用户问题
+0 2 0 269 0 0
+/ncuams/!svn/bc/6117/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/esb_eam_a10_pageinquirysiteinfosrv/ESBEAMA10PageInquirySiteInfoSrvImpl.java
+0 1 0 2285 0 0
+/svn/jsp/
+0 3 0 1473 1 1
+/fitm/!svn/bc/4006/chinamobile_xz/src/private/单据/nc/bs/cmer/pub/ImportToERPUtil.java
+0 1 0 6986 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/src/main
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/public/nc
+0 1 0 143 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/arap
+0 2 0 271 0 0
+/dynamicform/dev/sample/dfmetadzyw/WebRoot/ucdf
+0 13 0 2307 0 0
+/svn/images/icon/collapse_all.gif
+1 2 0 314 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/esb_erp_fa_importassetssiteinfosrv/NoteFaAdapterVo.java
+0 1 0 145 0 0
+/monit/apache2
+0 44 0 258878 1 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_trn/.project
+0 3 0 0 0 0
+/mobile/60HeiLJ/cmccbz_hlj/src/main/java
+0 2 0 659 0 0
+/scd/05 培训管理
+0 3 0 412 0 0
+/ctccss/doc/doc02/7系统集成
+0 1 0 144 0 0
+/hzf/dev/partner/WebRoot/ucloud/tpartnermodbaseinfo
+0 5 0 968 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/include/top.jsp
+0 1 0 143 0 0
+/doc/!svn/bc/63633/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile/suppUpLoadAnswerprice.jsp
+0 1 0 4561 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/sof/locationhelper
+0 2 0 585 0 0
+/mobile/60Heilj
+0 2 0 372 0 0
+/mobile/mobile20101104Bak
+0 6 0 813 0 0
+/svn/images/default/left_frame_Leftbutton.gif
+1 2 0 286 0 0
+/doc/!svn/bc/64697/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile/suppUploadFile.jsp
+0 1 0 2169 0 0
+/ctccss/doc/doc02/2项目管理文档/04实施工单
+0 1 0 144 0 0
+/svn/bg-nav.png
+1 1 0 1401 0 0
+/doc/!svn/bc/62983/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl/BidServiceFeeBs.java
+0 1 0 11351 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/交互设计文档/规范
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/30发布
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/dao/impl
+0 5 0 715 0 0
+/doc/!svn/bc/64649/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/user/insert_user.jsp
+0 1 0 1970 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/impAndExp/feenoticeinfo
+0 5 0 974 0 0
+/doc/ChinaUnicom/CNCWuLiu/50易用性
+0 1 0 143 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/contpo/purorderpo/bs/impl/PurOrderPoBs.java
+0 1 0 30457 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/bd
+0 1 0 0 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-项目管理_20140101（mgm）.doc
+0 1 0 143 0 0
+/ncuams/!svn/bc/6125/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/ucloud/pageapi/location/listLocationForPageApi.jsp
+0 1 0 4527 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/public/nc/itf/om/post/dev2
+0 4 0 670 0 0
+/svn/images/login_bg.gif
+1 5 0 251710 0 0
+/cloudfound/dev/myProject
+0 57 0 8901 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/交互设计文档
+0 5 0 681 0 0
+/mobile
+0 87 0 12489 3 1
+/svn/js/tree/icon//ftv2mlastnode.gif
+1 2 0 420 0 0
+/ctccss/doc/doc01/5.客户其他业务规划
+0 1 0 144 0 0
+/ctccss/dev/3source/nc_ctccss_std/src/client
+0 4 0 576 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/mtrl/moreStorageSum.jsp
+0 3 0 429 0 0
+/ctccss/doc/doc02/3开发过程文档/05初验终验
+0 1 0 144 0 0
+/mobile/mobile20101104Bak/50GanS/chinamobileTD/
+0 1 0 272 0 0
+/mobile/10XinJ
+0 1 0 145 0 0
+/ctccss/doc/iprodoc/5客户其他业务规划
+0 2 0 270 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/详细设计
+0 2 0 269 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/cmer
+0 5 0 687 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/util
+0 5 0 715 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/设计相关资料
+0 2 0 269 0 0
+/mobile/!svn/bc/13925/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/cmer/pfxx/xmlTools/MsgHeadConfigXml.java
+0 1 0 350 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_cm/.project
+0 5 0 0 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/103设计/概要设计/框架协议管控
+0 2 0 269 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp
+0 1 0 143 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/02参考资料汇总
+0 14 0 1883 0 0
+/cloudfound/dev/myProject/app
+0 2 0 274 0 0
+/hzf/dev/partner/WebRoot/WEB-INF/config/spring
+0 5 0 932 0 0
+/doc/!svn/bc/64585/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl/BidServiceFeeBs.java
+0 1 0 11362 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/resources
+0 1 0 145 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/SmsWS
+0 2 0 271 0 0
+/svn/js/datepicker/skin/whyGreen/datepicker.css
+0 5 0 24870 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex
+0 4 0 572 0 0
+/ctccss/doc/doc02/3开发过程文档/08其他资料
+0 3 0 414 0 0
+/doc/!svn/ver/64585/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl/BidServiceFeeBs.java
+0 2 0 22724 0 0
+/hzf/dev/partner/WebRoot/ucloud/website/regInfo.jsp
+0 1 0 144 0 0
+/doc/!svn/bc/64725/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/supplinkmanlocal/action/SuppLinkManLocalAction.java
+0 1 0 6567 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/conf/jdbc
+0 1 0 143 0 0
+/fitm/!svn/bc/4100/chinamobile_xz/src/private/单据/nc/bs/cmer/pub/ImportAPInvoiceToERP.java
+0 3 0 95164 0 0
+/public/Projectfile/M-移动/M-陕西移动报账五期/-04上线切换
+0 2 0 633 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/订单导入模板
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/hi/src/public/nc
+0 3 0 587 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/public/nc/vo/hrjf/corpapp/dev2
+0 4 0 666 0 0
+/doc/!svn/bc/63530/ehr/ChinaTelMSS/code/mss_data_itf/src/public/nc/itf/unitydir/client/TestService.java
+0 2 0 1212 0 0
+/public/Projectfile/T-电信/T-中国电信人力资源大集中/-02蓝图设计
+0 2 0 768 0 0
+/mobile/!svn/bc/13926/30LiaoN/NC_CMCC_LNTD/src/public/接口/nc/vo/cmer/pfxx/h20143/BDQuiryTaskVO.java
+0 1 0 1607 0 0
+/ctccss/doc/doc01/3开发过程文档/04上线文档
+0 1 0 144 0 1
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/0910省分调研
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/需求工作计划执行跟踪
+0 1 0 143 0 0
+/scd/!svn/bc/561/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程技术方案建议书-模版-V1.1-pjg-4.doc
+0 3 0 39503998 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/private/nc/impl/financial/assistant/processor
+0 13 0 1908 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/cont/purcontlisttransmit
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_pub/hrpub/src/public/nc
+0 2 0 286 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/centredpurcresult/latestmateprice/bs/impl
+0 3 0 429 0 0
+/mobile/!svn/bc/13968/60HeiLJ/hljmobile/src/client/单据/nc/ui/cmer/payapply/MyEventHandler.java
+0 1 0 26904 0 0
+/ctccss/doc/doc02/2项目管理文档
+0 2 0 270 0 0
+/doc/!svn/bc/63396/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/base/prodclass/condition/insertNewProdMaterials.jsp
+0 4 0 948 0 0
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/nc_hr_rm/.project
+0 2 0 484 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfo/dao/impl
+0 1 0 143 0 0
+/scd/!svn/bc/562/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/邮政ERP投标建议书-应用架构、接口示意图-模板.pptx
+0 3 0 4824300 0 0
+/svn/images/logo.png
+1 2 0 43950 0 0
+/ctccss/doc/doc02/8培训
+0 1 0 144 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/public/接口/nc/vo/cmer/pfxx
+0 2 0 663 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/交互设计文档/用户文档
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/public/nc/vo/om/post/dev2
+0 4 0 663 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/wfengine/engine/query
+0 1 0 0 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/109系统维护
+0 1 0 143 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/bs/impl/TenderFeeBs.java
+0 1 0 5778 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/soa/impl/supp/importPartnerinfo/bs/impl
+0 1 0 143 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs
+0 1 0 0 0 0
+/public/Projectfile/M-移动/西藏移动报账平台营改增/-04上线切换
+0 2 0 600 0 0
+/doc/!svn/bc/64643/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl/BidServiceFeeBs.java
+0 1 0 1816 0 0
+/doc/!svn/bc/64713/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/include/topBySSo.jsp
+0 1 0 2884 0 0
+/svn/images/icon/refresh_tree.gif
+1 2 0 332 0 0
+/cmccmt/dev/02_branches/branches_2.00/NC_LT_RM5.7/src/ic/client/nc/ui/ic
+0 2 0 564 0 0
+/svn/images/bottom.gif
+1 5 0 12530 0 0
+/ctccss/doc/doc01/7.系统集成
+0 1 0 144 0 0
+/fm/资金二期/6-二期初验文档/项目规划/
+0 1 0 587 0 0
+/doc/!svn/bc/64731/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00
+0 1 0 2532 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/101项目/版本管理/补丁包/2014
+0 18 0 2557 0 0
+/cloudfound/!svn/bc/110/dev/myProject/RubyMine-6.0.1.tar.gz
+0 1 0 155104869 0 0
+/dynamicform/!svn/bc/4273/dev/sample/dfStudyProject/WebContent/css/DF/df.css
+0 1 0 528 0 0
+/mobile/60HeiLJ/hljmobile/src/public/uap/nc/vo/ufida/sso/messageinfo
+0 6 0 3534 0 0
+/svn/js/tree/icon//ftv2node.gif
+1 2 0 140 0 0
+/doc/ehr/ChinaTelMSS/code/mss_sso
+0 7 0 538 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/ucloud/teamtask
+0 2 0 290 0 0
+/doc/!svn/bc/64717/ehr/pltdev/V55/nc_hr_ss_jiangxi/.project
+0 2 0 618 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/hi/src/public/nc/vo/hrss/empaccount/dev2
+0 9 0 815 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2purcfile/insertPerf2PurcFile.jsp
+0 1 0 14740 0 0
+/dynamicform/dev/sample/dfStudyProject/WebContent/DF_control/button.jsp
+0 1 0 150 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/ucloud/teamdimension
+0 1 0 145 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/hi/src/private/nc/impl/hrss/empaccount/dev2
+0 17 0 2648 2 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontbaseinfo/dao/impl
+0 3 0 429 0 0
+/doc/ChinaUnicom/CNCWuLiu/60培训/601开发/管理规范/加班记录/2013
+0 3 0 429 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile/suppUploadFile.jsp
+0 5 0 715 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/dwr.xml
+0 8 0 1144 0 0
+/ctccss/doc/doc_项目管理/03.项目管理
+0 2 0 556 0 0
+/scd/!svn/bc/561/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程技术方案建议书-财务核算部分_V 1.2_20121217.doc
+0 3 0 4940926 0 0
+/mobile/mobile20101104Bak/50GanS/chinamobileTD/.project
+0 8 0 1160 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs
+0 5 0 687 0 0
+/mobile/50GanS/GSChinaM/src/private
+0 8 0 0 0 0
+/doc/!svn/bc/52242/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/util/ISuppBaseInfoModConstants.java
+0 1 0 2499 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf/thewinbidder/condition
+0 1 0 0 0 0
+/doc/!svn/bc/64649/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/ordeform/po/bs/impl/PoBs.java
+0 1 0 71396 0 0
+/mobile/60HeiLJ/hljmobile/src/private/接口/nc/bs/cmer/pfxx/h20111/page
+0 2 0 1114 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/main/home.jsp
+0 7 0 1001 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wb/.project
+0 4 0 286 0 0
+/svn
+0 1 0 11243 5 0
+/svn/js/datepicker/skin/WdatePicker.css
+0 5 0 790 0 0
+/ctccss/doc/doc01/4.实施过程文档
+0 1 0 144 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/util/bidServiceFeeReciveTool.java
+0 2 0 286 0 0
+/ctccss/doc/iprodoc/8培训
+0 2 0 270 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/private/nc/impl/hrjf/asscorp/dev2
+0 1 0 143 0 0
+/doc/!svn/bc/64673/ehr/ChinaTelMSS/code/hr_wb/.project
+0 2 0 500 0 0
+/doc/!svn/bc/64029/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src.gap.rm/gap/rm/tools/helper/RmXmlHelper.java
+0 1 0 6115 0 0
+/doc/!svn/bc/60614/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/mtrl/moreStorageSum.jsp
+0 1 0 3449 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/01招标文档/01技术规范书初稿
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/user/insert_user.jsp
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/cont/purcontlistmate/bs/impl
+0 4 0 572 0 0
+/public/Projectfile/M-移动/2013年西藏移动银企互联系统建设项目/-04上线切换
+0 2 0 658 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/asscorp/model/dev2
+0 3 0 429 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa
+0 13 0 1219 1 0
+/mobile/!svn/bc/13953/60HeiLJ/hljmobile
+0 1 0 10218 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/supplinkmanlocal/action
+0 5 0 974 0 0
+/cloudfound/dev/myProject/app/
+0 1 0 276 0 0
+/doc/ehr/ChinaTelMSS/code
+0 16 0 1294 2 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_wa/src/client/nc/ui/wa/itemassign/dev2/action
+0 2 0 534 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/public/nc/vo/hrwa/syncvoucher/dev2
+0 3 0 286 0 0
+/svn/js/tree/icon//tv2vertline.gif
+1 2 0 136 0 0
+/fm/!svn/vcc/default
+0 4 0 6819 0 2
+/fm/日常工作文档/4-实施运维/问题受理清单
+0 2 0 866 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/conf/oid.xml
+0 1 0 143 0 0
+/
+0 24 0 1722 75 46
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/contpo/purorderpo/bs/impl/PurOrderPoBs.java
+0 1 0 143 0 0
+/ctccss/doc/doc01/3开发过程文档
+0 10 0 1404 0 0
+/ctccss/doc/doc03/3开发过程文档/01需求文档
+0 1 0 144 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/bd/pfxx/plugin
+0 2 0 0 0 0
+/mobile/!svn/bc/13927/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/cmer/pfxx/xmlTools/OAMessageConfigXml.java
+0 1 0 760 0 0
+/mobile/60HeiLJ/hljmobile/src/private
+0 8 0 984 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/base/attachment/baseattachfile/dao/impl
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu
+0 9 0 3126 0 0
+/scd/!svn/bc/561/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-汇总-V 2.1_20131230-成功案例.doc
+0 3 0 13004926 0 0
+/mobile/20XiZ/20131031TD/chinamobile_xzTD/src/private/接口/nc/bs/cmer/pfxx/h20111/page
+0 2 0 580 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/dao/impl
+0 2 0 286 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src
+0 1 0 0 0 0
+/mobile/30LiaoN
+0 5 0 687 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/client/nc/ui/hrwa
+0 3 0 550 0 0
+/mobile/20XiZ/20131031TD/chinamobile_xzTD/src/private/接口/nc/bs/cmer/pfxx/xmlTools
+0 2 0 558 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/src/main/java/mss/webservice/supplier
+0 9 0 1287 0 0
+/fitm/gd_yq/NC_TM_EBANK
+0 4 0 576 0 0
+/doc/!svn/bc/64629/ChinaUnicom/CNCWuLiu/60培训/601开发/管理规范/加班记录/2013
+0 1 0 2892 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/om/poststd/action/dev2
+0 3 0 534 0 0
+/hzf/!svn/bc/406/dev/partner/src/org/quickbundle/tools/helper/RmVoHelper.java
+0 1 0 6494 0 0
+/cmccmt/dev/03_branches/57SCM_CMCCMT_FORMAL
+0 6 0 870 1 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/.project
+0 2 0 286 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_pub
+0 18 0 1981 2 0
+/scd/!svn/bc/562/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/邮政ERP系统-项目管理-20131227.pptx
+0 3 0 7526690 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/META-INF
+0 1 0 145 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/scrapmaterialsdis/recyclerslinkman/insertRecyclerslinkman.jsp
+0 7 0 1001 0 0
+/svn/js/tree/icon//ftv2link.gif
+1 2 0 1218 0 0
+/ctccss/doc/iprodoc/6穿越测试汇总
+0 1 0 144 0 0
+/doc/!svn/bc/64618/ehr/ChinaTelMSS/code/nc_hr_hi/.project
+0 1 0 242 0 0
+/ctccss/doc/doc02/3开发过程文档/05初验文档/天翼电信集约化销售系统二期应用软件-压力测试报告
+0 2 0 270 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/client/com/eshore/cfmss/ws/hr/service
+0 7 0 809 1 0
+/doc/ehr/ChinaTelMSS/code/nc_uap/src/private/nc/bs/pub
+0 2 0 506 0 0
+/hzf/dev/partner/WebRoot
+0 5 0 919 0 0
+/svn/js/tree/icon//ftv2blank.gif
+1 2 0 270 0 0
+/svn/JobMonitorAction.do
+0 1 0 13241 0 0
+/crfit/gl/src/private/nc/bs/gl/voucher
+0 1 0 126 0 0
+/svn/RmLogAction.do
+0 1 0 48763 0 0
+/mobile/!svn/bc/13959/40JiL/JilinTD/.project
+0 1 0 303 0 0
+/mobile/mobile20101104Bak/50GanS/chinamobileTD/src/
+0 1 0 283 0 0
+/doc/!svn/bc/63687/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/dwr.xml
+0 4 0 4909 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/dao/impl/TenderFeeDao.java
+0 1 0 143 0 0
+/cloudfound/dev/myProject/ruby-1.9.3-p448.tar.gz
+0 2 0 296 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/相关文件/薪酬清册号-sap
+0 6 0 1261 1 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/private/nc/itf/mss/aduitresults
+0 9 0 2299 1 0
+/fm/code/cu-tm
+0 1 0 143 0 0
+/hzf/!svn/bc/1388/dev/partner/WebRoot/ucloud/website/regInfo.jsp
+0 1 0 10477 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/相关文件
+0 7 0 1106 0 0
+/ctccss/doc/doc02/3开发过程文档/08其他资料/创新大奖申报
+0 2 0 270 0 0
+/ctccss/doc/doc02/2项目管理文档/01开发计划
+0 2 0 270 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot/WEB-INF/config/spring/rm.webService.server.xml
+0 1 0 145 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite
+0 6 0 1594 0 0
+/fitm/!svn/bc/4089/chinamobile_xz/src/private/单据/nc/bs/cmer/pub/ImportAPInvoiceToERP.java
+0 1 0 9682 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/bs/impl
+0 2 0 286 0 0
+/doc/!svn/bc/64618/ehr/ChinaTelMSS/code/nc_hr_pub/.project
+0 1 0 253 0 0
+/mobile/40JiL/JilinTD/src/private/接口/nc/bs/cmer/pfxx
+0 2 0 659 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/uap
+0 1 0 0 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/cmer/budget
+0 2 0 271 0 0
+/ctccss/doc/doc_项目管理
+0 4 0 540 0 0
+/mobile/50GanS
+0 2 0 271 0 0
+/dynamicform/doc/1售前文档
+0 1 0 150 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/include
+0 7 0 1243 0 0
+/doc/ehr/pltdev/V55/nc_hr_ss_jiangxi
+0 5 0 698 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/hi/src/public/nc/vo/hrss/empaccount/dev2/EmpAccountVO.java
+0 1 0 0 0 0
+/ncuams/dev/EAM/StandardUCloudApp_0_2/src
+0 3 0 416 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/src/main/java/com/yonyou/wb/util
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod
+0 2 0 572 0 0
+/doc/!svn/bc/63396/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/cont/purcontbaseinfo/listPurContMateForChangeMatePrice.jsp
+0 2 0 486 0 0
+/svn/images/waiting.gif
+1 5 0 121665 0 0
+/doc/!svn/bc/64633/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/scrapmaterialsdis/recyclerslinkman/insertRecyclerslinkman.jsp
+0 3 0 1432 0 0
+/svn/images/default/spacer.gif
+1 2 0 86 0 0
+/ctccss/doc/doc04
+0 2 0 288 0 0
+/doc/!svn/bc/64667/ehr/ChinaTelMSS/code/nc_hr_jf/.project
+0 2 0 504 0 0
+/ncuams/dev/EAM/UCloud_AAR
+0 44 0 4973 4 0
+/doc/!svn/bc/64636/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/main/home.jsp
+0 1 0 2448 0 0
+/svn/tomcat.css
+0 1 0 5576 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_bm
+0 4 0 412 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/ordeform/po/bs/impl/PoBs.java
+0 2 0 286 0 0
+/crfit/gl
+0 1 0 126 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/sof/tpartnermodbaseinfo/service/impl
+0 2 0 288 0 0
+/svn/css/custom/jquery-ui-1.8.6.custom.css
+0 28 0 8260 0 0
+/scd/!svn/bc/561/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-项目管理_20140101（mgm）.doc
+0 3 0 22997118 0 0
+/doc/!svn/bc/64696/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile/suppUpLoadAnswerprice.jsp
+0 2 0 5955 0 0
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/nc_hr_hi/.project
+0 2 0 484 0 0
+/doc/!svn/bc/62627/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl/BidServiceFeeBs.java
+0 2 0 22468 0 0
+/crfit/gl_20130718/src/public/nc/bs/gl/glbzinterface/bztogl
+0 2 0 559 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/pub/workflownote
+0 1 0 0 0 0
+/svn/jsp/frameMid.jsp
+0 4 0 11268 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/purcprojimprove/perf2purcprojimprove/insertPerf2PurcProj.jsp
+0 5 0 715 0 0
+/doc/!svn/bc/64697/ehr/ChinaTelMSS/code/nc_hr_wa/src/client/nc/ui/wa/itemassign/dev2/model/WaItemAssignModelService.java
+0 2 0 1194 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/action
+0 2 0 286 0 0
+/cmccmt/dev/03_branches/57SCM_CMCCMT_FORMAL/src/ia/client/nc/ui/ia/ia402
+0 2 0 531 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/om
+0 2 0 611 0 0
+/doc/!svn/bc/64355/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/util/ISuppBaseInfoModConstants.java
+0 1 0 2512 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/单据
+0 2 0 271 0 0
+/mobile/40JiL/chinaMobile0214/src/client/单据公共/nc/ui/sm
+0 1 0 0 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_wa/.project
+0 3 0 0 0 0
+/mobile/20XiZ/20131031TD/chinamobile_xzTD/src/private/接口/nc/bs/cmer/pfxx/pub
+0 4 0 1124 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/doc/员工银行账号维护脚本
+0 7 0 685 0 0
+/doc/!svn/bc/63501/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/dwr.xml
+0 1 0 4295 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/util/ISuppBaseInfoModConstants.java
+0 4 0 572 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/private/nc/bs/hrwa/proandsub/dmo/dev2
+0 1 0 143 0 0
+/mobile/80QingH/mobile/src/private/uap/nc/bs/pub/pf/pfframe
+0 2 0 514 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/assigndept/action/dev2
+0 7 0 1103 0 0
+/doc/!svn/bc/64158/ehr/ChinaTelMSS/code/mss_data_itf/src/public/nc/itf/unitydir
+0 2 0 396 0 0
+/scd/!svn/bc/561/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程技术方案建议书-实施方案部分（未完）.doc
+0 3 0 4893822 0 0
+/doc/!svn/bc/63664/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile/suppUploadFile.jsp
+0 1 0 13143 0 0
+/doc/ehr/ChinaTelMSS/code/nc_uap/.project
+0 3 0 0 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/dao/impl/TenderFeeDao.java
+0 1 0 2711 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl/BidServiceFeeBs.java
+0 13 0 1859 0 0
+/mobile/40JiL/chinaMobile0214/src/private/接口/nc/bs/cmer/pfxx
+0 2 0 662 0 0
+/svn/jsp/main.jsp
+0 4 0 2904 0 0
+/svn/js/tree/icon//ftv2mnode.gif
+1 2 0 426 0 0
+/svn/JobLogAction.do
+0 1 0 14371 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/交互设计文档/图标
+0 2 0 269 0 0
+/svn/images/tree_bg_all.gif
+1 2 0 22738 0 0
+/mobile/50GanS/GSChinaM/src/private/接口/nc/bs/cmer/pfxx/h20121/page
+0 2 0 571 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/CNC-ERP-EX_界面原型2009-09-12
+0 1 0 143 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/test
+0 2 0 271 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/CNC-ERP-EX_界面原型2009-06-05
+0 1 0 143 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/dao/ITenderFeeDao.java
+0 1 0 1324 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/base/basecompanyresttime/util/testcase/BaseCompanyRestTimeTestCase.java
+0 1 0 143 0 0
+/mobile/!svn/bc/13925/30LiaoN/NC_CMCC_LNTD/src/public/接口/nc/vo/cmer/pfxx/h20105/BDQueueVendorVO.java
+0 1 0 1331 0 0
+/doc/!svn/bc/64696/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2purcfile/insertPerf2PurcFile.jsp
+0 1 0 14740 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc/bs/cmer/pfxx/xmlTools
+0 3 0 416 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/supplinkman/bs/impl
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/private/nc/impl/hrwa/proandsub/dev2
+0 2 0 286 0 0
+/doc/!svn/bc/64626/ehr/ChinaTelMSS/code/wbsite/wbsite/css/bg/style_j.css
+0 1 0 5254 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/nc
+0 5 0 687 0 0
+/doc/!svn/bc/64691/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/scrapmaterialsdis/recyclerslinkman/insertRecyclerslinkman.jsp
+0 3 0 1440 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/111项目管理规范/JIRA
+0 2 0 269 0 0
+/svn/images/bg_mcontentR.gif
+1 1 0 329 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/bd/pfxx/plugin/psndoc
+0 2 0 0 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/css/bg
+0 5 0 926 0 0
+/ctccss/doc/doc02/3开发过程文档/07实施文档
+0 3 0 414 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite
+0 46 0 6491 4 0
+/svn/images/default/left_frame_Rightbutton.gif
+1 2 0 288 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/public/hr/mss
+0 1 0 143 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/sm/loginui
+0 1 0 0 0 0
+/doc/!svn/bc/62903/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/dwr.xml
+0 1 0 4257 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/private/nc/impl/om/post/dev2
+0 4 0 670 0 0
+/mobile/mobile20101104Bak/50GanS
+0 4 0 542 0 0
+/mobile/60HeiLJ/hljmobile/src/public/uap/nc/bs/pf/pub
+0 4 0 2405 0 0
+/hzf/!svn/bc/1388/dev/partner/src/com/unicom/ucloud/service/workflow/web/CordysController.java
+0 1 0 11247 0 0
+/doc/!svn/bc/64649/ehr/ChinaTelMSS/code/hr_wa/.project
+0 2 0 498 0 0
+/monit/_runtime
+0 6 0 24910 0 0
+/monit/apache
+0 13 0 75271 0 0
+/doc/!svn/bc/63396/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/cont/purcontbaseinfo
+0 2 0 424 0 0
+/ncuams/dev/EAM/UCloud_AAR/WebRoot/ucloud/aar/raq/yonyou_t_eam_asset_soft_list_20140106.raq
+0 1 0 145 0 0
+/doc/!svn/bc/64649/ehr/ChinaTelMSS/code/wbsite/doc/表结构/init_table.sql
+0 1 0 2680 0 0
+/doc/!svn/bc/64618/ehr/ChinaTelMSS/code/nc_uap/.project
+0 1 0 241 0 0
+/cmccmt/dev/02_branches/branches_2.00/NC_LT_RM
+0 3 0 435 0 0
+/mobile/80QingH/mobile/src/private/接口/nc/bs/cmer/pfxx
+0 2 0 637 0 0
+/fitm/!svn/bc/3545/chinamobile_xz/src/private/单据/nc/bs/cmer/pub/ImportToERPUtil.java
+0 1 0 6949 0 0
+/mobile/!svn/bc/13959/60HeiLJ/cmccbz_hlj
+0 1 0 15408 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/src/com/unicom/ucloud/esb_eam_a10_pageinquirysiteinfosrv/ESBEAMA10PageInquirySiteInfoSrvImpl.java
+0 1 0 145 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/04交流文档/邮ERP政大集中汇报方案V1.4_20131210.pptx
+0 1 0 143 0 0
+/svn/js/datepicker/skin/whyGreen/img.gif
+1 5 0 8395 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfolocal/dao/impl
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/101项目/版本管理/补丁包
+0 18 0 2557 1 0
+/doc/!svn/bc/64687/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/conf/jdbc/jdbc.properties
+0 1 0 600 0 0
+/dynamicform/dev/sample/dfStudyProject
+0 3 0 426 0 0
+/doc/ehr/ChinaTelMSS/code/wbsite/doc/表结构/init_table.sql
+0 1 0 143 0 0
+/mobile/80QingH/chinaMoibl_TD/src/gen
+0 2 0 670 0 0
+/mobile/!svn/bc/13959/60HeiLJ/tdbz
+0 1 0 9108 0 0
+/scd/02 方案管理
+0 4 0 538 0 0
+/doc/ehr/pltdev/V55/jxdx
+0 2 0 269 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/prequalificationfee/action
+0 2 0 286 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/service/workflow/web/CordysController.java
+0 1 0 144 0 0
+/public/Projectfile/M-移动
+0 8 0 3194 0 0
+/mobile/60HeiLJ/cmccbz_hlj
+0 4 0 662 1 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/112项目成果/工作流升级
+0 2 0 269 0 0
+/ctccss/doc/doc02/2项目管理文档/03培训
+0 1 0 144 0 0
+/doc/!svn/bc/64732/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/purcont/cont/purcontbaseinfo/listPurContMateForChangeMatePrice.jsp
+0 1 0 5148 0 0
+/mobile/60HeiLJ
+0 11 0 1756 0 0
+/svn/images/default/bg_btn.png
+1 2 0 2592 0 0
+/hzf/dev/partner
+0 29 0 4521 2 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/supplinkmanlocal/action/SuppLinkManLocalAction.java
+0 1 0 143 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/bd/pfxx
+0 1 0 0 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src/private/nc/impl/hrwa/syncvoucher/dev2
+0 4 0 693 0 0
+/scd/07 部门工作
+0 5 0 949 1 0
+/doc/ehr/ChinaTelMSS/code/wbsite/wbsite/WEB-INF/jsp/user
+0 1 0 143 0 0
+/monit/svn
+0 1 0 3496 0 0
+/doc/ehr/ChinaTelMSS/code/hr_wa/hrwa/src
+0 9 0 1946 1 0
+/ctccss/doc/doc02
+0 6 0 2400 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/sof/tpartnerregbaseinfo/service/impl
+0 1 0 144 0 0
+/cmccmt/!svn/bc/6329/dev/02_branches/branches_2.00/NC_LT_RM5.7
+0 1 0 13542 0 0
+/doc/ehr/ChinaTelMSS/code/nc_uap
+0 8 0 824 1 0
+/doc/ehr/ChinaTelMSS/code/wbsite/res/lib/m_not_find
+0 2 0 286 0 0
+/hzf/dev/partner/WebRoot/ucloud/userRole
+0 2 0 288 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/action
+0 2 0 286 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/suppMaintenance/detailBaseInfo.jsp
+0 1 0 4021 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_hi/.project
+0 3 0 0 0 0
+/doc/ChinaUnicom/CNCWuLiu/60培训/601开发/管理规范/加班记录
+0 1 0 143 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hrss/META-INF
+0 3 0 525 0 0
+/dynamicform/dev/sample/dfmetadzyw/WebRoot
+0 3 0 426 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/om/poststd
+0 1 0 143 0 0
+/doc/!svn/bc/64591/ehr/ChinaTelMSS/code/nc_hr_wa/src/client/nc/ui/wa/itemassign/dev2/model/WaItemAssignModelService.java
+0 1 0 845 0 0
+/mobile/30LiaoN/chinaMobile
+0 2 0 271 0 0
+/svn/js/rm-validate.js
+0 11 0 316415 0 0
+/doc/!svn/bc/64722/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/util/ISuppBaseInfoModConstants.java
+0 3 0 265130 0 0
+/svn/images/yes.png
+1 1 0 832 0 0
+/hzf/!svn/bc/1386/dev/partner/src/org/quickbundle/tools/helper/RmVoHelper.java
+0 2 0 6702 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex
+0 3 0 429 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/cnceb/web/suppMaintenance
+0 4 0 572 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/pf
+0 3 0 0 0 0
+/doc/ChinaUnicom/CNCWuLiu/20开发/202脚本
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/CU-ERP-EX_合同订单_界面原型
+0 2 0 269 0 0
+/svn/images/default/iwpmi2.gif
+1 2 0 100 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/bs/impl
+0 17 0 2512 0 0
+/mobile/60HeiLJ/cmccbz_hlj/src/main
+0 1 0 145 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/105实施/省分项目总部采购流程资料v13_20091103
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfomod/dao
+0 2 0 286 0 0
+/doc/!svn/bc/64680/ehr/ChinaTelMSS/code/nc_hr_bm/.project
+0 2 0 532 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src/public/functions/rfc/sap/document/sap_com
+0 1 0 143 0 0
+/scd/04 案例管理
+0 4 0 538 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程ERP软件技术方案建议书-汇总-V 2.1_20131230-成功案例.doc
+0 1 0 143 0 0
+/svn/js/jquery.form.js
+0 11 0 228855 0 0
+/scd/03 产品规划管理
+0 3 0 412 0 0
+/mobile/!svn/bc/13959/60HeiLJ/tdbz/.project
+0 1 0 694 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/gap/authority/helper/LoginHelper.java
+0 1 0 143 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/wfwebservice/wfserver/bs/impl
+0 3 0 429 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/03投标文档/中国邮政ERP系统工程技术方案建议书-实施方案部分（未完）.doc
+0 1 0 143 0 0
+/ctccss/dev/3source/nc_ctccss_std/src/client/d3/nc/ui/d3
+0 1 0 144 0 0
+/doc/ehr/ChinaTelMSS/code/nc_hr_jf/hrjf/src/client/nc/ui/hrjf/assigndept/view/dev2
+0 9 0 1492 0 0
+/ctccss/doc/doc02/3开发过程文档/05初验文档/天翼电信集约化销售系统二期应用软件-合同扫描件
+0 2 0 270 0 0
+/ctccss/doc/doc01/2项目管理文档
+0 1 0 144 0 0
+/mobile/!svn/bc/13926/30LiaoN/NC_CMCC_LNTD/src/public/接口/nc/vo/cmer/pfxx/h20144/IPoOrderVO.java
+0 1 0 4720 0 0
+/dynamicform/doc/5培训文档/EAM_AAR
+0 3 0 426 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/bs/wfengine
+0 1 0 0 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc
+0 1 0 0 0 0
+/ncuams/dev/EAM/UCloudApp_EAM_0.1.1/WebRoot
+0 6 0 832 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/supp/suppbaseinfolocal/dao
+0 1 0 143 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/sof/tpartnerregbaseinfo/dao/impl
+0 2 0 288 0 0
+/scd/!svn/vcc/default
+0 29 0 1384500059 0 14
+/doc/ChinaUnicom/CNCWuLiu/10文档/102需求/CNC-ERP-EX_界面原型
+0 1 0 143 0 0
+/cloudfound/dev/myProject/.idea
+0 2 0 274 0 0
+/mobile/60HeiLJ/hljmobile
+0 11 0 1879 0 1
+/doc/!svn/bc/64715/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/perf2/issueandresp/perf2downloadfile/suppUploadFile.jsp
+0 3 0 13448 0 0
+/mobile/!svn/bc/13956/60HeiLJ/hljmobile
+0 2 0 20308 0 0
+/svn/js/tree/icon//ftv2folderopen.gif
+1 2 0 2080 0 0
+/doc/ehr/ChinaTelMSS/code/mss_data_itf/src
+0 4 0 598 0 0
+/svn/bg-upper.png
+1 1 0 3103 0 0
+/scd/01 售前项目管理/2013-062中国邮政ERP投标/04交流文档
+0 28 0 3885 1 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/WEB-INF/conf
+0 2 0 286 0 0
+/hzf/dev/partner/src/com/unicom/ucloud/soa/ecaop/service/impl
+0 1 0 144 0 0
+/svn/bg-button.png
+1 1 0 713 0 0
+/doc/!svn/bc/64709/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/tenderfee/bs/ITenderFeeBs.java
+0 1 0 1405 0 0
+/doc/ChinaUnicom/CNCWuLiu/10文档/运维工作文档
+0 1 0 143 0 0
+/crfit/!svn/vcc/default
+0 4 0 65780 0 2
+/mobile/60HeiLJ/cmccbz_hlj/WebContent
+0 2 0 848 0 0
+/doc/!svn/bc/64696/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src.gap.rm/gap/rm/tools/helper/RmXmlHelper.java
+0 3 0 263951 0 0
+/mobile/50GanS/GSChinaM/src/private/uap/nc/impl/uap/rbac/function
+0 3 0 0 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/impAndExp/bidservicefee/util/bidServiceFeeReciveTool.java
+0 2 0 2113 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/perf2/issueandresp/perf2suppreferlist/dao/impl
+0 2 0 286 0 0
+/mobile/30LiaoN/NC_CMCC_LNTD/src/private/接口/com
+0 1 0 145 0 0
+/doc/!svn/bc/64636/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/src/com/use/erpex/purcont/contpo/purorderpo/action/PurOrderPoAction.java
+0 1 0 15007 0 0
+/doc/ChinaUnicom/CNCWuLiu/cucode/branches/branches_1.00/cncpur/jsp/erpex/moreinandoutstorages/allMoreInAndOutStorages.jsp
+0 2 0 286 0 0
+/cloudfound
+0 8 0 1543 0 0
+# End Of Table - urls
+# -sites- (monthly)
+113.46.50.197
+0 1 0 239 0 0
+-
+211.137.211.67
+0 224 14 28897179 3 1389039906
+-
+211.137.135.199
+0 925 112 706756 1 1389033013
+-
+183.60.35.80
+0 2 0 962 1 1389022887
+-
+54.196.162.160
+0 1 0 278 1 1388890552
+/
+202.153.161.9
+0 1 1 0 1 1388771372
+/
+222.186.34.74
+0 4 0 1112 3 1389092213
+/
+118.198.161.128
+0 1 0 239 0 0
+-
+118.198.161.33
+0 1 0 239 0 0
+-
+221.218.118.217
+0 102 20 47953 1 1388772411
+/doc/!svn/vcc/default
+220.181.132.191
+0 1 0 232 1 1388785085
+/
+114.241.185.5
+0 1 0 289 0 0
+-
+101.226.66.175
+0 1 0 278 1 1388820572
+/
+180.153.211.190
+0 2 0 559 1 1388874946
+/monit/
+120.72.128.254
+0 3532 486 2327820 4 1389091514
+/mobile/!svn/vcc/default
+211.137.254.236
+0 1304 171 87364676 4 1389094585
+/mobile/!svn/vcc/default
+202.108.100.232
+0 1924 483 2749061 15 1389117171
+/ncuams/!svn/vcc/default
+183.61.174.217
+0 1 0 232 1 1389007742
+/
+113.111.206.176
+0 41 13 22207 1 1389050377
+/doc/!svn/vcc/default
+123.120.119.185
+0 1 0 289 0 0
+-
+183.60.62.44
+0 4 0 1924 4 1388768075
+/scd
+72.49.141.144
+0 6 0 0 1 1388755167
+-
+222.129.49.52
+0 1 0 239 0 0
+-
+80.82.78.9
+0 4 0 1148 2 1389069383
+-
+113.111.192.30
+0 68 12 14693 1 1388981007
+-
+54.194.179.157
+0 1 1 246 1 1389112018
+/
+206.17.173.194
+0 1 1 0 1 1388890029
+/
+124.207.205.92
+0 5037 1102 1829732636 19 1389129330
+-
+113.111.195.49
+0 47 6 12740 1 1388921840
+-
+183.61.174.213
+0 1 0 232 1 1388877734
+/
+58.16.225.253
+0 1 0 289 0 0
+-
+180.153.163.211
+0 10 9 258512 1 1388714908
+/svn/
+87.106.67.138
+0 6 0 1508 0 0
+-
+219.237.227.206
+0 81 10 36474 1 1388875500
+-
+50.18.115.35
+0 1 1 0 1 1388813758
+/
+221.130.253.135
+0 193 33 95067 6 1389115386
+/cmccmt/!svn/vcc/default
+101.226.66.181
+0 1 0 481 1 1388757773
+/scd/01 售前项目管理
+61.149.208.198
+0 3096 752 92895397 18 1389130122
+/doc/ChinaUnicom/CNCWuLiu/10文档/101项目/版本管理/补丁包/2014/PATCHES1115-0112
+183.60.244.29
+0 1 0 253 1 1389121372
+-
+112.64.235.91
+0 2 0 480 1 1389118096
+/analyse/
+60.191.107.98
+0 1 0 290 1 1388987698
+-
+218.241.137.34
+0 429 150 229021 5 1389027361
+/doc/!svn/vcc/default
+113.45.169.33
+0 7 5 43069 1 1388873349
+/monit/_viewlog
+183.61.174.211
+0 1 0 232 1 1388877793
+/
+118.198.162.240
+0 1 0 239 0 0
+-
+58.210.34.91
+0 1 0 290 1 1388785868
+-
+111.195.56.255
+0 22 4 5169 1 1388750594
+-
+98.209.67.250
+0 2 0 409 1 1389115665
+-
+123.122.25.68
+0 1 0 289 0 0
+-
+123.118.175.5
+0 3 0 867 0 0
+-
+61.231.81.126
+0 1 0 172 1 1388866332
+-
+218.29.42.251
+0 1 0 290 1 1389063155
+-
+113.111.208.125
+0 66 9 14148 2 1388896303
+-
+144.76.162.106
+0 2 0 478 0 0
+-
+110.172.209.41
+0 123 39 40730 3 1389052413
+/doc/!svn/vcc/default
+118.207.162.116
+0 41 6 10858 2 1389043003
+-
+114.243.206.184
+0 1 0 239 0 0
+-
+24.250.153.50
+0 2 0 409 1 1388931292
+-
+87.106.132.237
+0 6 0 1508 0 0
+-
+113.45.153.8
+0 20 15 72116 1 1389130263
+/analyse/
+117.41.184.109
+0 1 0 292 0 0
+-
+10.20.5.53
+0 26 24 389280 1 1389116608
+/svn/js/datepicker/My97DatePicker.htm
+101.226.66.180
+0 18 16 505872 2 1389118261
+/svn/
+123.120.117.73
+0 1 0 289 0 0
+-
+220.181.132.197
+0 2 0 464 1 1389104521
+/
+183.61.174.218
+0 1 0 232 1 1389104522
+/
+58.62.133.100
+0 1 1 0 1 1388764592
+/
+221.194.43.4
+0 1 0 0 1 1388918186
+-
+81.209.146.68
+0 1 0 0 1 1388711725
+-
+60.215.143.7
+0 1 0 289 0 0
+-
+113.105.95.122
+0 1 0 481 1 1389087526
+-
+183.60.48.25
+0 1 1 246 1 1388907600
+/
+180.153.206.30
+0 1 0 301 1 1389117904
+-
+180.153.205.252
+0 2 0 559 1 1389105294
+/monit/
+202.108.100.231
+0 1827 438 1609695 14 1389114963
+/hzf/!svn/vcc/default
+219.142.42.9
+0 1250 196 150797905 9 1389116614
+-
+111.192.33.172
+0 2 0 239 1 1388957980
+-
+113.45.145.152
+0 1125 338 156848316 1 1388719777
+-
+1.202.240.194
+0 7 2 47350 1 1388924795
+/cmccmt/!svn/vcc/default
+101.199.112.54
+0 2 0 464 1 1389007741
+/
+180.153.205.253
+0 9 8 253028 1 1389118261
+/svn/
+219.137.26.162
+0 4135 878 122417029 21 1389102705
+-
+66.206.50.58
+0 2 0 409 1 1388907614
+-
+92.61.41.213
+0 1 1 0 1 1388741185
+/
+60.8.63.50
+0 4 0 0 4 1389108275
+-
+114.246.72.202
+0 1 0 289 0 0
+-
+101.199.112.53
+0 1 0 232 1 1388877731
+/
+113.45.139.209
+0 5 1 5498 1 1388960900
+/monit/
+218.28.116.238
+0 1 0 290 1 1389127664
+-
+110.172.209.37
+0 231 47 1135653 5 1389020120
+-
+218.203.122.13
+0 36 1 50558 1 1389031162
+/mobile/!svn/vcc/default
+180.153.214.191
+0 9 8 253028 1 1388713085
+/svn/
+127.0.0.1
+0 3 2 4099 1 1389116300
+/analyse/
+162.220.64.104
+0 1 0 244 0 0
+-
+74.208.229.133
+0 6 0 1508 0 0
+-
+61.237.253.2
+0 145 13 110810 4 1389114777
+/crfit/!svn/vcc/default
+183.61.174.210
+0 1 0 232 1 1388785148
+/
+123.120.110.232
+0 1 0 289 0 0
+-
+10.255.87.11
+0 197 0 33884 43 1389130226
+/
+118.244.147.49
+0 4 4 984 1 1388890872
+/
+112.64.235.89
+0 1 0 481 1 1388757766
+/scd
+54.201.198.33
+0 1 0 278 1 1389128133
+/
+222.73.76.253
+0 1 0 375 1 1389108236
+/monit/apache2
+101.199.108.52
+0 4 0 928 1 1388877672
+/
+218.77.79.34
+0 6 0 0 6 1389112066
+-
+114.248.99.224
+0 1 0 289 0 0
+-
+220.181.132.218
+0 4 0 1112 4 1389104411
+/
+101.226.66.177
+0 9 8 253028 1 1388713080
+/svn/
+180.153.206.19
+0 1 0 375 1 1388875049
+/monit/_viewlog
+24.180.99.242
+0 2 0 409 1 1388757153
+-
+23.22.126.139
+0 1 0 278 1 1388983480
+/
+112.232.69.31
+0 1 0 289 0 0
+-
+203.67.83.30
+0 1 1 0 1 1389077751
+/
+# End Of Table - sites (monthly)
+# -sites- (daily)
+222.186.34.74
+0 2 0 556 1 1389092213
+/
+120.72.128.254
+0 14 4 4225 1 1389091514
+/mobile/!svn/vcc/default
+211.137.254.236
+0 684 93 41787021 2 1389094585
+/mobile/!svn/vcc/default
+202.108.100.232
+0 431 124 236248 6 1389117171
+/ncuams/!svn/vcc/default
+80.82.78.9
+0 2 0 574 1 1389069383
+-
+54.194.179.157
+0 1 1 246 1 1389112018
+/
+124.207.205.92
+0 2245 603 5226073 4 1389129330
+-
+87.106.67.138
+0 6 0 1508 0 0
+-
+221.130.253.135
+0 75 13 21363 3 1389115386
+/cmccmt/!svn/vcc/default
+61.149.208.198
+0 2239 459 7706387 7 1389130122
+/doc/ChinaUnicom/CNCWuLiu/10文档/101项目/版本管理/补丁包/2014/PATCHES1115-0112
+183.60.244.29
+0 1 0 253 1 1389121372
+-
+112.64.235.91
+0 2 0 480 1 1389118096
+/analyse/
+98.209.67.250
+0 2 0 409 1 1389115665
+-
+218.29.42.251
+0 1 0 290 1 1389063155
+-
+114.243.206.184
+0 1 0 239 0 0
+-
+113.45.153.8
+0 20 15 72116 1 1389130263
+/analyse/
+10.20.5.53
+0 26 24 389280 1 1389116608
+/svn/js/datepicker/My97DatePicker.htm
+101.226.66.180
+0 9 8 253028 1 1389118261
+/svn/
+220.181.132.197
+0 2 0 464 1 1389104521
+/
+183.61.174.218
+0 1 0 232 1 1389104522
+/
+113.105.95.122
+0 1 0 481 1 1389087526
+-
+180.153.206.30
+0 1 0 301 1 1389117904
+-
+180.153.205.252
+0 2 0 559 1 1389105294
+/monit/
+202.108.100.231
+0 829 217 425120 6 1389114963
+/hzf/!svn/vcc/default
+219.142.42.9
+0 503 86 298894 5 1389116614
+-
+180.153.205.253
+0 9 8 253028 1 1389118261
+/svn/
+219.137.26.162
+0 256 43 8580212 3 1389102705
+-
+60.8.63.50
+0 1 0 0 1 1389108275
+-
+218.28.116.238
+0 1 0 290 1 1389127664
+-
+127.0.0.1
+0 3 2 4099 1 1389116300
+/analyse/
+61.237.253.2
+0 24 4 7032 2 1389114777
+/crfit/!svn/vcc/default
+10.255.87.11
+0 49 0 8428 13 1389130226
+/
+54.201.198.33
+0 1 0 278 1 1389128133
+/
+222.73.76.253
+0 1 0 375 1 1389108236
+/monit/apache2
+218.77.79.34
+0 1 0 0 1 1389112066
+-
+220.181.132.218
+0 1 0 278 1 1389104411
+/
+112.232.69.31
+0 1 0 289 0 0
+-
+203.67.83.30
+0 1 1 0 1 1389077751
+/
+# End Of Table - sites (daily)
+# -referrers- 
+http://124.207.205.87/monit/svn
+0 1
+http://124.207.205.87/svn/js/datepicker/My97DatePicker.htm
+0 26
+http://124.207.205.87/svn/RmLogAction.do
+0 2
+http://124.207.205.87/monit/_viewlog
+0 15
+http://124.207.205.87/svn/jsp/welcome.jsp
+0 2
+http://124.207.205.87/svn/js/datepicker/skin/whyGreen/datepicker.css
+0 2
+http://124.207.205.87/svn/jsp/funcTree.jsp
+0 42
+http://124.207.205.87/svn/css/custom/css.jsp
+0 3
+http://124.207.205.87/svn/jsp/include/header.jsp
+0 23
+http://124.207.205.87/monit/apache
+0 13
+http://124.207.205.87/svn
+0 2
+http://124.207.205.87/svn/jsp/index0.jsp
+0 2
+http://124.207.205.87/
+0 8
+http://124.207.205.87/svn/JobMonitorAction.do
+0 3
+http://124.207.205.87/mobile/mobile20101104Bak/50GanS/chinamobileTD/
+0 1
+- (Direct Request)
+0 25939
+http://124.207.205.87/mobile/
+0 1
+http://124.207.205.87/svn/js/json2.js
+0 6
+http://124.207.205.87/svn/js/jquery.js
+0 6
+http://10.20.8.121/svn/
+0 16
+http://124.207.205.87/svn/JobTypeAction.do
+0 2
+http://124.207.205.87/svn/js/rm-tools.js
+0 6
+http://124.207.205.87/svn/RmUserSvnAction.do
+0 5
+http://124.207.205.87/monit/apache2
+0 54
+http://124.207.205.87/svn/JobDeployAction.do
+0 2
+http://124.207.205.87/svn/jsp/frameMid.jsp
+0 4
+http://124.207.205.87/mobile/mobile20101104Bak/
+0 1
+http://124.207.205.87/svn/JobLogAction.do
+0 3
+http://124.207.205.87/fm/
+0 1
+http://124.207.205.87/monit/
+0 72
+http://124.207.205.87/scd/
+0 1
+http://10.20.8.121/svn/js/datepicker/My97DatePicker.htm
+0 7
+http://124.207.205.87/svn/
+0 101
+http://124.207.205.87/svn/jsp/info.jsp
+0 8
+http://124.207.205.87/svn/jsp/main.jsp
+0 16
+http://124.207.205.87/fm/资金二期/
+0 1
+http://124.207.205.87/mobile/mobile20101104Bak/50GanS/
+0 4
+http://124.207.205.87/svn/js/rm-validate.js
+0 6
+http://124.207.205.87/svn/js/rm-behavior.js
+0 6
+http://124.207.205.87/svn/jsp/index.jsp
+0 8
+http://124.207.205.87/svn/js/datepicker/WdatePicker.js
+0 6
+http://124.207.205.87/svn/RmLoginAction.do
+0 13
+http://124.207.205.87/svn/RmUserAction.do
+0 2
+http://124.207.205.87/svn/js/jquery.form.js
+0 6
+http://124.207.205.87/monit/_runtime
+0 7
+http://124.207.205.87/mobile/mobile20101104Bak/50GanS/chinamobileTD
+0 2
+http://124.207.205.87/fm/资金二期/6-二期初验文档/
+0 1
+http://124.207.205.87/analyse/
+0 2
+# End Of Table - referrers
+# -agents- 
+SVN/1.6.2 SVNKit/1.3.0 (http://svnkit.com/) r5847
+0 60
+SVN/1.8.3 (x64-microsoft-windows) serf/1.3.1 TortoiseSVN-1.8.2.24708
+0 9
+Wget/1.13.4 (linux-gnu)
+0 3
+SVN/1.7.6 neon/0.29.6
+0 208
+SVN/1.6.15 (r1038135)/TortoiseSVN-1.6.12.20536 neon/0.29.5
+0 1508
+SVN/1.7.8/TortoiseSVN-1.7.11.23600 neon/0.29.6
+0 302
+SVN/1.6.3 (r38063) neon/0.28.2
+0 2
+SVN/1.6.5 (r38866)/TortoiseSVN-1.6.5.16974 neon/0.28.6
+0 502
+SVN/1.6.5 (r38866) neon/0.28.6
+0 54
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1
+0 39
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36
+0 117
+SVN/1.7.4/javahl neon/0.29.6
+0 817
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+0 4
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1
+0 2
+SVNKit 1.1.4 (http://svnkit.com/) r3248
+0 721
+SVN/1.7.8 SVNKit/1.7.8 (http://svnkit.com/) r9538_v20130107_2001
+0 369
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.11 (KHTML, like Gecko) chrome/22.0.1190.0 Safari/536.11
+0 5
+Mozilla/4.0
+0 74
+SVN/1.7.2/TortoiseSVN-1.7.2.22327 neon/0.29.6
+0 28
+SVN/1.6.17 (r1128011) neon/0.29.6
+0 2782
+SVN/1.7.5 SVNKit/1.7.5 (http://svnkit.com/) r9306_v20120621_1817
+0 2942
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.1) Gecko/2008092215 Firefox/3.0.1 Orca/1.1 beta 3
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+0 2
+python-requests/2.1.0 CPython/2.7.3 Linux/3.5.0-23-generic
+0 1
+SVN/1.7.6/TortoiseSVN-1.7.8.23174 neon/0.29.6
+0 22
+Morfeus Fucking Scanner
+0 1
+User-Agent\x09Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+0 1
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Win64; x64; Trident/7.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .N
+0 5
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31
+0 1
+SVN/1.8.5 (x86-microsoft-windows) serf/1.3.2 TortoiseSVN-1.8.4.24972
+0 1018
+SVN/1.7.5/javahl neon/0.29.6
+0 64
+SVN/1.8.1 (x86-microsoft-windows) serf/1.3.0 TortoiseSVN-1.8.1.24570
+0 588
+SVN/1.6.13 (r1002816) neon/0.29.4
+0 201
+SVN/1.8.0 (x64-microsoft-windows) serf/1.2.1 TortoiseSVN-1.8.0.24401
+0 211
+SVN/1.8.5 (x86-microsoft-windows) serf/1.3.2
+0 242
+SVN/1.6.16 (SlikSvn/1.6.16) X64 neon/0.29.5
+0 48
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)
+0 18
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; 360space)
+0 19
+SVN/1.4.5 (r25188) neon/0.26.3
+0 1344
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36 LBBROWSER
+0 10
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 2
+SVN/1.7.5/TortoiseSVN-1.7.7.22907 neon/0.29.6
+0 113
+Mozilla/5.0 (compatible; Konqueror/2.2.2; Linux 2.4.14-xfs; X11; i686)
+0 1
+SVN/1.6.9 (r901367)/TortoiseSVN-1.6.7.18415 neon/0.29.3
+0 152
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36 LBBROWSER
+0 1
+SVN/1.7.9/javahl neon/0.29.6
+0 419
+SVN/1.7.4 SVNKit/1.7.4-v1 (http://svnkit.com/) r9190_v20120510_1337
+0 487
+SVN/1.6.6 (r40053)/TortoiseSVN-1.6.6.17493 neon/0.28.6
+0 10
+Opera/9.0 (Windows NT 5.1; U; en)
+0 1
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CL
+0 7
+SVN/1.6.15 (r1038135) neon/0.29.5
+0 3483
+SVN/1.7.7/TortoiseSVN-1.7.10.23359 neon/0.29.6
+0 7
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CL
+0 11
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36
+0 150
+SVN/1.6.17 (r1128011)/TortoiseSVN-1.6.16.21511 neon/0.29.6
+0 10
+SVN/1.4.4 (r25188) neon/0.26.3
+0 48
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Win64; x64; Trident/4.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .N
+0 10
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36 SE 2.X MetaSr 1.0
+0 6
+SVN/1.7.10/javahl neon/0.29.6
+0 1375
+SVN/1.6.12 (r955767) neon/0.29.3
+0 189
+SVN/1.3.1 (r19032) neon/0.25.5
+0 677
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.11 (KHTML, like Gecko) DumpRenderTree/0.0.0.0 Safari/536.11
+0 10
+SVN/1.8.1 (x86-microsoft-windows) serf/1.3.0
+0 94
+Mozilla/5.0 (compatible; SnapPreviewBot; en-US; rv:1.8.0.9) Gecko/20061206 Firefox/1.5.0.9
+0 1
+SVN/1.6.4 (r38063) neon/0.28.2
+0 116
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17 SE 2.X MetaSr 1.0
+0 6
+SVN/1.7.6/TortoiseSVN-1.7.9.23248 neon/0.29.6
+0 1003
+SVN/1.7.8/javahl neon/0.29.6
+0 241
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.3
+0 4
+SVN/1.7.10/TortoiseSVN-1.7.13.24257 neon/0.29.6
+0 1118
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.3
+0 461
+curl/7.26.0
+0 4
+ZmEu
+0 18
+SVN/1.8.1 (x64-microsoft-windows) serf/1.3.0 TortoiseSVN-1.8.1.24570
+0 66
+SVN/1.7.10 neon/0.29.6
+0 286
+Mozilla/3.0 (compatible; Indy Library)
+0 4
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)
+0 1
+SVN/1.5.7 (r36142) neon/0.28.2
+0 925
+Mozilla/5.0 (Windows NT 6.1; rv:26.0) Gecko/20100101 Firefox/26.0
+0 208
+SVN/1.6.15 SVNKit/1.3.5 (http://svnkit.com/) r7406
+0 110
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0
+0 3
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; InfoPath.2)
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36 LBBROWSER
+0 3
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+yuyangk
+0 106 106 119729 13 1389114052
+hanxl
+0 148 148 150247400 4 1389116614
+houyp1
+0 16 16 43358 1 0
+yaozh
+0 3 3 28031339 2 1389002276
+huangtaoa
+0 8 8 381472836 4 1389007341
+lihuiw
+0 204 204 127118179 3 1388763048
+lianyi1
+0 2 2 45781 1 1388924795
+zhangdfuf
+0 66 66 68653 3 1389102551
+zhangganga
+0 98 98 63941947 8 1389102705
+zhangjqc
+0 32 32 489205693 8 1389024791
+liuxluf
+0 37 37 111025 1 1389111998
+wangsy2
+0 107 107 115543 6 1388998777
+chukuouf
+0 74 74 253767 6 1389127500
+zhangyuuf
+0 16 16 40117367 1 1389086101
+panpan1
+0 26 26 9221 3 1389105460
+zhangzig
+0 6 6 284455576 3 1388852355
+linsf
+0 6 6 1813 2 1389115386
+gaozya
+0 4 4 1218 1 1389102895
+wangxcb
+0 4 4 1711 1 1388750543
+dengsh1
+0 2 2 126 1 1389093340
+liule3
+0 13 13 45127 3 1389027900
+liyzuf
+0 188 188 54749784 14 1389050307
+hanxyuf
+0 12 12 19008 2 1389037326
+qianjy
+0 166 166 328012 3 1389108578
+jiangqx
+0 35 35 5342 1 1389021391
+sunhaox
+0 525 525 2643736 16 1389093438
+wangkaic
+0 304 304 3167506 5 1389128963
+chenzwa
+0 87 87 371628 4 1388770555
+mugm
+0 103 103 152158308 4 1389026918
+zhangbyuf
+0 8 8 104942 1 1388763863
+wangjhuf
+0 8 8 2222 1 1389104685
+yanjz
+0 88 88 39405 3 1389114963
+chenlyd
+0 7 7 941 2 1389026644
+fengcmuf
+0 61 61 139948 4 1389114940
+yangsluf
+0 2 2 5726 1 1389106320
+xudy
+0 2 2 642 1 0
+yuegyuf
+0 24 24 46058 2 1388768351
+wangcbuf
+0 1 1 13528 1 1389022274
+liyqa
+0 34 34 62364 3 1389111336
+baiyua
+0 2 2 866 1 1389083831
+wucfuf
+0 9 9 1881 3 1389114664
+wujba
+0 54 54 56531 1 1389115323
+zouqh
+0 94 94 155119611 4 1388743682
+fuhw
+0 2 2 8312 1 1389113517
+caokl
+0 4 4 381420834 2 1388930245
+zhangleiuf
+0 12 12 19647 3 1389104134
+wangluu
+0 13 13 68758 4 1389114777
+zengxduf
+0 249 249 1106579 9 1389109972
+zuohw1
+0 156 156 139608 7 1389043003
+zhanghjh
+0 8 8 6402 3 1389110914
+wunaa
+0 15 15 2952 3 1389104463
+liying
+0 56 56 75468 7 1389117136
+jinxxuf
+0 20 20 19885 1 1388772411
+zhangjhuf
+0 20 20 3587 1 1389112412
+zhangzz
+0 10 10 8283 2 1389117171
+yaoww1
+0 20 20 2516304 6 1389110043
+wangdh
+0 433 433 48046099 12 1389117530
+dxm
+0 6 6 37967 2 1389087581
+admin
+0 581 581 2717783 7 1389130254
+peijg
+0 12 12 90526177 1 1388738624
+liujwa
+0 26 26 15259 2 1389091514
+longyu1
+0 216 216 5321285 6 1389112258
+dufenga
+0 321 321 1186663 4 1388767550
+wuhdauf
+0 86 86 1094606 8 1389052413
+zhangbink
+0 16 16 8938 2 1389091060
+# End Of Table - usernames

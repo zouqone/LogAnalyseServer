@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+/* ======================主页面============================ */
+.ticket_page_div{}
+.ticket_table{margin:5px;width: 500px;height: 500px;border: 1px solid #BBBBBB;}
+.ticket_tr{border: 1px solid #BBBBBB;}
+.ticket_td{text-align:center;border: 1px solid #BBBBBB;}
+.ticket_title{height: 40px;}
+.ticket_button{width: 100px;}
+.ticket_input_button{border: 1px solid #BBBBBB;width: 50px;height: 26px;cursor: pointer;}
+.ticket_input_text{width: 100%;height: 30px;border: 0px;}
+.ticket_info{height: 200px;}
+.ticket_textarea_info{margin: 0;width: 100%;height: 200px;}
+
+
+
+
+
+
+
+
+
+
+

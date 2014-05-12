@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>MakeCode</display-name>
+	<!-- 连接内置h2数据库时，需初始化连接配置信息 -->
+	<!-- <listener>
+	   <listener-class>cn.log.analyse.listener.DBInitPath</listener-class>
+    </listener> -->
+
+	<!-- Spring Log4j Listener -->
+    <context-param>  
+        <param-name>contextConfigLocation</param-name>  
+        <param-value>classpath:applicationContext.xml,classpath:/cn/log/config/spring/applicationContext*.xml</param-value>  
+    </context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>cn.log.analyse.filter.LoginFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>*.html,*.jsp</url-pattern>
+	</filter-mapping>
+	
+	
+	
+	<welcome-file-list>
+		<welcome-file>/login/login.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
