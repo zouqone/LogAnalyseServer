@@ -54,7 +54,7 @@ function openHellow2(){
 </script>
 
 </head>
-<body onload="initPage();">
+<body onload="">
 <input type="button" value="openWinBox" onclick="openWin()">
 <input type="button" value="ceateWinBox1" onclick="openHellow1()">
 <input type="button" value="ceateWinBox2" onclick="openHellow2()">

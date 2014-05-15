@@ -107,7 +107,8 @@ function freshFunctionNode(){
 			<tr class="tool_tr">
 				<td class="tool_left_td" id="tool_left_td_id">
 					<a class="tool_a"  onclick="freshFunctionNode()" title="刷新">
-						<div  class="fresh_div" style="width: 24px;height: 24px;"></div>
+						<!-- <div  class="fresh_div" style="width: 24px;height: 24px;"></div> -->
+						&nbsp;&nbsp;刷新
 					</a>
 					<!-- <a class="tool_a"  onclick="setItem(this,'log_item_id','ticket',data)" >车票管理</a> -->
 					<!-- <a class="tool_a"  onclick="setItem(this,'log_item_id','svn',svn_data)" >svn管理</a> -->

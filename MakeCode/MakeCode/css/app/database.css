@@ -34,9 +34,14 @@
 .node_td_input{text-align: left;width: 150px;padding-left: 0px;}
 .node_td_input input{width: 97%;border: 0px;padding-left: 3px;border-bottom: 0px solid #BBBBBB;}
 
+/* 数据库 表*/
+.tableVoCss{border: 1px solid #BBBBBB;border-collapse: collapse;font-size: 12px;}
+.tableVoTrCss{border: 1px solid #BBBBBB;height: 24px;}
+.tableVoThCss{height: 26px;}
+.tableVoTrTdCss{border: 1px solid #BBBBBB;}
 
-
-
+.tvLeft{text-align: center;padding-left: 3px;width: 80px;}
+.tvRight{text-align: center;padding-left: 3px;}
 
 
 

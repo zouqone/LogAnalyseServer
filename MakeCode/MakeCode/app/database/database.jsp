@@ -16,6 +16,7 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/zTree_v3/jquery.ztree.excheck-3.5.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/zTree_v3/jquery.ztree.exhide-3.5.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-ui-1.10.4.custom.js"></script>
 
 <script type="text/javascript">
 var baseUrl = '<%=request.getContextPath()%>';
@@ -41,7 +42,7 @@ jQuery(document).ready(function(){
 		    ,callback: {   beforeClick: beforeClickZtree  }  //,onCheck: onCheck
 		   
 		}; 
-	
+	 conn();
 });
 
 function getDbInfoToTree(){
@@ -85,9 +86,11 @@ function DBNameListToName(json){
 	var nodes = [];
 	for(var i in json){
 		var e = json[i];
+		e= jQuery.trim(e);
 		node = {};
 		node.id = e;
 		node.name = e;
+		node.icon = baseUrl+"/images/db/db.png";
 		//node.open = false;
 		node.hasChild = true;
 		node.isParent = true;
@@ -112,8 +115,11 @@ function DBToTree(json){
 			var node = {};
 			node.id = tableVo.table_name;
 			node.name = tableVo.table_name;
+			node.comment = tableVo.comment;
+			node.tableVo = tableVo;
 			var level3 = columnListToNodes(tableVo);
 			node.children = level3;
+			node.icon = baseUrl+"/images/db/table.png";
 			level2.push(node);
 		}
 		rootNode.children = level2;
@@ -133,6 +139,7 @@ function columnListToNodes(tableVo){
 			var node = {};
 			node.id = columnVo.field;
 			node.name = columnVo.field;
+			node.icon = baseUrl+"/images/db/column.png";
 			nodes.push(node);
 		}
 	}
@@ -143,6 +150,38 @@ function columnListToNodes(tableVo){
 function beforeClickZtree(treeId, treeNode){  
     //alert(treeNode.id+","+treeNode.name); 
     var tableObj = jQuery("#node_table_id");
+    var contentView = jQuery("#contentView");
+    var tableDiv = jQuery("#tableDivId");
+    var formTemplate = tableDiv.children("form")[0];
+    
+    if(treeNode.level==1){
+    	var tableVo = treeNode.tableVo;
+    	var columnVoList = tableVo.columnVoList;
+    	var formVo = jQuery(formTemplate).clone();
+    	formVo = loadForm(tableVo,formVo);
+    	formVo.appendTo(tableDiv);
+    	$( formVo ).draggable({containment:"window"});
+    }
+}
+
+function loadForm(tableVo,formVo){
+	var tablename = tableVo.table_name;
+	jQuery("[name='tablename']",formVo).html(tablename);
+	var tableObj = jQuery(formVo).children()[0];
+	var columnVoList = tableVo.columnVoList;
+	if(columnVoList!=null&&columnVoList.length>0){
+		var columnTr = jQuery("[name='column']",formVo);
+		for(var i = 0 ; i < columnVoList.length ; i++){
+			var columnVo = columnVoList[i];
+			var trObj =  columnTr.clone();
+			var tds = jQuery(trObj).children("td");
+			jQuery(tds[0]).html(columnVo.field);
+			jQuery(tds[1]).html(columnVo.type);
+			columnTr.before(trObj);
+		}
+		columnTr.remove();
+	}
+	return formVo;
 }
 
 
@@ -203,7 +242,25 @@ function beforeClickZtree(treeId, treeNode){
 						</ul>
 					</div>
 				</td>
-				<td class="log_page" style="vertical-align: top;width: 620px;">
+				<td id="contentView" class="log_page" style="vertical-align: top;width: 620px;">
+				
+				
+				<div id="tableDivId" >
+					<form action="">
+						<table class="tableVoCss" style="width: 200px;height: 200px;">
+							<tr >
+								<td class="tableVoTrCss tableVoThCss" colspan="100%">
+									<div name="tablename" style="width: 100%;height: 25px;font-weight: bolder;text-align: center;"></div>
+								</td>
+							</tr>
+							<tr class="tableVoTrCss" name="column">
+								<td class="tableVoTrTdCss tvLeft"></td>
+								<td class="tableVoTrTdCss tvRight"></td>
+							</tr>
+							<tr></tr>
+						</table>
+					</form>
+				</div>
 					<form name="curform">
 					<table class="node_table" id="cur_node_table_id" style="display: ;">
 						<tr class="node_tr" style="display: none">
