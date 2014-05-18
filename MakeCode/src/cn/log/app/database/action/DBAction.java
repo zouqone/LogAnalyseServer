@@ -10,10 +10,19 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import net.sf.json.JsonConfig;
 
 import cn.log.app.database.service.IDBService;
+import cn.log.app.database.vo.ColumnVo;
+import cn.log.app.database.vo.ConfigVo;
 import cn.log.app.database.vo.DatabaseVo;
+import cn.log.app.database.vo.TableVo;
 import cn.log.tool.util.ActionHelp;
 import cn.log.tool.util.FileHelp;
 import cn.log.tool.web.AbstractBaseAction;
@@ -35,7 +44,6 @@ public class DBAction extends AbstractBaseAction implements
 	public IDBService mysqlDBService;
 	
 	public DatabaseVo databaseVo;
-	
 	
 	
 	/**
@@ -151,6 +159,32 @@ public class DBAction extends AbstractBaseAction implements
 		
 	}
 	
+	public void makeCode(){
+		String tableListStr = request.getParameter("tableList");
+		System.out.println(tableListStr);
+		
+		try{
+		JSONArray jsonArray = JSONArray.fromObject(tableListStr);
+		for (Object object : jsonArray) {
+			String config = ((JSONObject)object).getString("configVo");
+			//((JSONObject)object).remove("configVo");
+			JsonConfig jsonConfig = new JsonConfig();
+			//jsonConfig.setRootClass(TableVo.class);
+			Map classMap = new HashMap();
+	        classMap.put("columnVoList", ColumnVo.class);
+	        classMap.put("configVo", ConfigVo.class);
+			TableVo tableVo = (TableVo) JSONObject.toBean((JSONObject) object,TableVo.class,classMap);
+			
+			System.out.println(config);
+			System.out.println(object);
+		}
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+		ActionHelp.WriteStrToOut(response, "1");
+		
+	}
 	/**
 	 * @return the serialversionuid
 	 */

@@ -918,7 +918,13 @@ function getStrFormIndex(str,s,index){
 }
 //event.srcElement ? event.srcElement : event.target;
 
-
+function firstCharUpperCase(str){
+	if(str == null){
+		return str;
+	}
+	str = str.replace(/(^|\s+)\w/g,function(s){return s.toUpperCase();});
+	return str;
+}
 
 
 

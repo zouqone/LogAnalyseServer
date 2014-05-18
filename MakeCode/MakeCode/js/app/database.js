@@ -1,5 +1,31 @@
 
+function showConnInfo(obj){
+	var display = jQuery('#dbInfo_conn_id').css('display');
+	if(display == 'none'){
+		jQuery('#dbInfo_conn_id').css('display','');
+		jQuery(obj).val('隐藏链接');
+	}else{
+		jQuery('#dbInfo_conn_id').css('display','none');
+		jQuery(obj).val('显示连接');
+	}
+}
 
+function showMakeCode(obj){
+	var display = jQuery('#dbInfo_makeCode_div_id').css('display');
+	if(display == 'none'){
+		jQuery('#dbInfo_makeCode_div_id').css('display','');
+		//jQuery(obj).val('隐藏链接');
+	}else{
+		jQuery('#dbInfo_makeCode_div_id').css('display','none');
+		//jQuery(obj).val('显示连接');
+	}
+}
+
+function getDbInfoToTree(){
+	var dbInfoForm = jQuery("#dbInfo_id");
+	var dbInfoJson = getInputItems(dbInfoForm[0]);
+	return dbInfoJson;
+}
 
 
 function onCheck(e, treeId, treeNode) {
@@ -77,13 +103,307 @@ function getSelectedNodes(treeId){
 
 
 
+function filter(treeId, parentNode, childNodes) {
+	if (!childNodes) return null;
+	for (var i=0, l=childNodes.length; i<l; i++) {
+		childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
+	}
+	var node = DBToTree(childNodes);
+	childNodes = node.children;
+	return childNodes;
+}
+
+function DBNameListToName(json){
+	var dbInfoForm = jQuery("#dbInfo_id");
+	var dbInfoJson = getInputItems(dbInfoForm[0]);
+	if(json == null){
+		return [];
+	}
+	var nodes = [];
+	for(var i in json){
+		var e = json[i];
+		e= jQuery.trim(e);
+		node = {};
+		node.id = e;
+		node.name = e;
+		node.icon = baseUrl+"/images/db/db.png";
+		//node.open = false;
+		node.hasChild = true;
+		node.isParent = true;
+		nodes.push(node);
+	}
+	return nodes;
+}
+
+function DBToTree(json){
+	if(json == null){
+		return [];
+	}
+	var rootNode = {};
+	var zNodes = [rootNode];
+	var tableVoList = json.tableVoList;
+	rootNode.id=json.name;
+	rootNode.name=json.name;
+	if(tableVoList!=null&&tableVoList.length>0){
+		var level2 = [];
+		for(var i in tableVoList){
+			var tableVo = tableVoList[i];
+			var node = {};
+			node.id = tableVo.table_name;
+			node.name = tableVo.table_name;
+			node.comment = tableVo.comment;
+			node.tableVo = tableVo;
+			var level3 = columnListToNodes(tableVo);
+			node.children = level3;
+			node.icon = baseUrl+"/images/db/table.png";
+			level2.push(node);
+		}
+		rootNode.children = level2;
+	}
+	return rootNode;
+}
+
+function columnListToNodes(tableVo){
+	if(tableVo == null){
+		return [];
+	}
+	var columnVoList = tableVo.columnVoList;
+	var nodes = [];
+	if(columnVoList!=null&&columnVoList.length>0){
+		for(var i in columnVoList){
+			var columnVo = columnVoList[i];
+			var node = {};
+			node.id = columnVo.field;
+			node.name = columnVo.field;
+			node.icon = baseUrl+"/images/db/column.png";
+			nodes.push(node);
+		}
+	}
+	return nodes;
+}
 
 
 
 
+//单击事件  
+function beforeClickZtree(treeId, treeNode){  
+    //alert(treeNode.id+","+treeNode.name); 
+    if(treeNode.level==1){
+    	
+        var tableVo = treeNode.tableVo;
+        var table_name = tableVo.table_name;
+        var dbName = tableVo.dbName;
+        
+        var contentViewDiv = jQuery("#contentViewDiv");
+        var tableDiv = jQuery("#tableDivId");
+        var formTemplate = tableDiv.children("div[name='div_vo']")[0];
+        var current_div = jQuery('[name="'+table_name+'"]',contentViewDiv);
+        var current_db = contentViewDiv.attr('name');
+        if(current_db!=null&&current_db != dbName){
+        	var msg = "是从数据库"+current_db+"否切换到数据"+dbName+"?";
+        	  //如果不是当前数据库，则清空当前区域所有的表
+        	  if(confirm(msg)){
+        		  //contentViewDiv.empty();
+        		  var contentViewTable = jQuery('#contentViewTable');
+        		  var templateTr = jQuery("tr[name='dbTable']",contentViewTable);
+        		  while(templateTr.prev().length>0){
+        			  templateTr.prev().remove();
+        		  }
+        	  }else{
+        		  return ;
+        	  }
+        	
+        }
+        jQuery("#dbNameID").html(dbName);
+        contentViewDiv.attr('name',dbName);
+        
+        if(current_div !=null&&current_div.length>0){
+        	return ; //如果表已经存在，则不在创建该表
+        }
+        
+    	var formVo = jQuery(formTemplate).clone();
+    	formVo.attr("name",table_name);
+    	formVo = loadForm(tableVo,formVo);
+    	
+    	formVo.appendTo(contentViewDiv);
+    	
+    	var dbConfigureInput = jQuery("[name=dbConfigure]",formVo);
+    	var dbInfo_makeCode = jQuery('#dbInfo_makeCode_div_id');
+    	var configureValue = dbConfigureInput.val();
+    	if(configureValue == null || configureValue == ''){
+    		clearConfigTemplate(dbInfo_makeCode);
+    		initMakeCodeConfig(table_name,dbInfo_makeCode);
+    		var data = getConfigureInfo(dbInfo_makeCode);
+			var configureStr = JsonToString(data);
+			dbConfigureInput.val(configureStr);
+			clearConfigTemplate(dbInfo_makeCode);
+    	}
+    	var handleObj = jQuery('[name="head"]',formVo)[0];
+    	var handle_id = "handle_"+table_name;
+    	handleObj.id= handle_id;
+    	$( formVo ).draggable({containment: contentViewDiv,handle :handleObj});
+    	initTablePosition(contentViewDiv,formVo);
+    	
+    }
+}
+
+function initTablePosition(contentViewDiv,formVo){
+	var contentViewTable = jQuery('#contentViewTable');
+	var templateTr = jQuery("tr[name='dbTable']",contentViewTable);
+	var widthLen = 4;
+	var num = jQuery("div[dbType='table']",contentViewTable).length;
+	
+	var cols = num%widthLen+1;
+	var rows = Math.round(num/widthLen)+1;
+	
+	if(num%widthLen==0){
+		var trObj = templateTr.clone();
+		templateTr.before(trObj);
+		trObj.attr("name","tr"+rows);
+	}
+	var currentTrObj = templateTr.prev("tr");
+	var tdObj = jQuery("[name='td"+cols+"']",currentTrObj);
+	tdObj.attr("isNull","false");
+	formVo.appendTo(tdObj);
+}
+
+function delTableNode(obj){
+	var formDiv = jQuery(obj).parents("[dbType='table']")[0];
+	var ctd = jQuery(formDiv).parent();
+	jQuery(formDiv).remove();
+	
+	var contentViewTable = jQuery('#contentViewTable');
+	var templateTr = jQuery("tr[name='dbTable']",contentViewTable);
+	var lastTr = jQuery(templateTr).prev();
+	var noNullTdNo = jQuery("[isNull='false']",lastTr).length;
+	if(noNullTdNo >= 1){
+		var lastTd = jQuery("[isNull='false']",lastTr)[noNullTdNo-1];
+		jQuery(lastTd).children().appendTo(ctd);
+		jQuery(lastTd).attr("isNull","true");
+		if(noNullTdNo <= 1){
+			lastTr.remove();
+		}
+	}
+}
+
+function loadForm(tableVo,formVo){
+	//var tablename = tableVo.table_name;
+	//jQuery("[name='tablename']",formVo).html(tablename+"("+tableVo.comment+")");
+	//var titleTr = jQuery("[name='tablename']",formVo);
+	var table_name = jQuery("[name='table_name']",formVo);
+	var tcomment = jQuery("[name='tcomment']",formVo);
+	table_name.val(tableVo.table_name);
+	table_name[0].size = table_name[0].value.length;
+	tcomment.val(tableVo.comment);
+	//var tableObj = jQuery(formVo).children()[0];
+	var columnVoList = tableVo.columnVoList;
+	if(columnVoList!=null&&columnVoList.length>0){
+		var columnTr = jQuery("[name='column']",formVo);
+		for(var i = 0 ; i < columnVoList.length ; i++){
+			var columnVo = columnVoList[i];
+			var trObj =  columnTr.clone();
+			//var tds = jQuery(trObj).children("td");
+			//jQuery(tds[0]).html(columnVo.field);
+			//jQuery(tds[1]).html(columnVo.type);
+			//jQuery(tds[2]).html(columnVo.comment);
+			var fieldInput = jQuery('[name="field"]',trObj);
+			var typeInput = jQuery('[name="type"]',trObj);
+			var commentInput = jQuery('[name="comment"]',trObj);
+			fieldInput.val(columnVo.field);
+			typeInput.val(columnVo.type);
+			commentInput.val(columnVo.comment);
+			columnTr.before(trObj);
+		}
+		columnTr.remove();
+	}
+	return formVo;
+}
 
 
+function initMakeCodeConfig(tableName,obj){
+	var name = tableName.replace(/(^|\s+)\w/g,function(s){return s.toUpperCase();});
+	var checkObjs = jQuery('input[type="checkbox"]',obj);
+	checkObjs.attr("checked","checked");
+	jQuery('input[type="text"][name="dao"]',obj).val("I"+name+"VoDao");
+	jQuery('input[type="text"][name="service"]',obj).val("I"+name+"VoService");
+	jQuery('input[type="text"][name="web"]',obj).val(""+name+"VoAction");
+	jQuery('input[type="text"][name="vo"]',obj).val(""+name+"Vo");
+	jQuery('input[type="text"][name="util"]',obj).val(""+name+"VoUtil");
+	jQuery('input[type="text"][name="configure"]',obj).val(""+name+"VoConfigure");
+	jQuery('input[type="text"][name="jsp"]',obj).val(""+name+"VoList");
+	
+	jQuery('input[type="text"][name="packagePath"]',obj).val("cn.log.app."+name.toLocaleLowerCase()+"");
+	jQuery('input[type="text"][name="strutsxml"]',obj).val("cn/log/config/struts/struts"+name+"Vo.xml");
+	jQuery('input[type="text"][name="springxml"]',obj).val("cn/log/config/spring/applicationContext-"+name+"Vo.xml");
+	jQuery('input[type="text"][name="jspPath"]',obj).val("app/"+name+"VoList");
+	
+	jQuery('input[type="text"][name="images"]',obj).val("images/app/"+name+"Vo");
+	jQuery('input[type="text"][name="css"]',obj).val("css/app/"+name+"Vo");
+	jQuery('input[type="text"][name="js"]',obj).val("js/app/"+name+"Vo");
+	
+}
 
+function setMakeCodeConfig(data,obj){
+	var checkObjs = jQuery('input[type="checkbox"]',obj);
+	checkObjs.attr("checked","checked");
+	jQuery('input[type="text"][name="dao"]',obj).val(data.dao);
+	jQuery('input[type="text"][name="service"]',obj).val(data.service);
+	jQuery('input[type="text"][name="web"]',obj).val(data.web);
+	jQuery('input[type="text"][name="vo"]',obj).val(data.vo);
+	jQuery('input[type="text"][name="util"]',obj).val(data.util);
+	jQuery('input[type="text"][name="configure"]',obj).val(data.configure);
+	jQuery('input[type="text"][name="jsp"]',obj).val(data.jsp);
+	
+	jQuery('input[type="text"][name="packagePath"]',obj).val(data.packagePath);
+	jQuery('input[type="text"][name="strutsxml"]',obj).val(data.strutsxml);
+	jQuery('input[type="text"][name="springxml"]',obj).val(data.springxml);
+	jQuery('input[type="text"][name="jspPath"]',obj).val(data.jspPath);
+	
+	jQuery('input[type="text"][name="images"]',obj).val(data.images);
+	jQuery('input[type="text"][name="css"]',obj).val(data.css);
+	jQuery('input[type="text"][name="js"]',obj).val(data.js);
+}
+
+function clearConfigTemplate(obj){
+	if(obj!=null){
+		jQuery('input[type="checkbox"][checked="checked"]',obj).removeAttr("checked");
+		jQuery('input[type="text"]',obj).val(null);
+	}
+}
+function getConfigureInfo(obj){
+	var checkedObjs = jQuery('input[type="checkbox"][checked="checked"]',obj);
+	var json = {};
+	for(var i = 0; i < checkedObjs.length ; i++){
+		var checkedObj = checkedObjs[i];
+		var propetyName = jQuery(checkedObj).attr("name");
+		var inputObj = jQuery('input[type="text"][name="'+propetyName+'"]',obj);
+		json[propetyName]=inputObj.val();
+	}
+	return json;
+}
+
+/**
+ * 获取表格中所有信息
+ * @param obj
+ * @returns tableVo
+ */
+function getTableInfo(obj){
+	var trObjs = jQuery("[name='column']",obj);
+	var table_name = jQuery("[name='table_name']",obj).val();
+	var tcomment = jQuery("[name='tcomment']",obj).val();
+	var tableVo = {};
+	var data = [];
+	for(var i = 0 ; i<trObjs.length ; i++){
+		var json = {};
+		var trObj = trObjs[i];
+		json = getInputItems(trObj);
+		data.push(json);
+	}
+	tableVo.table_name = table_name;
+	tableVo.comment = tcomment;
+	tableVo.columnVoList = data;
+	return tableVo;
+}
 
 
 

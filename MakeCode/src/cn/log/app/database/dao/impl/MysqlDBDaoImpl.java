@@ -114,7 +114,7 @@ public class MysqlDBDaoImpl implements IDBDao {
 						
 						object = rs.getObject(IDBconstant.TYPE_NAME);
 						object = object==null?"":object;
-						columnVo.setType(object.toString());
+						columnVo.setType(object.toString().toLowerCase());
 						//columnVo.setColumnJavaType(rsmd.getColumnClassName(1));
 						
 						object = rs.getObject(IDBconstant.REMARKS);

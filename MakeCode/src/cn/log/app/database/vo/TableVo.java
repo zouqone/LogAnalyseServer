@@ -78,6 +78,12 @@ public class TableVo {
 	private String foreignKeyTableName;
 	
 	/**
+	 * 生成代码所需的配置信息
+	 */
+	private ConfigVo configVo;
+	
+	
+	/**
 	 * 
 	 */
 	public TableVo() {
@@ -264,6 +270,20 @@ public class TableVo {
 	 */
 	public void setForeignKeyTableName(String foreignKeyTableName) {
 		this.foreignKeyTableName = foreignKeyTableName;
+	}
+
+	/**
+	 * @return the configVo
+	 */
+	public ConfigVo getConfigVo() {
+		return configVo;
+	}
+
+	/**
+	 * @param configVo the configVo to set
+	 */
+	public void setConfigVo(ConfigVo configVo) {
+		this.configVo = configVo;
 	}
 
 	

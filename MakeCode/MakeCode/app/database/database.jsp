@@ -8,14 +8,19 @@
 <link href="<%=request.getContextPath()%>/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/demo.css" type="text/css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/app/database.css" type="text/css">
+<link href="<%=request.getContextPath()%>/css/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/app/database.js"></script>
 
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/zTree_v3/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/zTree_v3/jquery.ztree.core-3.5.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/zTree_v3/jquery.ztree.excheck-3.5.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/zTree_v3/jquery.ztree.exhide-3.5.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery.form.js"></script>
+
+
+
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-ui-1.10.4.custom.js"></script>
 
 <script type="text/javascript">
@@ -27,6 +32,7 @@ var functionUpdateAction = baseUrl+"/FunctionAction_EditFunction";
 var functionDelAction = baseUrl+"/FunctionAction_delFunction";
 var dbAction = baseUrl+"/DBAction_getDBInfo";
 var dbNameAction = baseUrl + "/DBAction_getAllDBName";
+var dbMakeCodeAction = baseUrl + "/DBAction_makeCode";
 var treeId = "treeRootNode";
 var optStatus = null;
 
@@ -45,11 +51,7 @@ jQuery(document).ready(function(){
 	 conn();
 });
 
-function getDbInfoToTree(){
-	var dbInfoForm = jQuery("#dbInfo_id");
-	var dbInfoJson = getInputItems(dbInfoForm[0]);
-	return dbInfoJson;
-}
+
 function conn(){
 	var dbInfoForm = jQuery("#dbInfo_id");
 	var dbInfoJson = getInputItems(dbInfoForm[0]);
@@ -67,233 +69,282 @@ function conn(){
       
 }
 
-function filter(treeId, parentNode, childNodes) {
-	if (!childNodes) return null;
-	for (var i=0, l=childNodes.length; i<l; i++) {
-		childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
-	}
-	var node = DBToTree(childNodes);
-	childNodes = node.children;
-	return childNodes;
+//生成Java代码
+function makeCode(obj){
+	var contentViewTable = jQuery('#contentViewTable');
+  	var formVos = jQuery("[dbtype='table']",contentViewTable);
+  	var tableList = [];
+  	for(var i = 0 ; i<formVos.length ; i++){
+  		var formVo = formVos[i];
+  		var dbConfigureInput = jQuery("[name=dbConfigure]",formVo);
+  		var tableInfo = getTableInfo(formVo);
+  		var configStr = dbConfigureInput.val();
+  		var config = StringToJson(configStr);
+  		tableInfo.configVo = config;
+  		tableList.push(tableInfo);
+  	}
+  	tableListStr = JsonToString(tableList);
+  	var url = dbMakeCodeAction;
+	$.ajax({  
+    	url: url+"?rk="+Math.random(), type: "POST",data:{tableList : tableListStr},
+        success: function(data) {
+        	alert(data);
+        }
+	});
+	
 }
 
-function DBNameListToName(json){
-	var dbInfoForm = jQuery("#dbInfo_id");
-	var dbInfoJson = getInputItems(dbInfoForm[0]);
-	if(json == null){
-		return [];
+function setTableNode(obj){
+	var formVo = jQuery(jQuery(obj).parents("[dbType='table']")[0]);
+	var table_name = formVo.attr('name');
+	var tcomment = jQuery('[name="tcomment"]',formVo).val();
+	var dbInfo_makeCode = jQuery('#dbInfo_makeCode_div_id');
+	var dbConfigureInput = jQuery("[name=dbConfigure]",formVo);
+	var configureValue = dbConfigureInput.val();
+	clearConfigTemplate(dbInfo_makeCode);
+	if(configureValue == null || configureValue == ''){
+		initMakeCodeConfig(table_name,dbInfo_makeCode);
+	}else{
+		var data = StringToJson(configureValue);
+		setMakeCodeConfig(data,dbInfo_makeCode);
 	}
-	var nodes = [];
-	for(var i in json){
-		var e = json[i];
-		e= jQuery.trim(e);
-		node = {};
-		node.id = e;
-		node.name = e;
-		node.icon = baseUrl+"/images/db/db.png";
-		//node.open = false;
-		node.hasChild = true;
-		node.isParent = true;
-		nodes.push(node);
-	}
-	return nodes;
+	
+	jQuery(dbInfo_makeCode).dialog({
+		autoOpen: true,
+		width: 950,
+		title:table_name+' '+tcomment,
+		buttons: [
+			{
+				text: "Ok",
+				click: function() {
+					var data = getConfigureInfo(dbInfo_makeCode);
+					var configureStr = JsonToString(data);
+					dbConfigureInput.val(configureStr);
+					$( this ).dialog( "close" );
+				}
+			},
+			{
+				text: "Cancel",
+				click: function() {
+					$( this ).dialog( "close" );
+				}
+			}
+		]
+	});
 }
-
-function DBToTree(json){
-	if(json == null){
-		return [];
-	}
-	var rootNode = {};
-	var zNodes = [rootNode];
-	var tableVoList = json.tableVoList;
-	rootNode.id=json.name;
-	rootNode.name=json.name;
-	if(tableVoList!=null&&tableVoList.length>0){
-		var level2 = [];
-		for(var i in tableVoList){
-			var tableVo = tableVoList[i];
-			var node = {};
-			node.id = tableVo.table_name;
-			node.name = tableVo.table_name;
-			node.comment = tableVo.comment;
-			node.tableVo = tableVo;
-			var level3 = columnListToNodes(tableVo);
-			node.children = level3;
-			node.icon = baseUrl+"/images/db/table.png";
-			level2.push(node);
-		}
-		rootNode.children = level2;
-	}
-	return rootNode;
-}
-
-function columnListToNodes(tableVo){
-	if(tableVo == null){
-		return [];
-	}
-	var columnVoList = tableVo.columnVoList;
-	var nodes = [];
-	if(columnVoList!=null&&columnVoList.length>0){
-		for(var i in columnVoList){
-			var columnVo = columnVoList[i];
-			var node = {};
-			node.id = columnVo.field;
-			node.name = columnVo.field;
-			node.icon = baseUrl+"/images/db/column.png";
-			nodes.push(node);
-		}
-	}
-	return nodes;
-}
-
-//单击事件  
-function beforeClickZtree(treeId, treeNode){  
-    //alert(treeNode.id+","+treeNode.name); 
-    var tableObj = jQuery("#node_table_id");
-    var contentView = jQuery("#contentView");
-    var tableDiv = jQuery("#tableDivId");
-    var formTemplate = tableDiv.children("form")[0];
-    
-    if(treeNode.level==1){
-    	var tableVo = treeNode.tableVo;
-    	var columnVoList = tableVo.columnVoList;
-    	var formVo = jQuery(formTemplate).clone();
-    	formVo = loadForm(tableVo,formVo);
-    	formVo.appendTo(tableDiv);
-    	$( formVo ).draggable({containment:"window"});
-    }
-}
-
-function loadForm(tableVo,formVo){
-	var tablename = tableVo.table_name;
-	jQuery("[name='tablename']",formVo).html(tablename);
-	var tableObj = jQuery(formVo).children()[0];
-	var columnVoList = tableVo.columnVoList;
-	if(columnVoList!=null&&columnVoList.length>0){
-		var columnTr = jQuery("[name='column']",formVo);
-		for(var i = 0 ; i < columnVoList.length ; i++){
-			var columnVo = columnVoList[i];
-			var trObj =  columnTr.clone();
-			var tds = jQuery(trObj).children("td");
-			jQuery(tds[0]).html(columnVo.field);
-			jQuery(tds[1]).html(columnVo.type);
-			columnTr.before(trObj);
-		}
-		columnTr.remove();
-	}
-	return formVo;
-}
-
 
 </script>
 </head>
 <body>
-		<table class="tree_table" >
-			<tr class="log_tr title_tr">
-				<td class="tool_title_td" colspan="100%">
-					<div class="tool_title_div">数据库信息</div>
-				</td>
-			</tr>
-			<tr class="log_tr tool_tr">
-				<td class="log_td tool_td">
-					<div style="margin: 3px;">
-						<input type="button" value="连接" onclick="conn();">
-						
-					</div>
-				</td>
-				<td class="log_td tool_td">
-					<div class="tool_title_div"></div>
-				</td>
-			</tr>
-			<tr class="log_tr conn_tr">
-				<td class="conn_td" colspan="100%">
-					<div style="height: 5px;width: 800px;"></div>
-					<form action="" name="dbInfo" id="dbInfo_id">
-						<table class=" dbInfo_table">
-							<tr class=" dbInfo_tr">
-								<td class="dbInfo_td dbInfo_td_left">数据库类型</td>
-								<td class="dbInfo_td dbInfo_td_right" style="width: 80px;"><input type="text" name="type" value="mysql"></td>
-								<td class="dbInfo_td dbInfo_td_left">数据库名</td>
-								<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="dbName" value="log"></td>
-								<td class="dbInfo_td dbInfo_td_left">ip地址</td>
-								<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="ip" value="localhost"></td>
-								<td class="dbInfo_td dbInfo_td_left" >端口号</td>
-								<td class="dbInfo_td dbInfo_td_right"><input type="text" name="port" value="3306"></td>
-							</tr>
-							<tr class=" dbInfo_tr">
-								<td class="dbInfo_td dbInfo_td_left">驱动类型</td>
-								<td class="dbInfo_td dbInfo_td_right" style="width: 80px;"><input type="text" name="driver" value="com.mysql.jdbc.Driver"></td>
-								<td class="dbInfo_td dbInfo_td_left">用户</td>
-								<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="username" value="root"></td>
-								<td class="dbInfo_td dbInfo_td_left">密码</td>
-								<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="password" value="1"></td>
-							</tr>
-						</table>
-					</form>
-					<div style="height: 5px;width: 800px;"></div>
-				</td>
-			</tr>
-			<tr class="log_tr">
-				<td class="log_item_td" id="log_item_id" style="vertical-align: top;width: 200px;">
-					<!-- 左侧功能树 -->
-					<div id="treeNodeContain" class="zTreeDemoBackground left"  style="width: 210px; height: 320px;margin:0px;padding-left: 15px;">
-						<ul	id="treeRootNode" class="ztree" style="height: 300px;width: 200px;">
-							
-						</ul>
-					</div>
-				</td>
-				<td id="contentView" class="log_page" style="vertical-align: top;width: 620px;">
+<!-- 数据库信息页面 -->
+<table class="tree_table" style="width: 99%">
+	<tr class="log_tr title_tr">
+		<td class="tool_title_td" colspan="100%">
+			<div class="tool_title_div">数据库信息</div>
+		</td>
+	</tr>
+	<tr class="log_tr tool_tr">
+		<td class="log_td tool_td">
+			<div style="margin: 3px;">
+				<input type="button" value="显示连接" onclick="showConnInfo(this);">
+				<input type="button" value="生成代码" onclick="makeCode(this);">
 				
-				
-				<div id="tableDivId" >
-					<form action="">
-						<table class="tableVoCss" style="width: 200px;height: 200px;">
-							<tr >
-								<td class="tableVoTrCss tableVoThCss" colspan="100%">
-									<div name="tablename" style="width: 100%;height: 25px;font-weight: bolder;text-align: center;"></div>
-								</td>
-							</tr>
-							<tr class="tableVoTrCss" name="column">
-								<td class="tableVoTrTdCss tvLeft"></td>
-								<td class="tableVoTrTdCss tvRight"></td>
-							</tr>
-							<tr></tr>
-						</table>
-					</form>
-				</div>
-					<form name="curform">
-					<table class="node_table" id="cur_node_table_id" style="display: ;">
-						<tr class="node_tr" style="display: none">
-							<td class="node_td_name">parentname</td>
-							<td class="node_td_input">
-								<input type="hidden" name="id" value="">
-								<input type="hidden" name="parentncode" value="">
-								<input type="text" name="parentname" value="">
-							</td>
-						</tr>
-						<tr class="node_tr">
-							<td class="node_td_name">nodename</td>
-							<td class="node_td_input"><input type="text" name="nodename" value=""></td>
-						</tr>
-						<tr class="node_tr">
-							<td class="node_td_name">ncode</td>
-							<td class="node_td_input"><input type="text" name="ncode" value=""></td>
-						</tr>
-						<tr class="node_tr">
-							<td class="node_td_name">nodedesc</td>
-							<td class="node_td_input"><input type="text" name="nodedesc" value=""></td>
-						</tr >
-						<tr class="node_tr">
-							<td class="node_td_name">link</td>
-							<td class="node_td_input"><input type="text" name="link" value=""></td>
-						</tr>
-						<!-- <tr></tr> -->
-					</table>
-					</form>
-				</td>
-			</tr>
-			<!-- <tr></tr> -->
-		</table>
+			</div>
+		</td>
+		<td class="log_td tool_td">
+			<div id="dbNameID" class="tool_title_div" style="text-align: center;"></div>
+		</td>
+	</tr>
+	<tr class="log_tr conn_tr" id="dbInfo_conn_id" style="display: none;">
+		<td class="conn_td" colspan="100%">
+			<div style="height: 5px;width: 800px;"></div>
+			<form action="" name="dbInfo" id="dbInfo_id">
+				<table class=" dbInfo_table">
+					<tr class=" dbInfo_tr">
+						<td class="dbInfo_td dbInfo_td_left">数据库类型</td>
+						<td class="dbInfo_td dbInfo_td_right" style="width: 80px;"><input type="text" name="type" value="mysql"></td>
+						<td class="dbInfo_td dbInfo_td_left">数据库名</td>
+						<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="dbName" value="log"></td>
+						<td class="dbInfo_td dbInfo_td_left">ip地址</td>
+						<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="ip" value="localhost"></td>
+						<td class="dbInfo_td dbInfo_td_left" >端口号</td>
+						<td class="dbInfo_td dbInfo_td_right"><input type="text" name="port" value="3306"></td>
+					</tr>
+					<tr class=" dbInfo_tr">
+						<td class="dbInfo_td dbInfo_td_left">驱动类型</td>
+						<td class="dbInfo_td dbInfo_td_right" style="width: 80px;"><input type="text" name="driver" value="com.mysql.jdbc.Driver"></td>
+						<td class="dbInfo_td dbInfo_td_left">用户</td>
+						<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="username" value="root"></td>
+						<td class="dbInfo_td dbInfo_td_left">密码</td>
+						<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="password" value="1"></td>
+						<td class="dbInfo_td dbInfo_td_left"></td>
+						<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="button" value="开始连接" onclick="conn();"></td>
+					
+					</tr>
+				</table>
+			</form>
+			<div style="height: 5px;width: 800px;"></div>
+		</td>
+	</tr>
+	<tr class="log_tr conn_tr" id="dbInfo_makeCode_id" style="display: none;">
+		<td class="conn_td" colspan="100%">
+		
+		</td>
+	</tr>			
+	<tr class="log_tr">
+		<td class="log_item_td" id="log_item_id" style="vertical-align: top;width: 230px;">
+			<!-- 左侧功能树 -->
+			<div id="treeNodeContain" class="zTreeDemoBackground left"  style="width: 210px; height: 320px;margin:0px;padding-left: 10px;">
+				<ul	id="treeRootNode" class="ztree" style="height: 300px;width: 200px;">
+					
+				</ul>
+			</div>
+		</td>
+		<td class="log_page" id="contentView"  style="vertical-align: top;width:auto;min-width: 720px;">
+			<!-- 数据库表显示区域 -->
+			<div id="contentViewDiv" style="width: 100%;height: auto;min-height: 400px;display: ;">
+				<table id="contentViewTable">
+				<tr name="dbTable">
+					<td name="td1"></td>
+					<td name="td2"></td>
+					<td name="td3"></td>
+					<td name="td4"></td>
+				</tr>
+			</table>
+			</div>
+			
+		</td>
+	</tr>
+	<!-- <tr></tr> -->
+</table>
 
+<!-- 配置信息 -->
+<div id="dbInfo_makeCode_div_id" style="display: none;">
+	<div style="height: 5px;width: 800px;"></div>
+	<form action="" name="dbInfo" id="makeCode_id">
+		<table class=" dbInfo_table">
+			<tr class=" dbInfo_tr" style="height: 30px;">
+				<td class="dbInfo_td dbMakeCode_td_left" style="vertical-align: bottom;text-align: left ;font-size:16px;font-weight:bolder ;padding-left: 10px;" colspan="100%" >
+					属性名称
+				</td>
+			</tr>
+			<tr class=" dbInfo_tr">
+				<td class="dbInfo_td dbMakeCode_td_left" >dao</td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="dao" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="dao" value=""></td>
+				<td class="dbInfo_td dbMakeCode_td_left">service</td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="service" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="service" value=""></td>
+				<td class="dbInfo_td dbMakeCode_td_left">web</td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="web" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="web" value=""></td>
+				<td class="dbInfo_td dbMakeCode_td_left">vo</td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="vo" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="vo" value=""></td>
+				
+				<td></td>
+			</tr>
+			
+			<tr class=" dbInfo_tr">
+				<td class="dbInfo_td dbMakeCode_td_left" >util</td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="util" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="util" value=""></td>
+				<td class="dbInfo_td dbMakeCode_td_left">configure</td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="configure" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="configure" value=""></td>
+				<td class="dbInfo_td dbMakeCode_td_left">jsp</td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="jsp" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="jsp" value=""></td>
+				<td class="dbInfo_td dbMakeCode_td_left"></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><!-- <input type="button" value="开始生成" onclick="makeCode(this);"> --></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"></td>
+				<td></td>
+			</tr>
+			<tr class=" dbInfo_tr" style="height: 30px;">
+				<td class="dbInfo_td dbMakeCode_td_left" style="vertical-align: bottom;text-align: left ;font-size:16px;font-weight:bolder ;padding-left: 10px;" colspan="100%" >
+					后台配置路径
+				</td>
+			</tr>
+			<tr class=" dbInfo_tr">
+				<td class="dbInfo_td dbMakeCode_td_left" >package</td>
+				<td class="dbInfo_td dbInfo_td_right_big" colspan="9" style="width: 200px;"><input type="text" name="packagePath" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right"  style="width: 20px;"><input type="checkbox" checked="checked" name="packagePath" value=""></td>
+				<td></td>
+			</tr>
+			<tr class=" dbInfo_tr">
+				<td class="dbInfo_td dbMakeCode_td_left">struts.xml</td>
+				<td class="dbInfo_td dbInfo_td_right_big" colspan="9" style="width: 200px;"><input type="text" name="strutsxml" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="strutsxml" value=""></td>
+				<td></td>
+			</tr>
+			<tr class=" dbInfo_tr">
+				<td class="dbInfo_td dbMakeCode_td_left">spring.xml</td>
+				<td class="dbInfo_td dbInfo_td_right_big"  colspan="9" style="width: 200px;"><input type="text" name="springxml" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="springxml" value=""></td>
+				<td></td>
+			</tr>
+			<tr class=" dbInfo_tr">
+				<td class="dbInfo_td dbMakeCode_td_left">jspPath</td>
+				<td class="dbInfo_td dbInfo_td_right_big" colspan="9" style="width: 200px;"><input type="text" name="jspPath" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="jspPath" value=""></td>
+				
+				<td></td>
+			</tr>
+			
+			<tr class=" dbInfo_tr" style="height: 30px;">
+				<td class="dbInfo_td dbMakeCode_td_left" style="vertical-align: bottom;;text-align: left ;font-size:16px;font-weight:bolder ;padding-left: 10px;" colspan="100%" >
+					前台配置路径
+				</td>
+			</tr>
+			<tr class=" dbInfo_tr">
+				<td class="dbInfo_td dbMakeCode_td_left" >images</td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="images" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="images" value=""></td>
+				<td class="dbInfo_td dbMakeCode_td_left">css</td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="css" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="css" value=""></td>
+				<td class="dbInfo_td dbMakeCode_td_left">js</td>
+				<td class="dbInfo_td dbInfo_td_right_big" colspan="3" style="width: 100px;"><input type="text" name="js" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="js" value=""></td>
+				
+			</tr>
+		</table>
+	</form>
+	<div style="height: 5px;width: 800px;"></div>
+</div>
+	
+<!-- 表格模板 -->	
+<div id="tableDivId" style="display: none;">
+	<div name="div_vo"  dbType="table" style="width: 200px;min-width:200px;height: auto;">
+	<input type="hidden" name="dbConfigure" value="">
+	<form action="">
+		<table class="tableVoCss" style="width: auto;height: auto;min-height: 100px;">
+			<tr name="head" style="">
+				<td class="tableVoTrCss tableVoThCss tableVoDelCss" colspan="100%" style="">
+				<a class="dbTypeIcon" onclick="setTableNode(this)"></a>
+				<input type="text" class="tableVoThCss headInput" name="table_name" value="tableName">
+				<a class="dbdela" onclick="delTableNode(this)"></a>
+				</td>
+			</tr>
+			<tr style="">
+				<td class="tableVoTrCss" colspan="100%" style="">
+					<div name="tablename" style="width: 100%;height: 20px;font-weight: bolder;text-align: center;">
+						
+						<span></span>
+						<input type="text" class="right" name="tcomment" value="tcomment">
+					</div>
+					
+				</td>
+			</tr>
+			<tr class="tableVoTrCss" name="column">
+				<td class="tableVoTrTdCss tvLeft"><input type="text" class="column" name="field" value="field"></td>
+				<td class="tableVoTrTdCss tvRight"><input type="text" class="column" name="type" value="type"></td>
+				<td class="tableVoTrTdCss tvRight"><input type="text" class="column" name="comment" value="comment"></td>
+			</tr>
+			<tr></tr>
+		</table>
+	</form>
+	</div>
+</div>					
 </body>
 </html>
