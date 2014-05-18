@@ -188,7 +188,7 @@ function setTableNode(obj){
 	</tr>
 	<tr class="log_tr conn_tr" id="dbInfo_makeCode_id" style="display: none;">
 		<td class="conn_td" colspan="100%">
-		
+			
 		</td>
 	</tr>			
 	<tr class="log_tr">
