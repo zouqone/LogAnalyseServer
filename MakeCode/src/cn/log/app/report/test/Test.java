@@ -16,6 +16,7 @@ import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.export.JRHtmlExporterParameter;
 
 /**
  * @author zouqone
@@ -36,6 +37,7 @@ public class Test {
 		String reportPath = "/app/report/"+"test.html";
 		String pdf = "/app/report/"+"test.pdf";
 		try {
+			
 			// 获取模板文件
 			jasperReport = JasperCompileManager.compileReport(rootPath+jrxmlPath);
 
@@ -53,7 +55,7 @@ public class Test {
 			e.printStackTrace();
 			System.out.println(e);
 		}
-		return pdf;
+		return reportPath;
 	}
 
 }

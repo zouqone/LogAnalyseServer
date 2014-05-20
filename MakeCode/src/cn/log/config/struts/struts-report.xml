@@ -10,6 +10,9 @@
 			<result name="example" type="redirectAction">app/report/ireport.jsp</result>
 			<result name="logout" type="redirectAction">login/login.jsp</result>
 		</action>
+		<action name="px" >
+			<result type="redirectAction" >images/report/px.gif</result>
+		</action>
 	</package>
 	
 </struts>

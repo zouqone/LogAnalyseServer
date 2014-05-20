@@ -18,6 +18,7 @@ function report(){
     	url: reportAction, type: "POST",data: {},
         success: function(data) {     
         	iframeObj.attr("src",baseUrl+data);
+        	//iframeObj.attr("src","test.html");
         }     
     }); 
 }
