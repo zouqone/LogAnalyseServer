@@ -148,8 +148,8 @@ public class DBAction extends AbstractBaseAction implements
 		}finally{
 			if (os != null) {
 				try {
-					os.flush();
-					os.close();
+					bos.flush();
+					bos.close();
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					//e.printStackTrace();
