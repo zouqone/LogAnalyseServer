@@ -37,7 +37,7 @@ var setting = {
 	}, */
 	 data: { key: {title: "title" },simpleData: {enable: true } }
     ,view: {  selectedMulti: false }  //,fontCss: setFontCss  
-    ,async: {   enable: true,url: treeAction,type:"POST",  autoParam:["id=pCode", "name", "level"], dataFilter: filter }   
+    ,async: {   enable: true,url: treeAction ,async : false,type : "POST" , autoParam:["id=pCode", "name", "level"], dataFilter: filter }   
     ,callback: {   beforeClick: beforeClickZtree  }  //,onCheck: onCheck
    
 };  
@@ -45,15 +45,35 @@ var setting = {
 function initMyZtree(){  
 	var zNodes="";
     $.ajax({  
-    	url: treeAction, type: "GET",data:{pCode:'rootdir0'},
+    	url: treeAction,async : false,type : "POST",data:{pCode:'rootdir0'},
         success: function(data) {     
             //alert(data);
             zNodes=eval(data);  
             $.fn.zTree.init($("#"+treeId), setting, zNodes);  
         }     
-    });    
-      
+    });
+    
+    var treeObj = $.fn.zTree.getZTreeObj(treeId);
+	var nodes = treeObj.getNodes();
+	if (nodes.length>0) {
+		for(var i in nodes){
+			treeObj.expandNode(nodes[i], true, true, true);
+		}
+	}
+  	
 }  
+
+function freshNode(p){
+	var treeObj = $.fn.zTree.getZTreeObj(treeId);
+	var nodes = treeObj.getSelectedNodes();
+	var node = nodes[0];
+	if(p==null||p==0){
+		treeObj.reAsyncChildNodes(node, "refresh");
+	}else{
+		var parentNode = node.getParentNode();
+		treeObj.reAsyncChildNodes(parentNode, "refresh");
+	}
+}
 
 
 function freshFunctionNode(){
@@ -132,8 +152,8 @@ function saveNode(){
 	        	alert("新增节点操作成功！");
 	            //alert(data);
 	            //zNodes=eval(data);  
-	            initMyZtree();
-	            
+	            //initMyZtree();
+	            freshNode();
 	        }     
 	    }); 
 		tableObj.css("display","none");
@@ -159,8 +179,8 @@ function saveNode(){
 	        	alert("修改节点操作成功！");
 	            //alert(data);
 	            //zNodes=eval(data);  
-	            initMyZtree();
-	            
+	            //initMyZtree();
+	        	freshNode(1);
 	        }     
 	    }); 
 		tableObj.css("display","none");
@@ -219,7 +239,8 @@ function delNode(){
 	        	alert("删除节点操作成功！");
 	            //alert(data);
 	            //zNodes=eval(data);  
-	            initMyZtree();
+	            //initMyZtree();
+	         	freshNode(1);
 	            optStatus = null;
 	 			setStatus(optStatus);
 	        }     
@@ -242,6 +263,7 @@ function delNode(){
 						<input type="button" value="修改" onclick="updateNode();">
 						<input type="button" value="删除" onclick="delNode();">
 						<input type="button" value="保存" onclick="saveNode();">
+						<input type="button" value="刷新" onclick="freshNode();">
 					</div>
 				</td>
 				<td class="log_td tool_td">
