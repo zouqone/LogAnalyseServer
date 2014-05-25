@@ -21,4 +21,26 @@ public class ContextUtil {
 		//System.out.println("ClassPath的绝对路径 = "+classPath); 
 		return classPath;
 	}
+	
+	/**
+	 * 获取项目根目录
+	 * @return
+	 */
+	public static String getWorkSpacePath(){
+		String root = null;
+		String classPath = getClassPath();
+		root = getIndexFormRight(classPath,"/",4);
+		return root;
+	}
+	
+	public static String getIndexFormRight(String str,String s,Integer indexRight){
+		if(indexRight == null||indexRight<0){
+			indexRight = 1;
+		}
+		for(int i = 0 ; i <indexRight ; i++ ){
+			int endIndex = str.lastIndexOf(s);
+			str = str.substring(0,endIndex);
+		}
+		return str;
+	}
 }

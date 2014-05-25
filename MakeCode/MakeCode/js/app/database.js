@@ -323,7 +323,10 @@ function loadForm(tableVo,formVo){
 function initMakeCodeConfig(tableName,obj){
 	var name = tableName.replace(/(^|\s+)\w/g,function(s){return s.toUpperCase();});
 	var checkObjs = jQuery('input[type="checkbox"]',obj);
-	checkObjs.attr("checked","checked");
+	//checkObjs.attr("checked","checked");
+	clearConfigTemplate(obj);
+	setCheckBoxsStatus(checkObjs,true);
+	
 	jQuery('input[type="text"][name="dao"]',obj).val("I"+name+"VoDao");
 	jQuery('input[type="text"][name="service"]',obj).val("I"+name+"VoService");
 	jQuery('input[type="text"][name="web"]',obj).val(""+name+"VoAction");
@@ -345,7 +348,7 @@ function initMakeCodeConfig(tableName,obj){
 
 function setMakeCodeConfig(data,obj){
 	var checkObjs = jQuery('input[type="checkbox"]',obj);
-	checkObjs.attr("checked","checked");
+	clearConfigTemplate(obj);
 	jQuery('input[type="text"][name="dao"]',obj).val(data.dao);
 	jQuery('input[type="text"][name="service"]',obj).val(data.service);
 	jQuery('input[type="text"][name="web"]',obj).val(data.web);
@@ -362,22 +365,78 @@ function setMakeCodeConfig(data,obj){
 	jQuery('input[type="text"][name="images"]',obj).val(data.images);
 	jQuery('input[type="text"][name="css"]',obj).val(data.css);
 	jQuery('input[type="text"][name="js"]',obj).val(data.js);
+	
+	var checkAllObjs = jQuery('input[type="checkbox"]',obj);
+	for(var i = 0; i < checkAllObjs.length ; i++){
+		var checkAllObj = checkAllObjs[i];
+		var propetyName = jQuery(checkAllObj).attr("name");
+		var ckName = propetyName+'_checked';
+		var isChecked = data[ckName];
+		if(isChecked!=null){
+			checkAllObj.checked =isChecked;
+		}else{
+			checkAllObj.checked =false;
+		}
+	}
 }
 
 function clearConfigTemplate(obj){
 	if(obj!=null){
-		jQuery('input[type="checkbox"][checked="checked"]',obj).removeAttr("checked");
+		jQuery('input[type="checkbox"][checked]',obj).removeAttr("checked");
 		jQuery('input[type="text"]',obj).val(null);
 	}
 }
+function setCheckBoxStatus(checkbox,status){
+	jQuery(checkbox)[0].checked = status;
+}
+
+/**
+ * 设置复选框是否被选中
+ * @param checkboxs 
+ * @param status true ,false
+ */
+function setCheckBoxsStatus(checkboxs,status){
+	for(var i = 0; i < checkboxs.length ; i++){
+		var checkbox = checkboxs[i];
+		setCheckBoxStatus(checkbox,status);
+	}
+}
+
 function getConfigureInfo(obj){
-	var checkedObjs = jQuery('input[type="checkbox"][checked="checked"]',obj);
+	var checkedObjs = jQuery('input[type="checkbox"]',obj);
 	var json = {};
 	for(var i = 0; i < checkedObjs.length ; i++){
 		var checkedObj = checkedObjs[i];
 		var propetyName = jQuery(checkedObj).attr("name");
-		var inputObj = jQuery('input[type="text"][name="'+propetyName+'"]',obj);
-		json[propetyName]=inputObj.val();
+		var checkAll = jQuery(checkedObj).attr("checkAll");
+		var ckName = propetyName+'_checked';
+		if(checkedObj.checked == true){
+			json[ckName]=true;
+		}else{
+			json[ckName]=false;
+		}
+		if(checkAll==null){
+			var inputObj = jQuery('input[type="text"][name="'+propetyName+'"]',obj);
+			json[propetyName]=inputObj.val();
+		}
+	}
+	
+	return json;
+}
+
+function filterConfig(config){
+	var json = {};
+	if(config != null){
+		for( var key in config){
+			var value = config[key];
+			var strs = key.split('_');
+			var checked = strs[1];
+			var propetyName = strs[0];
+			var isCheckAll = jQuery('[checkAll="'+propetyName+'"]')[0];
+			if(strs.length>=2&&propetyName!='checkAll'&&isCheckAll==null&&checked=='checked'&&value==true){
+				json[propetyName] = config[propetyName];
+			}
+		}
 	}
 	return json;
 }
@@ -405,7 +464,48 @@ function getTableInfo(obj){
 	return tableVo;
 }
 
+/**
+ * 全选反选事件
+ * @param obj
+ * @param checkAll
+ * @param item
+ */
+function selectAllCheckbox(obj,checkAll,item){
+	if(obj == null){
+		return null;
+	}
+	var cks = null;
+	var checkStatus = jQuery(obj)[0].checked;
+	if(checkAll != null&&item!=null){
+		var checkItem = jQuery(obj).attr(checkAll);
+		if(checkItem==null||checkItem == ''){
+			cks = jQuery('input['+item+'][type="checkbox"]');
+			var ckAll = jQuery('input['+checkAll+'][type="checkbox"]');
+			setCheckboxStatus(ckAll,checkStatus);
+		}else{
+			cks = jQuery('input['+item+'="'+checkItem+'"][type="checkbox"]');
+		}
+		setCheckboxStatus(cks,checkStatus);
+	}
+}
 
+function setCheckboxStatus(cks,checkStatus){
+	if(checkStatus){
+		for(var i=0;i<cks.length;i++){
+			var ck = cks[i];
+			if(ck!=null&&!ck.checked){
+				jQuery(ck)[0].checked =true;
+			}
+		}
+	}else{
+		for(var i=0;i<cks.length;i++){
+			var ck = cks[i];
+			if(ck!=null&&ck.checked){
+				jQuery(ck)[0].checked =false;
+			}
+		}
+	}
+}
 
 
 

@@ -29,10 +29,10 @@ public interface ITemplateEngineVoDao {
 	
 	/**
 	 * 生成模板
-	 * @param context
+	 * @param templateEngineVo
 	 * @param vmPath
 	 * @param targetPath
 	 */
-	public void writerFile(VelocityContext context , String vmPath, String targetPath);
+	public void writerFile(TemplateEngineVo templateEngineVo , String vmPath, String targetPath);
 	
 }

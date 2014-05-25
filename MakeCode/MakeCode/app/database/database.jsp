@@ -80,15 +80,16 @@ function makeCode(obj){
   		var tableInfo = getTableInfo(formVo);
   		var configStr = dbConfigureInput.val();
   		var config = StringToJson(configStr);
+  		config = filterConfig(config);
   		tableInfo.configVo = config;
   		tableList.push(tableInfo);
   	}
-  	tableListStr = JsonToString(tableList);
+  	var tableListStr = JsonToString(tableList);
   	var url = dbMakeCodeAction;
 	$.ajax({  
     	url: url+"?rk="+Math.random(), type: "POST",data:{tableList : tableListStr},
         success: function(data) {
-        	alert(data);
+        	alert("代码已生成！");
         }
 	});
 	
@@ -219,28 +220,40 @@ function setTableNode(obj){
 </table>
 
 <!-- 配置信息 -->
-<div id="dbInfo_makeCode_div_id" style="display: none;">
+<div id="dbInfo_makeCode_div_id" style="display: ;">
 	<div style="height: 5px;width: 800px;"></div>
-	<form action="" name="dbInfo" id="makeCode_id">
+		<form action="" name="dbInfo" id="makeCode_id">
 		<table class=" dbInfo_table">
 			<tr class=" dbInfo_tr" style="height: 30px;">
 				<td class="dbInfo_td dbMakeCode_td_left" style="vertical-align: bottom;text-align: left ;font-size:16px;font-weight:bolder ;padding-left: 10px;" colspan="100%" >
-					属性名称
+					全选所有选项  
+					<input type="checkbox" name="checkAll" checkAll="" onclick="selectAllCheckbox(this,'checkAll','checkboxName')">
 				</td>
+				
+			</tr>
+			<tr class=" dbInfo_tr" style="height: 30px;">
+				<td class="dbInfo_td dbMakeCode_td_left" style="vertical-align: bottom;text-align: left ;font-size:16px;font-weight:bolder ;padding-left: 10px;" colspan="100%" >
+					属性名称  
+					&nbsp;&nbsp;
+					<span style="display:inline-block;font-size: 12px;height:26px;font-weight: normal;vertical-align:middle;border: 0px solid #BBBBBB">
+					全选</span> 
+					<input type="checkbox" name="property" checkAll="property" onclick="selectAllCheckbox(this,'checkAll','checkboxName')">
+				</td>
+				
 			</tr>
 			<tr class=" dbInfo_tr">
 				<td class="dbInfo_td dbMakeCode_td_left" >dao</td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="dao" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="dao" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="property" checked="checked" name="dao" value=""></td>
 				<td class="dbInfo_td dbMakeCode_td_left">service</td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="service" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="service" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="property" checked="checked" name="service" value=""></td>
 				<td class="dbInfo_td dbMakeCode_td_left">web</td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="web" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="web" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="property" checked="checked" name="web" value=""></td>
 				<td class="dbInfo_td dbMakeCode_td_left">vo</td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="vo" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="vo" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="property" checked="checked" name="vo" value=""></td>
 				
 				<td></td>
 			</tr>
@@ -248,13 +261,13 @@ function setTableNode(obj){
 			<tr class=" dbInfo_tr">
 				<td class="dbInfo_td dbMakeCode_td_left" >util</td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="util" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="util" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="property" checked="checked" name="util" value=""></td>
 				<td class="dbInfo_td dbMakeCode_td_left">configure</td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="configure" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="configure" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="property" checked="checked" name="configure" value=""></td>
 				<td class="dbInfo_td dbMakeCode_td_left">jsp</td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="jsp" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="jsp" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="property" checked="checked" name="jsp" value=""></td>
 				<td class="dbInfo_td dbMakeCode_td_left"></td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><!-- <input type="button" value="开始生成" onclick="makeCode(this);"> --></td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"></td>
@@ -263,30 +276,34 @@ function setTableNode(obj){
 			<tr class=" dbInfo_tr" style="height: 30px;">
 				<td class="dbInfo_td dbMakeCode_td_left" style="vertical-align: bottom;text-align: left ;font-size:16px;font-weight:bolder ;padding-left: 10px;" colspan="100%" >
 					后台配置路径
+				    &nbsp;&nbsp;
+					<span style="display:inline-block;font-size: 12px;height:26px;font-weight: normal;vertical-align:middle;border: 0px solid #BBBBBB">
+					全选</span> 
+					<input type="checkbox" name="javaConfigPath" checkAll="javaConfigPath" onclick="selectAllCheckbox(this,'checkAll','checkboxName')">
 				</td>
 			</tr>
 			<tr class=" dbInfo_tr">
 				<td class="dbInfo_td dbMakeCode_td_left" >package</td>
 				<td class="dbInfo_td dbInfo_td_right_big" colspan="9" style="width: 200px;"><input type="text" name="packagePath" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right"  style="width: 20px;"><input type="checkbox" checked="checked" name="packagePath" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right"  style="width: 20px;"><input type="checkbox" checkboxName="javaConfigPath" checked="checked" name="packagePath" value=""></td>
 				<td></td>
 			</tr>
 			<tr class=" dbInfo_tr">
 				<td class="dbInfo_td dbMakeCode_td_left">struts.xml</td>
 				<td class="dbInfo_td dbInfo_td_right_big" colspan="9" style="width: 200px;"><input type="text" name="strutsxml" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="strutsxml" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="javaConfigPath" checked="checked" name="strutsxml" value=""></td>
 				<td></td>
 			</tr>
 			<tr class=" dbInfo_tr">
 				<td class="dbInfo_td dbMakeCode_td_left">spring.xml</td>
 				<td class="dbInfo_td dbInfo_td_right_big"  colspan="9" style="width: 200px;"><input type="text" name="springxml" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="springxml" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="javaConfigPath" checked="checked" name="springxml" value=""></td>
 				<td></td>
 			</tr>
 			<tr class=" dbInfo_tr">
 				<td class="dbInfo_td dbMakeCode_td_left">jspPath</td>
 				<td class="dbInfo_td dbInfo_td_right_big" colspan="9" style="width: 200px;"><input type="text" name="jspPath" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="jspPath" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="javaConfigPath" checked="checked" name="jspPath" value=""></td>
 				
 				<td></td>
 			</tr>
@@ -294,18 +311,22 @@ function setTableNode(obj){
 			<tr class=" dbInfo_tr" style="height: 30px;">
 				<td class="dbInfo_td dbMakeCode_td_left" style="vertical-align: bottom;;text-align: left ;font-size:16px;font-weight:bolder ;padding-left: 10px;" colspan="100%" >
 					前台配置路径
+					&nbsp;&nbsp;
+					<span style="display:inline-block;font-size: 12px;height:26px;font-weight: normal;vertical-align:middle;border: 0px solid #BBBBBB">
+					全选</span> 
+					<input type="checkbox" name="jspConfigPath" checkAll="jspConfigPath" onclick="selectAllCheckbox(this,'checkAll','checkboxName')">
 				</td>
 			</tr>
 			<tr class=" dbInfo_tr">
 				<td class="dbInfo_td dbMakeCode_td_left" >images</td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="images" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="images" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="jspConfigPath" checked="checked" name="images" value=""></td>
 				<td class="dbInfo_td dbMakeCode_td_left">css</td>
 				<td class="dbInfo_td dbInfo_td_right" style="width: 100px;"><input type="text" name="css" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="css" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="jspConfigPath" checked="checked" name="css" value=""></td>
 				<td class="dbInfo_td dbMakeCode_td_left">js</td>
 				<td class="dbInfo_td dbInfo_td_right_big" colspan="3" style="width: 100px;"><input type="text" name="js" value=""></td>
-				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checked="checked" name="js" value=""></td>
+				<td class="dbInfo_td dbInfo_td_right" style="width: 20px;"><input type="checkbox" checkboxName="jspConfigPath" checked="checked" name="js" value=""></td>
 				
 			</tr>
 		</table>

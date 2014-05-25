@@ -8,11 +8,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
+import org.apache.velocity.app.VelocityEngine;
 
 import cn.log.app.template.dao.ITemplateEngineVoDao;
 import cn.log.app.template.vo.TemplateEngineVo;
@@ -48,20 +51,33 @@ public class TemplateEngineVoDaoImpl implements ITemplateEngineVoDao{
 		String OUTPUT_ENCODING = templateProperties.getProperty("output_encoding");
 		
 		Properties properties = new Properties();
-		properties.setProperty(Velocity.RUNTIME_LOG, RUNTIME_LOG);
-		properties.setProperty(Velocity.FILE_RESOURCE_LOADER_PATH, FILE_RESOURCE_LOADER_PATH); //src/cn/vm
+		String root = ContextUtil.getWorkSpacePath();
+		
+		properties.setProperty(Velocity.RUNTIME_LOG, root+"/"+FILE_RESOURCE_LOADER_PATH+"/"+RUNTIME_LOG);
+		properties.setProperty(Velocity.FILE_RESOURCE_LOADER_PATH, root+"/"+FILE_RESOURCE_LOADER_PATH); 
 		properties.setProperty(Velocity.INPUT_ENCODING, INPUT_ENCODING);
 		properties.setProperty(Velocity.ENCODING_DEFAULT, ENCODING_DEFAULT);
 		properties.setProperty(Velocity.OUTPUT_ENCODING, OUTPUT_ENCODING);
 		
+		
+		
+		String vo = "vo";
+		String vmPath = root+"/"+FILE_RESOURCE_LOADER_PATH+"/vm.properties";
+		Properties ppvm = PropertyHelp.readProperty(vmPath);
+		
+		Map<String, String> mapVm = PropertyHelp.PropertyToMap(ppvm);
+		//mapVm.put(vo, templateProperties.getProperty(vo));
+		
 		//初始化模板引擎
 		engineVo.initTemplateEngineVo(properties);
 		engineVo.setTemplatePath(FILE_RESOURCE_LOADER_PATH);
+		
+		engineVo.setMapVM(mapVm);
 		return engineVo;
 	}
 
 	@Override
-	public void writerFile(VelocityContext context , String vmPath, String targetPath) {
+	public void writerFile(TemplateEngineVo templateEngineVo , String vmPath, String targetPath) {
 		// TODO Auto-generated method stub
 		String classPath = targetPath.substring(0,targetPath.lastIndexOf("/"));
 		File file = new File(classPath);
@@ -70,18 +86,27 @@ public class TemplateEngineVoDaoImpl implements ITemplateEngineVoDao{
 			file.mkdirs();
 		}
 		
-		Template template = Velocity.getTemplate(vmPath);
+		//Velocity引擎 
+		Template template =  Velocity.getTemplate(vmPath);
+		
 		FileWriter fw = null;
 		Writer writer = null;
 		try {
 			fw = new FileWriter(targetPath);
 			writer = new PrintWriter(fw);
 			//转换输出
-			template.merge(context, writer);
+			template.merge(templateEngineVo.getContext(), writer);
 			writer.flush();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally{
+			try {
+				writer.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	

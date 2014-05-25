@@ -8,7 +8,7 @@ package cn.log.app.template.vo;
  * @date 2014-5-18 下午1:41:18 
  * @Description: TODO 属性模板对象
  */
-public class AtrributeVo {
+public class AttributeVo {
 
 	/**
 	 * 属性名称
@@ -43,13 +43,13 @@ public class AtrributeVo {
 	/**
 	 * 
 	 */
-	public AtrributeVo() {
+	public AttributeVo() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	
 
-	public AtrributeVo(String atrributeName, String dataType,
+	public AttributeVo(String atrributeName, String dataType,
 			String defaultValue, String comment, String authType,
 			String applyType) {
 		this.atrributeName = atrributeName;

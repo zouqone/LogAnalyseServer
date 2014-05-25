@@ -15,24 +15,23 @@
 		/> -->
 
 	<!-- Dao -->
-	<bean id="functionDao" class="cn.log.function.dao.impl.FunctionDaoImpl">
+	<bean id="templateEngineVoDao" class="cn.log.app.template.dao.impl.TemplateEngineVoDaoImpl">
 		<!-- <property name="sessionFactory"> <ref bean="sessionFactory" /> </property> -->
 	</bean>
 
 	<!-- Service -->
-	<bean id="functionService" class="cn.log.function.service.impl.FunctionServiceImpl">
-		<property name="functionDao">
-			<ref bean="functionDao" />
+	<bean id="buildCodeService" class="cn.log.app.template.service.impl.buildCodeImpl">
+		<property name="templateEngineVoDao">
+			<ref bean="templateEngineVoDao" />
 		</property>
 	</bean>
 
 	<!-- Action -->
-	<bean id="functionAction" class="cn.log.function.action.FunctionAction"
+	<!-- <bean id="DBAction" class="cn.log.app.database.action.DBAction"
 		scope="session">
-		<property name="functionService">
-			<ref bean="functionService" />
+		<property name="mysqlDBService">
+			<ref bean="mysqlDBService" />
 		</property>
-	</bean>
+	</bean> -->
 
-	
 </beans>

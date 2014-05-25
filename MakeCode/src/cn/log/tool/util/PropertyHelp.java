@@ -11,6 +11,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 
 /**
@@ -48,6 +52,24 @@ public class PropertyHelp {
 		}
 
 		return properties;
+	}
+	
+	/**
+	 * property To Map
+	 * @param properties
+	 * @return
+	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public static Map<String, String> PropertyToMap(Properties properties){
+		Map<String, String> map = new HashMap<String, String>();
+		Iterator iterator = properties.entrySet().iterator();
+		while(iterator.hasNext()){
+			Map.Entry<String, String> entry = ((Map.Entry<String, String>) iterator.next());
+			String key = entry.getKey();
+			String value = entry.getValue();
+			map.put(key, value);
+		}
+		return map;
 	}
 	
 	/**

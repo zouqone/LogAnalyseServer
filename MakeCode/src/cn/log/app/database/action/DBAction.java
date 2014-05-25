@@ -23,6 +23,9 @@ import cn.log.app.database.vo.ColumnVo;
 import cn.log.app.database.vo.ConfigVo;
 import cn.log.app.database.vo.DatabaseVo;
 import cn.log.app.database.vo.TableVo;
+import cn.log.app.template.service.IBuildCode;
+import cn.log.app.template.service.impl.buildCodeImpl;
+import cn.log.app.template.vo.TemplateEngineVo;
 import cn.log.tool.util.ActionHelp;
 import cn.log.tool.util.FileHelp;
 import cn.log.tool.web.AbstractBaseAction;
@@ -45,6 +48,7 @@ public class DBAction extends AbstractBaseAction implements
 	
 	public DatabaseVo databaseVo;
 	
+	IBuildCode buildCodeService ;
 	
 	/**
 	 * 
@@ -163,6 +167,7 @@ public class DBAction extends AbstractBaseAction implements
 		String tableListStr = request.getParameter("tableList");
 		System.out.println(tableListStr);
 		
+		TemplateEngineVo templateEngineVo = new TemplateEngineVo();
 		try{
 		JSONArray jsonArray = JSONArray.fromObject(tableListStr);
 		for (Object object : jsonArray) {
@@ -175,6 +180,7 @@ public class DBAction extends AbstractBaseAction implements
 	        classMap.put("configVo", ConfigVo.class);
 			TableVo tableVo = (TableVo) JSONObject.toBean((JSONObject) object,TableVo.class,classMap);
 			
+			buildCodeService.buildCode(tableVo, templateEngineVo);
 			System.out.println(config);
 			System.out.println(object);
 		}
@@ -227,5 +233,20 @@ public class DBAction extends AbstractBaseAction implements
 		this.databaseVo = databaseVo;
 	}
 
+	/**
+	 * @return the buildCodeService
+	 */
+	public IBuildCode getBuildCodeService() {
+		return buildCodeService;
+	}
+
+	/**
+	 * @param buildCodeService the buildCodeService to set
+	 */
+	public void setBuildCodeService(IBuildCode buildCodeService) {
+		this.buildCodeService = buildCodeService;
+	}
+
+	  
 	
 }

@@ -1,0 +1,63 @@
+package ${package}.vo;
+
+$!{extpackage}
+
+/**
+ * @author $!{author}
+ * @date $!{date}
+ * @Description： $!{info}
+ */
+public class ${class}{
+
+
+/*=========================属性==============================*/
+
+#foreach(${attribute} in $attributeList)
+	/**
+	 * ${attribute.comment}
+	 */
+	private $attribute.dataType $attribute.atrributeName;
+	
+#end
+
+
+
+/*=========================构造方法==============================*/
+
+	public ${class}() {
+		// TODO Auto-generated constructor stub
+		
+	}
+	
+	/**
+	 * $info
+#foreach($attribute in $attributeList)
+	 * @param $attribute.atrributeName
+#end
+	 */ 
+	public ${class}(#set($i = 0)#foreach($attribute in $attributeList)#if($i>0) , #end$attribute.dataType $attribute.atrributeName #set($i = $i +1)#end){
+#foreach($attribute in $attributeList)
+		this.$attribute.atrributeName= $attribute.atrributeName;
+#end
+	}
+
+
+/*=========================set 和 get 方法==============================*/
+
+#foreach($attribute in $attributeList)
+#set($function=$attribute.atrributeName.substring(0, 1).toUpperCase()+$attribute.atrributeName.substring(1))
+	/**
+	 * @return the $attribute.atrributeName 
+	 */
+	public $attribute.dataType get$function () {
+		return $attribute.atrributeName;
+	}
+
+	/**
+	 *  @param $attribute.atrributeName the $attribute.atrributeName to set
+	 */
+	public void set$function ($attribute.dataType $attribute.atrributeName) {
+		this.$attribute.atrributeName = $attribute.atrributeName;
+	}
+#end
+}
