@@ -3,7 +3,10 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<queryString language="SQL">
+	<parameter name="parentncode" class="java.lang.String">
+		<defaultValueExpression><![CDATA[rootdir]]></defaultValueExpression>
+	</parameter>
+	<queryString>
 		<![CDATA[SELECT
      function.`id` AS function_id,
      function.`ncode` AS function_ncode,
@@ -12,7 +15,10 @@
      function.`parentncode` AS function_parentncode,
      function.`link` AS function_link
 FROM
-     `function` function]]>
+     `function` function
+
+     WHERE
+function.parentncode = $P{parentncode}]]>
 	</queryString>
 	<field name="function_id" class="java.lang.Long"/>
 	<field name="function_ncode" class="java.lang.String"/>

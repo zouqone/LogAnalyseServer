@@ -38,6 +38,8 @@ public class Test {
 		String pdf = "/app/report/"+"test.pdf";
 		try {
 			
+			params.put("parentncode", "rootdir");
+			
 			// 获取模板文件
 			jasperReport = JasperCompileManager.compileReport(rootPath+jrxmlPath);
 
