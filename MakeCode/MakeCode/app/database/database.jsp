@@ -21,7 +21,7 @@
 
 
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-ui-1.10.4.custom.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-ui-1.10.4.js"></script>
 
 <script type="text/javascript">
 var baseUrl = '<%=request.getContextPath()%>';
@@ -111,6 +111,7 @@ function setTableNode(obj){
 	}
 	
 	jQuery(dbInfo_makeCode).dialog({
+		modal: true,
 		autoOpen: true,
 		width: 950,
 		title:table_name+' '+tcomment,
