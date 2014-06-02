@@ -1,0 +1,143 @@
+package ${package}.util;
+
+
+#set($constants="I"+$vo+"Constants")
+
+#set($sqlcolName = "")
+#set($colvalue = "")
+#set($updateparam = "")
+#set($i = 0 )
+#foreach($attribute in $attributeList)
+	#set ($i=$i+1) 
+	#if($i>1)
+		#set($sqlcolName = $sqlcolName+" , ")
+		#set($colvalue = $colvalue + " ,")
+		#set($updateparam = $updateparam + " ,")
+	#end 
+	#set($atrributeName = $table+"."+$attribute.atrributeName)
+	#set($sqlcolName = $sqlcolName+$atrributeName)
+	#set($colvalue = $colvalue + "?")
+	#set($updateparam = $updateparam + $atrributeName+" = ? ")
+#end
+
+/**
+ * @author $!{author}
+ * @date $!{date}
+ * @Description： $!{info}
+ */
+public interface ${constants} {
+
+	/**
+	 * BS的规划化名称
+	 */
+	public final static String SERVICE_KEY = "${service}";
+	
+	/**
+	 * 表名
+	 */
+	public final static String TABLE_NAME = "${table}";
+	
+	/**
+	 * 表名注释
+	 */
+	public final static String TABLE_NAME_COMMENT = "用户信息";
+
+	/**
+	 * 默认查询条件链接关键字
+	 */
+	public final static String DEFAULT_SQL_CONTACT_KEYWORD = " where ";
+	
+	/**
+	 * 默认查询条件
+	 */
+	public final static String DEFAULT_QUERY_WHERE_ENABLE = DEFAULT_SQL_CONTACT_KEYWORD+" 1=1 ";
+
+	/**
+	 * 默认排序字段
+	 */
+	public final static String DEFAULT_ORDER_CODE = "${pk}";
+
+	
+	//web层 Action 跳转
+	/**
+	 * 列表页面
+	 */
+	public final static String LIST_PAGE = "list";
+	
+	/**
+	 * 新增页面
+	 */
+	public final static String ADD_PAGE = "insert";
+	
+	/**
+	 * 修改页面
+	 */
+	public final static String UPDATE_PAGE = "update";
+	
+	/**
+	 * 删除页面
+	 */
+	public final static String DELTE_PAGE ="delete";
+	
+	/**
+	 * 详情页面
+	 */
+	public final static String DETAIL_PAGE ="detail";
+	
+	/**
+	 * 错误页面
+	 */
+	public final static String ERROR_PAGE ="error";
+	
+	
+	/**
+	 * beans
+	 */
+	public final static String BEANS ="beans";
+	
+	/**
+	 * bean
+	 */
+	public final static String BEAN ="bean";
+	
+	
+	
+
+	//SQL语句
+	/**
+	 * 插入
+	 */
+	public final static String SQL_INSERT = "insert into ${table}(${sqlcolName}) values(${colvalue}) ";
+	
+	/**
+	 * 通过PK删除
+	 */
+	public final static String SQL_DELETE_BY_PK = "delete from ${table} where ${pk}=?";
+
+	/**
+	 * 批量删除
+	 */
+	public final static String SQL_DELETE_MULTI_BY_PKS = "delete from ${table}";
+
+	/**
+	 * 通过PK修改
+	 */
+	public final static String SQL_UPDATE_BY_PK = "update ${table} set ${updateparam}  where ${pk} = ?";
+
+	/**
+	 * 查询记录数目
+	 */
+	public final static String SQL_COUNT = "select count(*) from ${table}";
+
+	/**
+	 * 查询所有记录
+	 */
+	public final static String SQL_QUERY_ALL = "SELECT ${sqlcolName}  FROM ${table}";
+
+	/**
+	 * 通过PK查询
+	 */
+	public final static String SQL_FIND_BY_PK = SQL_QUERY_ALL+DEFAULT_SQL_CONTACT_KEYWORD+" ${pk} = ? ";
+
+
+}

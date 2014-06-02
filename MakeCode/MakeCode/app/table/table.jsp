@@ -17,7 +17,7 @@ function initPage(){
 }
 </script>
 </head>
-<body onload="initPage();">
+<body onload="">
 <center>
 <h2><span>表格的基本操作</span></h2>
 </center>

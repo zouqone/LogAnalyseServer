@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+#set($voVar=$vo.substring(0,1).toLowerCase()+$vo.substring(1))	
+	<package name="struts2-${vo}" extends="struts2-spring3">
+		<action name="${web}_*" method="{1}" class="${package}.action.${web}">
+			<result name="list" >app/jsp/${voVar}/${voVar}List.jsp</result>
+			<result name="insert" >app/jsp/${voVar}/${voVar}Insert.jsp</result>
+			<result name="update" >app/jsp/${voVar}/${voVar}Insert.jsp</result>
+			<result name="detail" >app/jsp/${voVar}/${voVar}Detail.jsp</result>
+			<result name="error" ></result>
+			
+		</action>
+	</package>
+	
+</struts>

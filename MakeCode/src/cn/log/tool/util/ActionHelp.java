@@ -30,6 +30,57 @@ public class ActionHelp {
 	}
 
 	/**
+	 * 对象转字符串
+	 * @param object
+	 * @return
+	 */
+	public static String objectToString(Object object){
+		if(object == null){
+			return null;
+		}
+		JSONObject jsonObject = JSONObject.fromObject(object);
+		String info = jsonObject.toString();
+		return info;
+	}
+	
+	/**
+	 * List数组转字符串
+	 * @param objects
+	 * @return
+	 */
+	public static String listToString(List<Object> objects){
+		if(objects == null){
+			return null;
+		}
+		if(objects.size()==0){
+			return "[]";
+		}
+		
+		JSONArray jsonArray = JSONArray.fromObject(objects);
+		String info = jsonArray.toString();
+		return info;
+	}
+	/**
+	 * 将字符串写入输出流
+	 * @param response
+	 * @param object
+	 */
+	public static void WriteStrToOut(HttpServletResponse response ,Object object){
+		String info = objectToString(object);
+		WriteStrToOut(response, info);
+	}
+	
+	/**
+	 * 将字符串写入输出流
+	 * @param response
+	 * @param objects
+	 */
+	public static void WriteStrToOut(HttpServletResponse response ,List<Object> objects){
+		String info = listToString(objects);
+		WriteStrToOut(response, info);
+	}
+	
+	/**
 	 * 将字符串写入输出流
 	 * @param response
 	 * @param info

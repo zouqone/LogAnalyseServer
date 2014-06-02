@@ -1,0 +1,164 @@
+package ${package}.service.impl;
+
+import java.util.List;
+import java.util.Map;
+
+import ${package}.dao.${dao};
+import ${package}.service.${service};
+import ${package}.vo.${vo};
+
+#set($serviceimpl=$service.substring(1)+"Impl")	
+#set($voVar=$vo.substring(0, 1).toLowerCase()+$vo.substring(1))
+#set($daoVar=$dao.substring(1,2).toLowerCase()+$dao.substring(2))	
+#set($daoName=$dao.substring(1,2).toUpperCase()+$dao.substring(2))
+
+#set($sp="#");
+
+/**
+ * @author $!{author}
+ * @date $!{date}
+ * @Description： $!{info}
+ */
+public class ${serviceimpl} implements ${service} {
+	
+	private ${dao} ${daoVar};
+
+	/**
+	 * @return the ${daoVar}
+	 */
+	public ${dao} get${daoName}() {
+		return ${daoVar};
+	}
+
+	/**
+	 * @param ${daoVar} the ${daoVar} to set
+	 */
+	public void set${daoName}(${dao} ${daoVar}) {
+		this.${daoVar} = ${daoVar};
+	}
+	
+	
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}queryAll${vo}()
+	 */
+	@Override
+	public List<${vo}> queryAll${vo}() {
+		// TODO Auto-generated method stub
+		List<${vo}> ${voVar}s = ${daoVar}.queryAll${vo}();
+		
+		return ${voVar}s;
+	}
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}query${vo}ByCondition(java.lang.String)
+	 */
+	@Override
+	public List<${vo}> query${vo}ByCondition(String condition) {
+		// TODO Auto-generated method stub
+		List<${vo}> ${voVar}s = ${daoVar}.query${vo}ByCondition(condition);
+		return ${voVar}s;
+	}
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}query${vo}BySql(java.lang.String)
+	 */
+	@SuppressWarnings("rawtypes")
+	@Override
+	public List<Map> query${vo}BySql(String sql) {
+		// TODO Auto-generated method stub
+		List<Map> maps = ${daoVar}.query${vo}BySql(sql);
+		return maps;
+	}
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}find(${package}.vo.${vo})
+	 */
+	@Override
+	public ${vo} find(${vo} ${voVar}) {
+		// TODO Auto-generated method stub
+		${vo} vo = ${daoVar}.find(${voVar});
+		return vo;
+	}
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}insert${vo}(${package}.vo.${vo})
+	 */
+	@Override
+	public Object insert${vo}(${vo} ${voVar}) {
+		// TODO Auto-generated method stub
+		Object object = ${daoVar}.insert${vo}(${voVar});
+		return object;
+	}
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}insert${vo}(java.util.List)
+	 */
+	@Override
+	public List<Object> insert${vo}(List<${vo}> ${voVar}List) {
+		// TODO Auto-generated method stub
+		List<Object> objects = ${daoVar}.insert${vo}(${voVar}List);
+		return objects;
+	}
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}update${vo}(${package}.vo.${vo})
+	 */
+	@Override
+	public Object update${vo}(${vo} ${voVar}) {
+		// TODO Auto-generated method stub
+		Object object = ${daoVar}.update${vo}(${voVar});
+		return object;
+	}
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}update${vo}(java.util.List)
+	 */
+	@Override
+	public List<Object> update${vo}(List<${vo}> ${voVar}List) {
+		// TODO Auto-generated method stub
+		List<Object> objects = ${daoVar}.update${vo}(${voVar}List);
+		return objects;
+	}
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}delete${vo}(${package}.vo.${vo})
+	 */
+	@Override
+	public Object delete${vo}(${vo} ${voVar}) {
+		// TODO Auto-generated method stub
+		Object object = ${daoVar}.delete${vo}(${voVar});
+		return object;
+	}
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}delete${vo}ByCondition(java.lang.String)
+	 */
+	@Override
+	public Object delete${vo}ByCondition(String condition) {
+		// TODO Auto-generated method stub
+		Object object = ${daoVar}.delete${vo}ByCondition(condition);
+		return object;
+	}
+
+	/* (non-Javadoc)
+	 * @see ${package}.service.${service}${sp}query${vo}TotalNumber()
+	 */
+	@Override
+	public Integer query${vo}TotalNumber() {
+		// TODO Auto-generated method stub
+		Integer count = query${vo}TotalNumber(null);
+		return count;
+	}
+
+	/**
+	 * 查询${vo}数目
+	 * @param condition
+	 * @return
+	 */
+	public Integer query${vo}TotalNumber(String condition){
+		Integer count = ${daoVar}.query${vo}TotalNumber(condition);
+		return count;
+	}
+	
+}

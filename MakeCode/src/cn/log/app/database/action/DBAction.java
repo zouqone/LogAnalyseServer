@@ -16,7 +16,6 @@ import java.util.Map;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import net.sf.json.JsonConfig;
 
 import cn.log.app.database.service.IDBService;
 import cn.log.app.database.vo.ColumnVo;
@@ -36,6 +35,7 @@ import com.opensymphony.xwork2.ModelDriven;
  * @author zouqone date 2014年5月11日 下午4:32:37
  * 
  */
+@SuppressWarnings("serial")
 public class DBAction extends AbstractBaseAction implements
 		ModelDriven<DatabaseVo> {
 
@@ -119,6 +119,7 @@ public class DBAction extends AbstractBaseAction implements
 		}
 		ActionHelp.WriteStrToOut(response, fileStr.toString());
 	}
+	@SuppressWarnings("deprecation")
 	public void down(){
 		String path = request.getRealPath("/")+request.getParameter("path");
 		File file = new File(path);
@@ -163,30 +164,25 @@ public class DBAction extends AbstractBaseAction implements
 		
 	}
 	
+	@SuppressWarnings({ "unchecked", "rawtypes", "deprecation" })
 	public void makeCode(){
 		String tableListStr = request.getParameter("tableList");
-		System.out.println(tableListStr);
-		
+		//System.out.println(tableListStr);
+		String webRoot = request.getRealPath("/");
 		TemplateEngineVo templateEngineVo = new TemplateEngineVo();
 		try{
 		JSONArray jsonArray = JSONArray.fromObject(tableListStr);
 		for (Object object : jsonArray) {
-			String config = ((JSONObject)object).getString("configVo");
-			//((JSONObject)object).remove("configVo");
-			JsonConfig jsonConfig = new JsonConfig();
-			//jsonConfig.setRootClass(TableVo.class);
 			Map classMap = new HashMap();
 	        classMap.put("columnVoList", ColumnVo.class);
 	        classMap.put("configVo", ConfigVo.class);
 			TableVo tableVo = (TableVo) JSONObject.toBean((JSONObject) object,TableVo.class,classMap);
-			
+			tableVo.getConfigVo().setWebRoot(webRoot);
 			buildCodeService.buildCode(tableVo, templateEngineVo);
-			System.out.println(config);
-			System.out.println(object);
 		}
 		}catch (Exception e) {
 			// TODO: handle exception
-			System.out.println(e);
+			e.printStackTrace();
 		}
 		ActionHelp.WriteStrToOut(response, "1");
 		

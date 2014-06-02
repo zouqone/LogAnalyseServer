@@ -1,4 +1,4 @@
-package ${package}.dao;
+package ${package}.service;
 
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import ${package}.vo.${vo};
  * @date $!{date}
  * @Description： $!{info}
  */
-public interface ${dao} {
+public interface ${service} {
 
 	/*=======================查询query===========================*/
 	/**

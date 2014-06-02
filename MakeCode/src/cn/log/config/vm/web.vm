@@ -1,0 +1,122 @@
+package ${package}.action;
+
+
+#set($serviceimpl=$service.substring(1)+"Impl")	
+#set($voVar=$vo.substring(0, 1).toLowerCase()+$vo.substring(1))
+#set($daoVar=$dao.substring(1,2).toLowerCase()+$dao.substring(2))	
+#set($daoName=$dao.substring(1,2).toUpperCase()+$dao.substring(2))
+
+#set($serviceVar=$service.substring(1, 2).toLowerCase()+$service.substring(2))
+#set($serviceName=$service.substring(1, 2).toUpperCase()+$service.substring(2))
+
+#set($constants="I"+$vo+"Constants")
+
+import java.util.List;
+
+import ${package}.service.${service};
+import ${package}.util.${constants};
+import ${package}.vo.${vo};
+import cn.log.tool.util.ActionHelp;
+import cn.log.tool.web.AbstractBaseAction;
+
+import com.opensymphony.xwork2.ModelDriven;
+
+
+/**
+ * @author $!{author}
+ * @date $!{date}
+ * @Description： $!{info}
+ */
+@SuppressWarnings("serial")
+public class ${web} extends AbstractBaseAction implements
+ModelDriven<${vo}> ,${constants}{
+
+	private ${vo} ${voVar};
+	private ${service} ${serviceVar};
+	
+	/**
+	 * @return the ${serviceVar}
+	 */
+	public ${service} get$serviceName() {
+		return ${serviceVar};
+	}
+
+	/**
+	 * @param ${serviceVar} the ${serviceVar} to set
+	 */
+	public void set$serviceName(${service} ${serviceVar}) {
+		this.${serviceVar} = ${serviceVar};
+	}
+
+	
+	/**
+	 * @return the ${voVar}
+	 */
+	public ${vo} get${vo}() {
+		return ${voVar};
+	}
+
+	/**
+	 * @param ${voVar} the ${voVar} to set
+	 */
+	public void set${vo}(${vo} ${voVar}) {
+		this.${voVar} = ${voVar};
+	}
+
+	/* (non-Javadoc)
+	 * @see com.opensymphony.xwork2.ModelDriven#getModel()
+	 */
+	@Override
+	public ${vo} getModel() {
+		// TODO Auto-generated method stub
+		if(${voVar} == null){
+			${voVar} = new ${vo}();
+		}
+		return ${voVar};
+	}
+	
+	public String getList(){
+		
+		List<${vo}> ${voVar}s = ${serviceVar}.queryAll${vo}();
+		request.setAttribute(BEANS, ${voVar}s);
+		return LIST_PAGE;
+	}
+	
+	public String insert(){
+		Object object = ${serviceVar}.insert${vo}(${voVar});
+		request.setAttribute("count", object);
+		return LIST_PAGE;
+	}
+
+	public String update(){
+		${vo} vo = ${serviceVar}.find(${voVar});
+		request.setAttribute(BEAN, vo);
+		return UPDATE_PAGE;
+	}
+	
+	public String save(){
+		Object object = ${serviceVar}.update${vo}(${voVar});
+		request.setAttribute("count", object);
+		return LIST_PAGE;
+	}
+	
+	public String delete(){
+		Object object = ${serviceVar}.delete${vo}(${voVar});
+		request.setAttribute("count", object);
+		return DELTE_PAGE;
+	}
+	
+	public String detail(){
+		${vo} vo = ${serviceVar}.find(${voVar});
+		request.setAttribute(BEAN, vo);
+		return DETAIL_PAGE;
+	}
+	
+	
+	//ajax 请求页面
+	public void query(){
+		String condition = request.getParameter("condition");
+		List<${vo}> ${voVar}s = ${serviceVar}.query${vo}ByCondition(condition);
+		ActionHelp.WriteStrToOut(response, ${voVar}s);
+	}
+}

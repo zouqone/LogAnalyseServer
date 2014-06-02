@@ -88,6 +88,25 @@ public class ConfigVo {
 	 * 
 	 */
 	private String js;
+	
+	/**
+	 * 
+	 */
+	private String webRoot;
+
+	/**
+	 * @return the webRoot
+	 */
+	public String getWebRoot() {
+		return webRoot;
+	}
+
+	/**
+	 * @param webRoot the webRoot to set
+	 */
+	public void setWebRoot(String webRoot) {
+		this.webRoot = webRoot;
+	}
 
 	public ConfigVo() {
 		// TODO Auto-generated constructor stub

@@ -56,7 +56,6 @@ public class TemplateEngineVoDaoImpl implements ITemplateEngineVoDao{
 		properties.setProperty(Velocity.RUNTIME_LOG, root+"/"+FILE_RESOURCE_LOADER_PATH+"/"+RUNTIME_LOG);
 		properties.setProperty(Velocity.FILE_RESOURCE_LOADER_PATH, root+"/"+FILE_RESOURCE_LOADER_PATH); 
 		properties.setProperty(Velocity.INPUT_ENCODING, INPUT_ENCODING);
-		properties.setProperty(Velocity.ENCODING_DEFAULT, ENCODING_DEFAULT);
 		properties.setProperty(Velocity.OUTPUT_ENCODING, OUTPUT_ENCODING);
 		
 		

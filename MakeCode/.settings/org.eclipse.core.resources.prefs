@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+encoding//MakeCode/app/jsp/userVo=UTF-8
+encoding//MakeCode/app/jsp/userVo/userVoDetail.jsp=UTF-8
+encoding//MakeCode/app/jsp/userVo/userVoInsert.jsp=UTF-8
+encoding//MakeCode/app/jsp/userVo/userVoList.jsp=UTF-8
 encoding//src/cn/log/config/vm/vm.properties=UTF-8
 encoding//src/template.properties=UTF-8
 encoding/<project>=UTF-8

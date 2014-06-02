@@ -322,6 +322,7 @@ function loadForm(tableVo,formVo){
 
 function initMakeCodeConfig(tableName,obj){
 	var name = tableName.replace(/(^|\s+)\w/g,function(s){return s.toUpperCase();});
+	var jspName = tableName.replace(/(^|\s+)\w/g,function(s){return s.toLowerCase();});
 	var checkObjs = jQuery('input[type="checkbox"]',obj);
 	//checkObjs.attr("checked","checked");
 	clearConfigTemplate(obj);
@@ -336,13 +337,13 @@ function initMakeCodeConfig(tableName,obj){
 	jQuery('input[type="text"][name="jsp"]',obj).val(""+name+"VoList");
 	
 	jQuery('input[type="text"][name="packagePath"]',obj).val("cn.log.app."+name.toLocaleLowerCase()+"");
-	jQuery('input[type="text"][name="strutsxml"]',obj).val("cn/log/config/struts/struts"+name+"Vo.xml");
-	jQuery('input[type="text"][name="springxml"]',obj).val("cn/log/config/spring/applicationContext-"+name+"Vo.xml");
-	jQuery('input[type="text"][name="jspPath"]',obj).val("app/"+name+"VoList");
+	jQuery('input[type="text"][name="strutsxml"]',obj).val("cn/log/config/struts/struts-"+jspName+"Vo.xml");
+	jQuery('input[type="text"][name="springxml"]',obj).val("cn/log/config/spring/applicationContext-"+jspName+"Vo.xml");
+	jQuery('input[type="text"][name="jspPath"]',obj).val("app/jsp/"+jspName+"Vo");
 	
-	jQuery('input[type="text"][name="images"]',obj).val("images/app/"+name+"Vo");
-	jQuery('input[type="text"][name="css"]',obj).val("css/app/"+name+"Vo");
-	jQuery('input[type="text"][name="js"]',obj).val("js/app/"+name+"Vo");
+	jQuery('input[type="text"][name="images"]',obj).val("images/app/"+jspName+"Vo");
+	jQuery('input[type="text"][name="css"]',obj).val("css/app/"+jspName+"Vo");
+	jQuery('input[type="text"][name="js"]',obj).val("js/app/"+jspName+"Vo");
 	
 }
 

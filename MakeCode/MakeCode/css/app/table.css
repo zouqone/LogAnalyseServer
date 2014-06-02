@@ -1,19 +1,20 @@
 @CHARSET "UTF-8";
 
 /* 工具条 */
-.tool_menu_div{border-bottom: 2px solid #99CC00;background-color: #F1F1F1;height: 32px;padding-bottom:5px;font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',宋体,sans-serif;}
+.tool_menu_div{display:inline-table;border-bottom: 2px solid #99CC00;background-color: #F1F1F1;height: 32px;padding-bottom:5px;font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',宋体,sans-serif;}
 .menu_item_ul{display: inline;float: left;list-style: none outside none;border: 0px solid #BBBBBB;padding: 0;}
 .menu_item_ul li{margin: 0;font-size: 16px;text-align: center;display: inline;float: left;border: 0px solid #BBBBBB;cursor: pointer;}
 .menu_item_ul li a{font-weight: bolder;width: 40px; height: 22px; overflow: hidden;padding: 0 3px;display: inline;float: left; color: #000000;text-decoration: none;}
 .menu_item_ul li a:hover {background-color: #CFDAE5;}
 
 /* 表格 */
-.table_form_div{border: 1px solid #BBBBBB;height: 440px; width: 720px;overflow-y:auto;}
-.data_table{border: 1px solid #BBBBBB;background-color:#FFFFFF;min-width:510px;width: auto;height: 400px;*height:auto;border-collapse:collapse;margin: 5px;}
+.table_form_div{border: 1px solid #BBBBBB;overflow-y:auto;}
+.data_table{border: 1px solid #BBBBBB;background-color:#FFFFFF;width: auto;height: 400px;height:auto;border-collapse:collapse;margin: 5px;}
 .data_table_tr{height: 24px;border: 1px solid #BBBBBB;font-size: 12px;}
 .data_table_td{width: 50px;border: 1px solid #BBBBBB;}
 .data_table_input{border: 0px solid #BBBBBB;width: 100%;}
 .data_table_tr_even{background-color: #F6F6F6}
+.data_table_tr_select{background-color: #DFEBF2}
 .data_table_tr:hover {background-color: #CFDAE5;}
 .data_head:hover {background-color: #EBEBEB;}
 .input_checkbox_head{text-align: center;vertical-align:middle;width: 30px;}
