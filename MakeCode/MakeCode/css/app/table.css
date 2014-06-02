@@ -1,8 +1,8 @@
 @CHARSET "UTF-8";
 
 /* 工具条 */
-.tool_menu_div{display:inline-table;border-bottom: 2px solid #99CC00;background-color: #F1F1F1;height: 32px;padding-bottom:5px;font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',宋体,sans-serif;}
-.menu_item_ul{display: inline;float: left;list-style: none outside none;border: 0px solid #BBBBBB;padding: 0;}
+.tool_menu_div{width: 100%;display:inline-table;border-bottom: 2px solid #99CC00;background-color: #F1F1F1;height: 32px;padding-bottom:5px;font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',宋体,sans-serif;}
+.menu_item_ul{list-style: none outside none;border: 0px solid #BBBBBB;padding: 0;}
 .menu_item_ul li{margin: 0;font-size: 16px;text-align: center;display: inline;float: left;border: 0px solid #BBBBBB;cursor: pointer;}
 .menu_item_ul li a{font-weight: bolder;width: 40px; height: 22px; overflow: hidden;padding: 0 3px;display: inline;float: left; color: #000000;text-decoration: none;}
 .menu_item_ul li a:hover {background-color: #CFDAE5;}
