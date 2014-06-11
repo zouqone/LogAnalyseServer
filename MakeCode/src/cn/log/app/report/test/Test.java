@@ -57,6 +57,7 @@ public class Test {
 			e.printStackTrace();
 			System.out.println(e);
 		}
+		reportPath = pdf;
 		return reportPath;
 	}
 

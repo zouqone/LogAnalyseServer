@@ -23,12 +23,32 @@ function report(){
     }); 
 }
 
+function showReport(){
+	var type = jQuery('#reportTypeID').val();
+	var url = baseUrl+"/app/report/jasper.jsp?type="+type;
+	var iframeObj = jQuery("#report_id");
+	iframeObj.attr("src",url);
+}
+
+function browseReport(){
+	var type = "print";
+	var url = baseUrl+"/app/report/jasper.jsp?type="+type;
+	var iframeObj = jQuery("#report_id");
+	iframeObj.attr("src",url);
+}
 </script>
 </head>
 <body>
-
+<select name="reportType" id="reportTypeID">
+	<option value="html">html</option>
+	<option value="pdf">pdf</option>
+	<option value="xls">xls</option>
+	<option value="word">word</option>
+</select>
 	<div>
-		<input type="button" value="生成报表" onclick="report()">
+		<input type="button" value="后台生成报表" onclick="report()">
+		<input type="button" value="前台生成报表" onclick="showReport()">
+		<input type="button" value="预览报表" onclick="browseReport()">
 	</div>
 	<div>
 		<iframe src="" id="report_id"
