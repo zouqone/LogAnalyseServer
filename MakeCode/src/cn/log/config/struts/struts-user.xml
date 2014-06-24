@@ -6,9 +6,9 @@
 	
 	<package name="struts2-user" extends="struts2-spring3">
 		<action name="UserAction_*" method="{1}" class="cn.log.user.action.UserAction">
-			<result name="success" type="redirectAction">log/index.jsp</result>
-			<result name="error" type="redirectAction">login/login.jsp</result>
-			<result name="logout" type="redirectAction">login/login.jsp</result>
+			<result name="success" type="redirect">log/index.jsp</result>
+			<result name="error" type="redirect">login/login.jsp</result>
+			<result name="logout" type="redirect">login/login.jsp</result>
 		</action>
 	</package>
 	
