@@ -9,7 +9,10 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="java.io.*" %>
 <%@ page import="cn.log.db.util.JdbcUtils" %>
-
+<%@ page import="java.io.*" %>
+<%@ page import="org.dom4j.*" %>
+<%@ page import="org.dom4j.io.*" %>
+<%@ page import="cn.log.tool.util.*" %>
 <%
 String type = request.getParameter("type");
 JasperReport jasperReport = null;
@@ -25,7 +28,14 @@ InputStream in = null;
 OutputStream os = null;
 
 try {
-	jasperReport=JasperCompileManager.compileReport(application.getRealPath("/upload/test.jrxml"));
+	String real = application.getRealPath("/upload/test.jrxml");
+	Document document = XmlHelp.ireportEx(real);
+	
+	InputStream is = new ByteArrayInputStream(document.asXML().getBytes("utf-8"));
+	jasperReport=JasperCompileManager.compileReport(is);
+	//jasperReport=JasperCompileManager.compileReport(real);
+	//jasperReport=JasperCompileManager.compileReport("C:/Users/Administrator/Documents/report/ireport/test.jrxml");
+	
 	// 填充数据，生成打印文件
 	jasperPrint = JasperFillManager.fillReport(jasperReport, params,conn);
 
