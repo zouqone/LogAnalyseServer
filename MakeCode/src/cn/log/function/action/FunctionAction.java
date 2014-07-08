@@ -205,7 +205,7 @@ public class FunctionAction extends AbstractBaseAction implements
 		PrintWriter out = null;
 		String outInfo = "";
 		String id = null;
-		id = functionService.createFunctionVo(functionVo);
+		id = functionService.insertFunctionVo(functionVo);
 		outInfo = "{id:'" + id + "'}";
 
 		// 向前台发送信息

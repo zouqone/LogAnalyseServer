@@ -13,6 +13,14 @@ import cn.log.function.vo.FunctionVo;
 public interface IFunctionService {
 
 	/**
+	 * 创建FunctionVo
+	 * @param functionVo
+	 * @return
+	 */
+	public String insertFunctionVo(FunctionVo functionVo);
+	
+	
+	/**
 	 * 查询出所有的FunctionVo
 	 * @return List<FunctionVo>
 	 */
@@ -53,6 +61,7 @@ public interface IFunctionService {
 	 * @return
 	 */
 	public String createFunctionVo(FunctionVo functionVo);
+	
 	
 	/**
 	 * 通过id删除应用

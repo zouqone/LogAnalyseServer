@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<aop:aspectj-autoproxy />
+	<!-- <context:annotation-config /> <context:component-scan base-package="(填写)" 
+		/> -->
+
+	<!-- 表示实现代理之前的方法的类的实例    -->
+	<bean id="before" class="cn.log.test.proxy.impl.ProxySubjectBeforeAdvice">
+
+	</bean>
+
+	<!-- 表示实现代理之后的方法的类的实例   -->
+	<bean id="after" class="cn.log.test.proxy.impl.ProxySubjectAfterAdvice">
+	
+	</bean> 
+	
+	<!--定义一个真实主题类的对象 -->
+	<bean id="subject" class="cn.log.test.proxy.impl.RealSubject">
+	
+	</bean>
+	
+	<!-- 写出Spring中提供的代理类的Bean(一定要注意找准Spring中的那个ProxyFactoryBean类) -->
+	<bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<!-- 代理接口 -->
+		<property name="proxyInterfaces">
+			<!-- 真实的类实现的接口Subject -->
+			<value>cn.log.test.proxy.Subject</value>
+		</property>
+		<!-- 加入一个目标属性表示所代理的真实类 -->
+		<property name="target">
+			<!-- 参考subject（真实的主题类的实例） -->
+			<ref bean="subject"/>
+		</property>
+		<!-- 写入拦截器属性 -->
+		<property name="interceptorNames">
+			<!-- 注入拦截器的集合 -->
+			<list>
+				<!-- 表示调用刚才定义的ProxySubjectBeforeAdvice的实例中的before（）方法 -->
+                <!-- value中间的before其实是刚才ProxySubjectBeforeAdvice的Bean的id-->
+                <value>before</value>
+                <!-- 加入代理之后完成任务的拦截器 -->
+                <value>after</value>
+			</list>
+		</property>
+		
+	</bean>
+	
+	
+	
+</beans>

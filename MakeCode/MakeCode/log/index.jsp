@@ -40,7 +40,7 @@ jQuery(document).ready(function(){
 var setting = {  
     view: {  selectedMulti: false },  //,fontCss: setFontCss 
     async: {  
-        enable: true,  url: treeAction,type:"POST",
+        enable: true,  url: treeAction+"?rk="+Math.random(),type:"GET",
         autoParam:["id=pCode", "name", "level"],  
         dataFilter: filter
     },  
@@ -71,7 +71,7 @@ function filter(treeId, parentNode, childNodes) {
 function initMyZtree(){  
 	var zNodes="";
     $.ajax({  
-    	url: treeAction, type: "GET",data:{pCode:'rootdir'},
+    	url: treeAction+"?rk="+Math.random(), type: "GET",data:{pCode:'rootdir'},
         success: function(data) {     
             //alert(data);
             zNodes=eval(data);  

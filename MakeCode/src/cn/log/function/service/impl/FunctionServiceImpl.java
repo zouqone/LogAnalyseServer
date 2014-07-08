@@ -3,10 +3,15 @@
  */
 package cn.log.function.service.impl;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import net.sf.json.JSONArray;
+import cn.log.db.util.JdbcUtils;
 import cn.log.function.dao.IFunctionDao;
 import cn.log.function.service.IFunctionService;
 import cn.log.function.vo.FunctionVo;
@@ -17,6 +22,8 @@ import cn.log.tool.vo.TreeVo;
  * @author zouqone
  * @see FunctionService接口实现
  */
+@Transactional
+@Service("functionService")  
 public class FunctionServiceImpl implements IFunctionService {
 
 	/**
@@ -40,6 +47,22 @@ public class FunctionServiceImpl implements IFunctionService {
 		this.functionDao = functionDao;
 	}
 
+	/* (non-Javadoc)
+	 * @see cn.log.function.service.IFunctionService#insertFunctionVo(cn.log.function.vo.FunctionVo)
+	 * @param functionVo
+	 * @return
+	 */
+	@Override
+	public String insertFunctionVo(FunctionVo functionVo) {
+		// TODO Auto-generated method stub
+		Integer id = 0;
+		//Connection conn = JdbcUtils.getConnection();
+		//JdbcUtils.startTransaction();
+		id = functionDao.insertFunctionVo(functionVo);
+		//int s = 1/0;
+		return id.toString();
+	}
+	
 	/* (non-Javadoc)
 	 * @see cn.log.function.service.IFunctionService#getAllFunctionVo()
 	 */
@@ -124,10 +147,18 @@ public class FunctionServiceImpl implements IFunctionService {
 	@Override
 	public String createFunctionVo(FunctionVo functionVo) {
 		// TODO Auto-generated method stub
-		Integer id = functionDao.insertFunctionVo(functionVo);
-		if(id!=null){
-			return id.toString();
+		try{
+			Integer id = functionDao.insertFunctionVo(functionVo);
+			//Integer is = 1/0;
+			//functionVo.setId(id);
+			if(id!=null){
+				return id.toString();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
 		}
+		//functionDao.insertFunctionVo(functionVo);
+		
 		return null;
 	}
 
@@ -211,4 +242,6 @@ public class FunctionServiceImpl implements IFunctionService {
 		String treeListStr = jsonArray.toString();
 		return treeListStr;
 	}
+
+
 }

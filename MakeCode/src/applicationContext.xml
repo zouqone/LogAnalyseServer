@@ -1,19 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
-           http://www.springframework.org/schema/context
-           http://www.springframework.org/schema/context/spring-context-2.5.xsd
-           http://www.springframework.org/schema/aop
-           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
-           http://www.springframework.org/schema/tx 
-           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans"    
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:aop="http://www.springframework.org/schema/aop"   
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:jee="http://www.springframework.org/schema/jee"  
+    xmlns:tx="http://www.springframework.org/schema/tx"  
+    xsi:schemaLocation="    
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd  
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd  
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">  
+        
 	<aop:aspectj-autoproxy />
-	<!-- <context:annotation-config /> <context:component-scan base-package="(填写)" 
-		/> -->
 
+	<!-- 用注解方式注入bean -->
+	<context:annotation-config />
+	<!-- 基于注解自动扫描组件 -->
+	<context:component-scan base-package="cn.log.function" />
 
+	<!-- hibernate属性配置文件 多个可以用逗号分割 -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
 
+	<!-- 数据库连接池 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName">
+			<value>${hibernate.jdbc.driverClassName}</value>
+		</property>
+		<property name="url">
+			<value>${hibernate.jdbc.url}</value>
+		</property>
+		<property name="username">
+			<value>${hibernate.jdbc.username}</value>
+		</property>
+		<property name="password">
+			<value>${hibernate.jdbc.password}</value>
+		</property>
+	</bean>
+
+	<!-- 注册SessionFactory 使用JPA注解就不能使用LocalSessionFactoryBean,而对于Hibernate4,AnnotationSessionFactoryBean和LocalSessionFactoryBean统一合并为LocalSessionFactoryBean了 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+		scope="singleton">
+		
+		<!-- 数据库连接 -->
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		
+		<!-- hibernate自身属性 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+				<prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop>
+				<prop key="hibernate.connection.autocommit">${hibernate.connection.autocommit}</prop>
+				<!-- 解决no session found --> 
+                <!-- <prop key="hibernate.current_session_context_class">thread</prop> -->
+                <prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext</prop>
+			</props>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>cn.log</value>
+				<!-- <value>cn.log.app</value> -->
+			</list>
+		</property>
+	</bean>
+
+	<!-- 注册Spring的模版对象 -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
 </beans>

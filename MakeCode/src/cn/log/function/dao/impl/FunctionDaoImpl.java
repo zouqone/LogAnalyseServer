@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.hibernate.SessionFactory;
 
 import cn.log.db.util.JdbcUtils;
 import cn.log.function.dao.IFunctionDao;
@@ -20,7 +21,9 @@ import cn.log.function.vo.FunctionVo;
  */
 public class FunctionDaoImpl implements IFunctionDao {
 
-									
+		
+	//private SessionFactory sessionFactory;
+	
 	/* (non-Javadoc)
 	 * 查询所有的Function
 	 * @return List<FunctionVo> 菜单类型列表

@@ -1,12 +1,23 @@
 package cn.log.function.vo;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 
 /**
  * @author zouqone
  * @see 功能节点
  */
+@Entity
+@Table(name="function")
 @SuppressWarnings("serial")
-public class FunctionVo {
+public class FunctionVo implements Serializable {
 
 
 /*=========================属性==============================*/
@@ -14,31 +25,33 @@ public class FunctionVo {
 	/**
 	 * id
 	 */
-	//@Column(name="id")
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="id")
 	private Integer id;
 	
 	/**
 	 * 节点编码
 	 */
-	//@Column(name="ncode")
+	@Column(name="ncode")
 	private String ncode;
 	
 	/**
 	 * 节点名称
 	 */
-	//@Column(name="nodename")
+	@Column(name="nodename")
 	private String nodename;
 	
 	/**
 	 * 节点描述
 	 */
-	//@Column(name="nodedesc")
+	@Column(name="nodedesc")
 	private String nodedesc;
 	
 	/**
 	 * 上级节点编码
 	 */
-	//@Column(name="parentncode")
+	@Column(name="parentncode")
 	private String parentncode;
 	
 	/**
