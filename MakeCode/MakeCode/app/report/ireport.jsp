@@ -23,36 +23,41 @@ function report(){
     }); 
 }
 
-function showReport(){
-	var type = jQuery('#reportTypeID').val();
+function printReport(){
+	var type = "print";
+	var url = baseUrl+"/app/report/jasper.jsp?type="+type;
+	var iframeObj = jQuery("#report_print");
+	iframeObj.attr("src",url);
+}
+
+function browseReport(type){
+	if(type==null){
+		type = "html";
+	}
 	var url = baseUrl+"/app/report/jasper.jsp?type="+type;
 	var iframeObj = jQuery("#report_id");
 	iframeObj.attr("src",url);
 }
 
-function browseReport(){
-	var type = "print";
-	var url = baseUrl+"/app/report/jasper.jsp?type="+type;
-	var iframeObj = jQuery("#report_id");
-	iframeObj.attr("src",url);
-}
+jQuery(document).ready(function(){
+	browseReport();
+});
 </script>
 </head>
 <body>
-<select name="reportType" id="reportTypeID">
-	<option value="html">html</option>
-	<option value="pdf">pdf</option>
-	<option value="xls">xls</option>
-	<option value="word">word</option>
-</select>
 	<div>
+		<input type="button" value="刷新" onclick="browseReport()">
+		<input type="button" value="预览报表" onclick="printReport()">
+		<input type="button" value="导出word" onclick="browseReport('doc')">
+		<input type="button" value="导出Excel" onclick="browseReport('xls')">
+		<input type="button" value="导出PDF" onclick="browseReport('pdf')">
 		<input type="button" value="后台生成报表" onclick="report()">
-		<input type="button" value="前台生成报表" onclick="showReport()">
-		<input type="button" value="预览报表" onclick="browseReport()">
 	</div>
 	<div>
 		<iframe src="" id="report_id"
-			style="width: 1000px; height: 1000px; border: 0px;"> </iframe>
+			style="width: 100%; height: 400px; border: 0px;"> </iframe>
+		<iframe src="" id="report_print"
+			style="display: none;"> </iframe>
 	</div>
 </body>
 </html>

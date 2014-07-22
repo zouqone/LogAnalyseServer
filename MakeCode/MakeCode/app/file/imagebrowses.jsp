@@ -4,8 +4,8 @@
 <title></title>
 </head>
 <body>
-<div id="divPreview">
-      <img id="imgHeadPhoto" src="noperson.jpg" style="width: 160px; height: 170px; border: solid 1px #d2e2e2;" alt="" />
+<div id="divPreview" style="width: 260px; height: 170px; border: solid 1px #d2e2e2;">
+      <img id="imgHeadPhoto" src="" style="width: 260px; height: 170px; border: solid 1px #d2e2e2;" alt="" />
 </div>
 <input type="file" onchange="PreviewImage(this,'imgHeadPhoto','divPreview')" size="20"/>
 

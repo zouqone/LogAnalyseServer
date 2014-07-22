@@ -29,11 +29,11 @@ OutputStream os = null;
 
 try {
 	String real = application.getRealPath("/upload/test.jrxml");
-	Document document = XmlHelp.ireportEx(real);
+	//Document document = XmlHelp.ireportEx(real);
 	
-	InputStream is = new ByteArrayInputStream(document.asXML().getBytes("utf-8"));
-	jasperReport=JasperCompileManager.compileReport(is);
-	//jasperReport=JasperCompileManager.compileReport(real);
+	//InputStream is = new ByteArrayInputStream(document.asXML().getBytes("utf-8"));
+	//jasperReport=JasperCompileManager.compileReport(is);
+	jasperReport=JasperCompileManager.compileReport(real);
 	//jasperReport=JasperCompileManager.compileReport("C:/Users/Administrator/Documents/report/ireport/test.jrxml");
 	
 	// 填充数据，生成打印文件
@@ -66,7 +66,7 @@ try {
 	    exporter.setParameter(JRXlsExporterParameter.IS_REMOVE_EMPTY_SPACE_BETWEEN_COLUMNS, Boolean.TRUE);
 	    exporter.setParameter(JRXlsExporterParameter.IS_WHITE_PAGE_BACKGROUND, Boolean.TRUE);
 	    exporter.exportReport();  
-	}else if("word".equals(type)){
+	}else if("doc".equals(type)){
 		String fileName = new String("test.doc".getBytes("gbk"), "utf-8");
 		response.setContentType("application/msword;charset=utf-8");
 		response.setHeader("Content-disposition", "attachment; filename=" + fileName);  

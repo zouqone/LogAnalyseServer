@@ -71,7 +71,15 @@
 		<url-pattern>*.html,*.jsp</url-pattern>
 	</filter-mapping>
 	
-	
+	<!-- ireport print -->
+	<servlet>
+		<servlet-name>Xml4SwfServlet</servlet-name>
+		<servlet-class>net.sf.jasperreports.j2ee.servlets.Xml4SwfServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Xml4SwfServlet</servlet-name>
+		<url-pattern>/servlets/xml4swf</url-pattern>
+	</servlet-mapping>
 	
 	<welcome-file-list>
 		<welcome-file>/login/login.jsp</welcome-file>

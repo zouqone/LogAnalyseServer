@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"    
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:aop="http://www.springframework.org/schema/aop"   
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:jee="http://www.springframework.org/schema/jee"  
+    xmlns:tx="http://www.springframework.org/schema/tx"  
+    xsi:schemaLocation="    
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd  
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd  
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">  
+	<aop:aspectj-autoproxy />
+	<!-- <context:annotation-config /> <context:component-scan base-package="(填写)" 
+		/> -->
+
+	<!-- Dao -->
+	<!-- <bean id="mysqlDBDao" class="cn.log.app.database.dao.impl.MysqlDBDaoImpl">
+		<property name="sessionFactory"> <ref bean="sessionFactory" /> </property>
+	</bean> -->
+
+	<!-- Service -->
+	<!-- <bean id="mysqlDBService" class="cn.log.app.database.service.impl.MysqlDBServcieImpl">
+		<property name="mysqlDBDao">
+			<ref bean="mysqlDBDao" />
+		</property>
+	</bean> -->
+
+	<!-- Action -->
+	<bean id="FileAction" class="cn.log.app.file.action.FileAction"
+		scope="session">
+		<!-- <property name="mysqlDBService">
+			<ref bean="mysqlDBService" />
+		</property> -->
+	</bean>
+
+</beans>

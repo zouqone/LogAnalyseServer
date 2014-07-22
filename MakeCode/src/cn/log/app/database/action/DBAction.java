@@ -16,14 +16,12 @@ import java.util.Map;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-
 import cn.log.app.database.service.IDBService;
 import cn.log.app.database.vo.ColumnVo;
 import cn.log.app.database.vo.ConfigVo;
 import cn.log.app.database.vo.DatabaseVo;
 import cn.log.app.database.vo.TableVo;
 import cn.log.app.template.service.IBuildCode;
-import cn.log.app.template.service.impl.buildCodeImpl;
 import cn.log.app.template.vo.TemplateEngineVo;
 import cn.log.tool.util.ActionHelp;
 import cn.log.tool.util.FileHelp;
@@ -72,7 +70,7 @@ public class DBAction extends AbstractBaseAction implements
 	}
 
 	public void getDBInfo(){
-		String dbInfoStr = request.getParameter("dbInfo");
+		//String dbInfoStr = request.getParameter("dbInfo");
 		String dbName = request.getParameter("pCode");
 		String jsonString = "hi";
 		if(dbName == null){
@@ -97,6 +95,7 @@ public class DBAction extends AbstractBaseAction implements
 		ActionHelp.WriteStrToOut(response, jsonString);
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void getFiles(){
 		String path = request.getRealPath("/")+request.getParameter("path");
 		File file = new File(path);
