@@ -57,34 +57,44 @@ public class FunctionVo implements Serializable {
 	/**
 	 * 链接
 	 */
+	@Column(name="link")
 	private String link;
+	
+	/**
+	 * 序号
+	 */
+	@Column(name="sort")
+	private String sort;
 
 
 /*=========================构造方法==============================*/
 
+	/**
+	 *功能节点
+	 */
 	public FunctionVo() {
 		// TODO Auto-generated constructor stub
 		
 	}
 	
-	/**
-	 * 功能节点
-	 * @param id
-	 * @param ncode
-	 * @param nodename
-	 * @param nodedesc
-	 * @param parentncode
-	 */ 
-	public FunctionVo(Integer id , String ncode , String nodename , String nodedesc , String parentncode){
-		this.id= id;
-		this.ncode= ncode;
-		this.nodename= nodename;
-		this.nodedesc= nodedesc;
-		this.parentncode= parentncode;
-	}
+	
 
 
 /*=========================set 和  get 方法==============================*/
+
+	public FunctionVo(Integer id, String ncode, String nodename,
+			String nodedesc, String parentncode, String link, String sort) {
+		this.id = id;
+		this.ncode = ncode;
+		this.nodename = nodename;
+		this.nodedesc = nodedesc;
+		this.parentncode = parentncode;
+		this.link = link;
+		this.sort = sort;
+	}
+
+
+
 
 	/**
 	 * @return the id 
@@ -165,4 +175,19 @@ public class FunctionVo implements Serializable {
 	public void setLink(String link) {
 		this.link = link;
 	}
+
+	/**
+	 * @return the sort
+	 */
+	public String getSort() {
+		return sort;
+	}
+
+	/**
+	 * @param sort the sort to set
+	 */
+	public void setSort(String sort) {
+		this.sort = sort;
+	}
+	
 }

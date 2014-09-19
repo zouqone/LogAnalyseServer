@@ -27,7 +27,7 @@ public class OracleTest {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FunctionVo functionVo = new FunctionVo(4, "1-1", "1-1", "test", "app");
+		FunctionVo functionVo = new FunctionVo(4, "1-1", "1-1", "test", "app", null, null);
 		Connection conn = getConn();
 		try {
 			conn.setAutoCommit(false);

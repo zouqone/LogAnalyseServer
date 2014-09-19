@@ -31,6 +31,8 @@ public class TreeVo{
 	
 	private String info;
 	
+	private String sort;
+	
 	public TreeVo() {
 		// TODO Auto-generated constructor stub
 		
@@ -174,6 +176,20 @@ public class TreeVo{
 	 */
 	public void setUk(String uk) {
 		this.uk = uk;
+	}
+
+	/**
+	 * @return the sort
+	 */
+	public String getSort() {
+		return sort;
+	}
+
+	/**
+	 * @param sort the sort to set
+	 */
+	public void setSort(String sort) {
+		this.sort = sort;
 	}
 
 }

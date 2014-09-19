@@ -188,12 +188,14 @@ public class FunctionServiceImpl implements IFunctionService {
 			String nodeName = function.getNodename();
 			String nodeCode = function.getNcode();
 			String link = function.getLink();
+			String sort = function.getSort();
 			List<FunctionVo> functionChildList = queryFunction(nodeCode);
 			
 			treeVo.setId(nodeCode);
 			treeVo.setName(nodeName);
 			treeVo.setpId(pCode);
 			treeVo.setFile(link);
+			treeVo.setSort(sort);
 			treeVo.setIsParent(functionChildList.size()>0?true:false);
 			treeVo.setHasChild(functionChildList.size()>0?true:false);
 			treeVoList.add(treeVo);
@@ -224,6 +226,7 @@ public class FunctionServiceImpl implements IFunctionService {
 			String nodeName = function.getNodename();
 			String nodeCode = function.getNcode();
 			String link = function.getLink();
+			String sort = function.getSort();
 			String nodedesc = function.getNodedesc();
 			List<FunctionVo> functionChildList = queryFunction(nodeCode);
 			
@@ -233,6 +236,7 @@ public class FunctionServiceImpl implements IFunctionService {
 			treeVo.setpId(pCode);
 			treeVo.setFile(link);
 			treeVo.setInfo(nodedesc);
+			treeVo.setSort(sort);
 			treeVo.setChecked(false);
 			treeVo.setIsParent(functionChildList.size()>0?true:false);
 			treeVo.setHasChild(functionChildList.size()>0?true:false);
