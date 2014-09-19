@@ -959,6 +959,8 @@
 					}
 					view.setNodeLineIcos(setting, node);
 					if (newNodes && newNodes !== "") {
+						newNodes = view.sortNodes(newNodes);
+						
 						newNodes = tools.apply(setting.async.dataFilter, [setting.treeId, node, newNodes], newNodes);
 						view.addNodes(setting, node, !!newNodes ? tools.clone(newNodes) : [], !!isSilent);
 					} else {
@@ -990,6 +992,26 @@
 				}
 			}
 			if (!node) data.getRoot(setting).curSelectedList = [];
+		},
+		sortNodes : function (nodes){
+			if(nodes!=null&&nodes.length>0){ //排序 zouqone 2014-07-28
+				var node0 = nodes[0];
+				if(node0.sort!=null&&node0.sort!=''){
+					for (var i = 0; i < nodes.length-1; i++) {
+						if(nodes[i].sort == null){
+							break;
+						}
+						for (var j = i+1; j < nodes.length; j++) {
+							if(nodes[i].sort>nodes[j].sort){
+								var tmp = nodes[j];
+								nodes[j] = nodes[i];
+								nodes[i] = tmp;
+							}
+						}
+					}
+				}
+			}
+			return nodes;
 		},
 		createNodeCallback: function(setting) {
 			if (!!setting.callback.onNodeCreated || !!setting.view.addDiyDom) {

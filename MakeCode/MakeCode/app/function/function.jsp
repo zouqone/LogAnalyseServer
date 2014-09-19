@@ -112,22 +112,40 @@ function addNode(){
 	var tableObj = jQuery("#node_table_id");
 	tableObj.css("display","");
 	if(optStatus==null){
-		if(node!=null){
-			clearNodeValue("node_table_id");
-			jQuery("input[name='parentname']",tableObj).val(node.name);
-			jQuery("input[name='parentncode']",tableObj).val(node.id);
-		}
+		createNode(node,tableObj);
 	}else{
 		if(confirm("是否放弃当前操作？")){
-			if(node!=null){
-				clearNodeValue("node_table_id");
-				jQuery("input[name='parentname']",tableObj).val(node.name);
-				jQuery("input[name='parentncode']",tableObj).val(node.id);
-			}
+			createNode(node,tableObj);
 		}
 	}
 	optStatus = "add";
 	setStatus(optStatus);
+}
+function createNode(node,tableObj){
+	if(node!=null){
+		clearNodeValue("node_table_id");
+		jQuery("input[name='parentname']",tableObj).val(node.name);
+		jQuery("input[name='parentncode']",tableObj).val(node.id);
+		var sort = '';
+		if(node.hasChild==true){
+			if(node.children==null){
+				var treeObj = $.fn.zTree.getZTreeObj(treeId);
+				treeObj.reAsyncChildNodes(node, "refresh");
+			}
+			var nodes = node.children;
+			if(node.children!=null&&nodes.length>0){
+				var maxsort = nodes[nodes.length-1].sort;
+				if(maxsort==null){
+					sort = nodes.length;
+				}else{
+					sort = Number(maxsort)+1;
+				}
+			}
+		}else{
+			sort = 0;
+		}
+		jQuery("input[name='sort']",tableObj).val(sort);
+	}
 }
 
 function saveNode(){
@@ -310,6 +328,10 @@ function delNode(){
 							<td class="node_td_name">link</td>
 							<td class="node_td_input"><input type="text" name="link" value=""></td>
 						</tr>
+						<tr class="node_tr">
+							<td class="node_td_name">sort</td>
+							<td class="node_td_input"><input type="text" name="sort" value=""></td>
+						</tr>
 						<tr></tr>
 					</table>
 					</form>
@@ -340,6 +362,10 @@ function delNode(){
 						<tr class="node_tr">
 							<td class="node_td_name">link</td>
 							<td class="node_td_input"><input type="text" name="link" value=""></td>
+						</tr>
+						<tr class="node_tr">
+							<td class="node_td_name">sort</td>
+							<td class="node_td_input"><input type="text" name="sort" value=""></td>
 						</tr>
 						<tr></tr>
 					</table>

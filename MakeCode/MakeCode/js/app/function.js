@@ -63,6 +63,8 @@ function setNodeValue(treeNode,tableId){
 	jQuery("input[name='nodename']",tableObj).val(treeNode.name);
 	jQuery("input[name='nodedesc']",tableObj).val(treeNode.nodedesc);
 	jQuery("input[name='link']",tableObj).val(treeNode.file);
+	jQuery("input[name='sort']",tableObj).val(treeNode.sort);
+	
 }
 
 function clearNodeValue(tableId){
@@ -81,7 +83,34 @@ function getSelectedNodes(treeId){
 	return nodes;
 }
 
-
+function ztreeSort(znode){
+	
+}
+/**
+ * 给节点排序
+ * @param nodes
+ * @returns
+ */
+function sortNodes(nodes){
+	if(nodes!=null&&nodes.length>0){ //排序 zouqone 2014-07-28
+		var node0 = nodes[0];
+		if(node0.sort!=null&&node0.sort!=''){
+			for (var i = 0; i < nodes.length-1; i++) {
+				if(nodes[i].sort == null){
+					break;
+				}
+				for (var j = i+1; j < nodes.length; j++) {
+					if(nodes[i].sort>nodes[j].sort){
+						var tmp = nodes[j];
+						nodes[j] = nodes[i];
+						nodes[i] = tmp;
+					}
+				}
+			}
+		}
+	}
+	return nodes;
+}
 
 
 
