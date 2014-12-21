@@ -63,11 +63,32 @@ function initMyZtree(){
   	
 }  
 
+/**
+ * p : null 刷新；0 新增 ；1 修改 ；2 删除
+ */
 function freshNode(p){
+	var flag = 0;
 	var treeObj = $.fn.zTree.getZTreeObj(treeId);
 	var nodes = treeObj.getSelectedNodes();
 	var node = nodes[0];
-	if(p==null||p==0){
+	var hasChild = node.hasChild;
+	if(p==2){
+		node = node.getParentNode();
+		if(node.children.length>=2){
+			flag = 1;
+		}else{
+			flag = 0;
+		}
+	}else if(p==1){
+		flag = 0;
+	}else if(p==null||p==0){
+		if(hasChild==true){
+			flag = 1;
+		}else{
+			flag = 0;
+		}
+	}
+	if(flag==1){
 		treeObj.reAsyncChildNodes(node, "refresh");
 	}else{
 		var parentNode = node.getParentNode();
@@ -258,7 +279,7 @@ function delNode(){
 	            //alert(data);
 	            //zNodes=eval(data);  
 	            //initMyZtree();
-	         	freshNode(1);
+	         	freshNode(2);
 	            optStatus = null;
 	 			setStatus(optStatus);
 	        }     

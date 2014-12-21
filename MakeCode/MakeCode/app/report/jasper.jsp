@@ -1,3 +1,5 @@
+<%@page import="net.sf.json.JSONObject"%>
+<%@page import="net.sf.json.JSON"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="net.sf.jasperreports.engine.*" %>
@@ -14,7 +16,10 @@
 <%@ page import="org.dom4j.io.*" %>
 <%@ page import="cn.log.tool.util.*" %>
 <%
+String root = "/upload/";
 String type = request.getParameter("type");
+String paramStr = request.getParameter("params");
+String jrxml = request.getParameter("report");
 JasperReport jasperReport = null;
 JasperPrint jasperPrint = null;
 JasperReportsContext jasperReportsContext = null;
@@ -22,13 +27,27 @@ JasperRunManager jasperRunManager = null;
 
 Connection conn = JdbcUtils.getConnection();
 Map<String, Object> params = new HashMap<String, Object>();
-params.put("parentncode", "rootdir");
+if(paramStr!=null&&!paramStr.trim().equals("")){
+	JSONObject jsonObject = JSONObject.fromObject(paramStr);
+	if(jsonObject!=null){
+		for(Object key : jsonObject.keySet()){
+			Object value = jsonObject.get(key);
+			params.put(key.toString(), value);
+			System.out.print(key+" : "+value+"  ");
+		}
+	}
+	System.out.println("");
+}
+//params.put("parentncode", "rootdir");
 
 InputStream in = null;
 OutputStream os = null;
 
+if(jrxml==null){
+	jrxml = "test";
+}
 try {
-	String real = application.getRealPath("/upload/test.jrxml");
+	String real = application.getRealPath(root+jrxml+".jrxml");
 	//Document document = XmlHelp.ireportEx(real);
 	
 	//InputStream is = new ByteArrayInputStream(document.asXML().getBytes("utf-8"));
