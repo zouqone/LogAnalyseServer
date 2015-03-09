@@ -65,8 +65,31 @@ public class ActionHelp {
 	 * @param response
 	 * @param object
 	 */
+	@SuppressWarnings("unchecked")
 	public static void WriteStrToOut(HttpServletResponse response ,Object object){
-		String info = objectToString(object);
+		String info = null;
+		try{
+			if(object instanceof List){
+				WriteListToOut(response,(List<Object>)object);
+			}else if(object instanceof String){
+				info = object.toString();
+				WriteStrToOut(response, info);
+			}else{
+				info = objectToString(object);
+				WriteStrToOut(response, info);
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 将数组写入输出流
+	 * @param response
+	 * @param objects
+	 */
+	public static void WriteListToOut(HttpServletResponse response ,List<Object> objects){
+		String info = listToString(objects);
 		WriteStrToOut(response, info);
 	}
 	
