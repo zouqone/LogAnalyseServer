@@ -20,6 +20,9 @@
 .input_checkbox_head{text-align: center;vertical-align:middle;width: 30px;}
 .data_head{height:30px;background-color: #EBEBEB;text-align: center;font-weight: bolder;font-size: 16px;}
 
+.simple_table{border: 1px solid #BBBBBB;background-color:#FFFFFF;width: auto;height: 400px;height:auto;border-collapse:collapse;}
+.table_border{border: 1px solid #BBBBBB;}
+.table_font{font-size: 12px;}
 /* 翻页条 */
 .page_table{width: 100%;}
 .page_table span{font-size: 12px;}
