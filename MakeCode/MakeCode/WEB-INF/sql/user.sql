@@ -11,3 +11,8 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS 'mc_user'
+create table 'mc_user' {
+
+
+}

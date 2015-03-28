@@ -328,22 +328,22 @@ function initMakeCodeConfig(tableName,obj){
 	clearConfigTemplate(obj);
 	setCheckBoxsStatus(checkObjs,true);
 	
-	jQuery('input[type="text"][name="dao"]',obj).val("I"+name+"VoDao");
-	jQuery('input[type="text"][name="service"]',obj).val("I"+name+"VoService");
-	jQuery('input[type="text"][name="web"]',obj).val(""+name+"VoAction");
+	jQuery('input[type="text"][name="dao"]',obj).val("I"+name+"Dao");
+	jQuery('input[type="text"][name="service"]',obj).val("I"+name+"Service");
+	jQuery('input[type="text"][name="web"]',obj).val(""+name+"Action");
 	jQuery('input[type="text"][name="vo"]',obj).val(""+name+"Vo");
-	jQuery('input[type="text"][name="util"]',obj).val(""+name+"VoUtil");
-	jQuery('input[type="text"][name="configure"]',obj).val(""+name+"VoConfigure");
-	jQuery('input[type="text"][name="jsp"]',obj).val(""+name+"VoList");
+	jQuery('input[type="text"][name="util"]',obj).val(""+name+"Util");
+	jQuery('input[type="text"][name="configure"]',obj).val(""+name+"Configure");
+	jQuery('input[type="text"][name="jsp"]',obj).val(""+name+"List");
 	
 	jQuery('input[type="text"][name="packagePath"]',obj).val("cn.log.app."+name.toLocaleLowerCase()+"");
-	jQuery('input[type="text"][name="strutsxml"]',obj).val("cn/log/config/struts/struts-"+jspName+"Vo.xml");
-	jQuery('input[type="text"][name="springxml"]',obj).val("cn/log/config/spring/applicationContext-"+jspName+"Vo.xml");
-	jQuery('input[type="text"][name="jspPath"]',obj).val("app/jsp/"+jspName+"Vo");
+	jQuery('input[type="text"][name="strutsxml"]',obj).val("cn/log/config/struts/struts-"+jspName+".xml");
+	jQuery('input[type="text"][name="springxml"]',obj).val("cn/log/config/spring/applicationContext-"+jspName+".xml");
+	jQuery('input[type="text"][name="jspPath"]',obj).val("app/jsp/"+jspName+"");
 	
-	jQuery('input[type="text"][name="images"]',obj).val("images/app/"+jspName+"Vo");
-	jQuery('input[type="text"][name="css"]',obj).val("css/app/"+jspName+"Vo");
-	jQuery('input[type="text"][name="js"]',obj).val("js/app/"+jspName+"Vo");
+	jQuery('input[type="text"][name="images"]',obj).val("images/app/"+jspName+"");
+	jQuery('input[type="text"][name="css"]',obj).val("css/app/"+jspName+"");
+	jQuery('input[type="text"][name="js"]',obj).val("js/app/"+jspName+"");
 	
 }
 
@@ -379,6 +379,56 @@ function setMakeCodeConfig(data,obj){
 			checkAllObj.checked =false;
 		}
 	}
+}
+
+function updateEntityName(obj,orgName,entityName){
+	var upattrs = 'dao,service,web,vo,util,configure,jsp'.split(',');;
+	var lowattrs = 'packagePath,strutsxml,springxml,jspPath,images,css,js'.split(',');;
+	
+	var upOrgName = orgName.replace(/(^|\s+)\w/g,function(s){return s.toUpperCase();});
+	var upEntityName = entityName.replace(/(^|\s+)\w/g,function(s){return s.toUpperCase();});
+	replaceAttrs(upattrs,upOrgName,upEntityName,obj);
+	
+	var lowOrgName = orgName.replace(/(^|\s+)\w/g,function(s){return s.toLowerCase();});
+	var lowEntityName = entityName.replace(/(^|\s+)\w/g,function(s){return s.toLowerCase();});
+	replaceAttrs(lowattrs,lowOrgName,lowEntityName,obj);
+	
+	/*
+	jQuery('[name="dao"]',obj).val(data.dao);
+	jQuery('[name="service"]',obj).val(data.service);
+	jQuery('[name="web"]',obj).val(data.web);
+	jQuery('[name="vo"]',obj).val(data.vo);
+	jQuery('[name="util"]',obj).val(data.util);
+	jQuery('[name="configure"]',obj).val(data.configure);
+	jQuery('[name="jsp"]',obj).val(data.jsp);
+	
+	jQuery('[name="packagePath"]',obj).val(data.packagePath);
+	jQuery('[name="strutsxml"]',obj).val(data.strutsxml);
+	jQuery('[name="springxml"]',obj).val(data.springxml);
+	jQuery('[name="jspPath"]',obj).val(data.jspPath);
+	
+	jQuery('[name="images"]',obj).val(data.images);
+	jQuery('[name="css"]',obj).val(data.css);
+	jQuery('[name="js"]',obj).val(data.js);*/
+
+}
+
+function replaceAttrs(attrs,oldValue,newValue,obj){
+	if(attrs == null){return ; }
+	for(var i = 0 ; i < attrs.length ; i++){
+		var attr = attrs[i];
+		replaceAttr(attr,oldValue,newValue,obj);
+	}
+}
+
+function replaceAttr(attr,oldValue,newValue,obj){
+	var inputObj = jQuery('[name="'+attr+'"]',obj);
+	if(inputObj==null){return ; }
+	var value = inputObj.val();
+	value = value.replace(oldValue,newValue);
+	inputObj.val(value);
+	
+	
 }
 
 function clearConfigTemplate(obj){

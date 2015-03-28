@@ -13,5 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="resources/snaker-core-1.5.0.jar"/>
 	<classpathentry kind="output" path="MakeCode/WEB-INF/classes"/>
 </classpath>

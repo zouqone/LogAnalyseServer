@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	<package name="struts2-ComcategoryVo" extends="struts2-spring3">
+		<action name="ComcategoryAction_*" method="{1}" class="cn.sys.md.action.ComcategoryAction">
+			<result name="list" >app/jsp/comcategoryVo/comcategoryVoList.jsp</result>
+			<result name="insert" >app/jsp/comcategoryVo/comcategoryVoInsert.jsp</result>
+			<result name="update" >app/jsp/comcategoryVo/comcategoryVoInsert.jsp</result>
+			<result name="detail" >app/jsp/comcategoryVo/comcategoryVoDetail.jsp</result>
+			<result name="error" ></result>
+			
+		</action>
+	</package>
+	
+</struts>

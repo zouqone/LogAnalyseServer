@@ -49,6 +49,19 @@ jQuery(document).ready(function(){
 		   
 		}; 
 	 conn();
+	 jQuery('[name="entityName"]').autocomplete({
+		minLength : 0,
+		source : function(request,response){
+			var inputObj = this.bindings[0];
+			var entityName = inputObj.value;
+			var orgName = jQuery(inputObj).attr('orgName');
+			if(orgName!=entityName){
+				var dbInfo_makeCode = jQuery('#dbInfo_makeCode_div_id');
+				updateEntityName(dbInfo_makeCode,orgName,entityName)
+				jQuery(inputObj).attr('orgName',entityName);
+			}
+		 }
+	 });
 });
 
 
@@ -109,7 +122,8 @@ function setTableNode(obj){
 		var data = StringToJson(configureValue);
 		setMakeCodeConfig(data,dbInfo_makeCode);
 	}
-	
+	jQuery("[name=entityName]",dbInfo_makeCode).val(table_name);
+	jQuery("[name=entityName]",dbInfo_makeCode).attr('orgName',table_name);
 	jQuery(dbInfo_makeCode).dialog({
 		modal: true,
 		autoOpen: true,
@@ -221,7 +235,7 @@ function setTableNode(obj){
 </table>
 
 <!-- 配置信息 -->
-<div id="dbInfo_makeCode_div_id" style="display: ;">
+<div id="dbInfo_makeCode_div_id" style="display: none ;">
 	<div style="height: 5px;width: 800px;"></div>
 		<form action="" name="dbInfo" id="makeCode_id">
 		<table class=" dbInfo_table">
@@ -229,8 +243,9 @@ function setTableNode(obj){
 				<td class="dbInfo_td dbMakeCode_td_left" style="vertical-align: bottom;text-align: left ;font-size:16px;font-weight:bolder ;padding-left: 10px;" colspan="100%" >
 					全选所有选项  
 					<input type="checkbox" name="checkAll" checkAll="" onclick="selectAllCheckbox(this,'checkAll','checkboxName')">
+					&nbsp;&nbsp;&nbsp;&nbsp;实体名称
+					<input type="text" name="entityName" orgName="" value="" style="width:200px;">
 				</td>
-				
 			</tr>
 			<tr class=" dbInfo_tr" style="height: 30px;">
 				<td class="dbInfo_td dbMakeCode_td_left" style="vertical-align: bottom;text-align: left ;font-size:16px;font-weight:bolder ;padding-left: 10px;" colspan="100%" >

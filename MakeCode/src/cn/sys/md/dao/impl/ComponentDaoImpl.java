@@ -1,24 +1,9 @@
-package ${package}.dao.impl;
-
-#set($constants="I"+$vo+"Constants")
+package cn.sys.md.dao.impl;
 
 
-#set($voVar=$vo.substring(0, 1).toLowerCase()+$vo.substring(1))
-#set($daoimpl=$dao.substring(1)+"Impl")	
 
-#set($insertparam = "")
-#set($i = 0 )
-#foreach($attribute in $attributeList)
-	#set ($i=$i+1) 
-	#if($i>1)
-		#set($insertparam = $insertparam + " ,")
-	#end 
-	#set($function=$attribute.atrributeName.substring(0, 1).toUpperCase()+$attribute.atrributeName.substring(1))
-	#set($insertparam = $insertparam + $voVar+".get"+$function+"()")
-#end
 
-#set($function=$pk.substring(0, 1).toUpperCase()+$pk.substring(1))
-#set($pkparam = $voVar+".get"+$function+"()")
+																							
 
 
 
@@ -33,100 +18,100 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
-import ${package}.dao.${dao};
-import ${package}.vo.${vo};
+import cn.sys.md.dao.IComponentDao;
+import cn.sys.md.vo.ComponentVo;
 import cn.log.db.util.JdbcUtils;
 import cn.log.tool.util.DBHelp;
 import cn.log.tool.util.DBSquence;
-import ${package}.util.${constants};
+import cn.sys.md.util.IComponentVoConstants;
 
 
 
 /**
- * @author $!{author}
- * @date $!{date}
- * @Description： $!{info}
+ * @author zouqone
+ * @date 
+ * @Description： 组件
  */
-public class ${daoimpl} implements ${dao} ,${constants}{
+public class ComponentDaoImpl implements IComponentDao ,IComponentVoConstants{
 
 	
 	/*=======================查询query===========================*/
 	
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}queryAll${vo}()
+	 * @see cn.sys.md.dao.IComponentDao${sp}queryAllComponentVo()
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<${vo}> queryAll${vo}() {
+	public List<ComponentVo> queryAllComponentVo() {
 		// TODO Auto-generated method stub
-		List<${vo}> ${voVar}s = null;
+		List<ComponentVo> componentVos = null;
 		try {
 			QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 			String sql = SQL_QUERY_ALL;
 			System.out.println("查询数据，执行sql语句 : "+sql);
-			${voVar}s = (List<${vo}>) qr.query(sql,  new BeanListHandler(${vo}.class));
+			componentVos = (List<ComponentVo>) qr.query(sql,  new BeanListHandler(ComponentVo.class));
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return ${voVar}s;
+		return componentVos;
 	}
 
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}query${vo}ByCondition(java.lang.String)
+	 * @see cn.sys.md.dao.IComponentDao${sp}queryComponentVoByCondition(java.lang.String)
 	 * @param condition
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<${vo}> query${vo}ByCondition(String condition) {
+	public List<ComponentVo> queryComponentVoByCondition(String condition) {
 		// TODO Auto-generated method stub
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 		String sql = SQL_QUERY_ALL;
 		sql =DBHelp.AddCondition(sql, condition);
 		System.out.println("查询数据，执行sql语句 : "+sql);
-		List<${vo}> ${voVar}s = null;
+		List<ComponentVo> componentVos = null;
 		try {
-			${voVar}s = (List<${vo}>) qr.query(sql,  new BeanListHandler(${vo}.class));
+			componentVos = (List<ComponentVo>) qr.query(sql,  new BeanListHandler(ComponentVo.class));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return ${voVar}s;
+		return componentVos;
 	}
 
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}query${vo}BySql(java.lang.String)
+	 * @see cn.sys.md.dao.IComponentDao${sp}queryComponentVoBySql(java.lang.String)
 	 * @param sql
 	 * @return
 	 */
 	@Override
-	public List<Map> query${vo}BySql(String sql) {
+	public List<Map> queryComponentVoBySql(String sql) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}find(${package}.vo.${vo})
-	 * @param ${voVar}
+	 * @see cn.sys.md.dao.IComponentDao${sp}find(cn.sys.md.vo.ComponentVo)
+	 * @param componentVo
 	 * @return
 	 */
 	@SuppressWarnings("deprecation")
 	@Override
-	public ${vo} find(${vo} ${voVar}) {
+	public ComponentVo find(ComponentVo componentVo) {
 		// TODO Auto-generated method stub
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 		String sql = SQL_FIND_BY_PK;
 		System.out.println("查询数据，执行sql语句 : "+sql);
-		${vo} vo = null;
-		if(${voVar}.getId()== null){
+		ComponentVo vo = null;
+		if(componentVo.getId()== null){
 			return vo;
 		}
-		String id = ${voVar}.getId().toString();
-		//Integer id = ${voVar}.getId();
+		String id = componentVo.getId().toString();
+		//Integer id = componentVo.getId();
 		try {
-			vo =  (${vo}) qr.query(sql,id, new BeanHandler(${vo}.class));
+			vo =  (ComponentVo) qr.query(sql,id, new BeanHandler(ComponentVo.class));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -141,19 +126,19 @@ public class ${daoimpl} implements ${dao} ,${constants}{
 	/*=====================插入 insert==========================*/
 	
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}insert${vo}(${package}.vo.${vo})
-	 * @param ${voVar}
+	 * @see cn.sys.md.dao.IComponentDao${sp}insertComponentVo(cn.sys.md.vo.ComponentVo)
+	 * @param componentVo
 	 * @return
 	 */
 	@Override
-	public Object insert${vo}(${vo} ${voVar}) {
+	public Object insertComponentVo(ComponentVo componentVo) {
 		// TODO Auto-generated method stub
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 		String sql = SQL_INSERT;
-		String id = ${voVar}.getId()==null ?DBSquence.nextId():${voVar}.getId().toString();
-		${voVar}.setId(id);
+		String id = componentVo.getId()==null ?DBSquence.nextId():componentVo.getId().toString();
+		componentVo.setId(id);
 		Object params[] = { 
-				${insertparam}
+				componentVo.getId() ,componentVo.getCode() ,componentVo.getName() ,componentVo.getDetail() ,componentVo.getCreatetime() ,componentVo.getCreator() ,componentVo.getModifytime() ,componentVo.getModifer() ,componentVo.getTs() ,componentVo.getDr() ,componentVo.getComponentid() ,componentVo.getComcategoryid()
 				};
 		Object object = null;
 		
@@ -168,16 +153,16 @@ public class ${daoimpl} implements ${dao} ,${constants}{
 	}
 
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}insert${vo}(java.util.List)
-	 * @param ${voVar}List
+	 * @see cn.sys.md.dao.IComponentDao${sp}insertComponentVo(java.util.List)
+	 * @param componentVoList
 	 * @return
 	 */
 	@Override
-	public List<Object> insert${vo}(List<${vo}> ${voVar}List) {
+	public List<Object> insertComponentVo(List<ComponentVo> componentVoList) {
 		// TODO Auto-generated method stub
 		List<Object> objects = new ArrayList<Object>();
-		for (${vo} ${voVar} : ${voVar}List) {
-			Object object = insert${vo}(${voVar});
+		for (ComponentVo componentVo : componentVoList) {
+			Object object = insertComponentVo(componentVo);
 			objects.add(object);
 		}
 		return objects;
@@ -190,12 +175,12 @@ public class ${daoimpl} implements ${dao} ,${constants}{
 	/*=====================修改update==========================*/
 	
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}update${vo}(${package}.vo.${vo})
-	 * @param ${voVar}
+	 * @see cn.sys.md.dao.IComponentDao${sp}updateComponentVo(cn.sys.md.vo.ComponentVo)
+	 * @param componentVo
 	 * @return
 	 */
 	@Override
-	public Object update${vo}(${vo} ${voVar}) {
+	public Object updateComponentVo(ComponentVo componentVo) {
 		// TODO Auto-generated method stub
 		Object object = null;
 		
@@ -203,8 +188,8 @@ public class ${daoimpl} implements ${dao} ,${constants}{
 			QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 			String sql =SQL_INSERT;
 			Object params[] = { 
-					${insertparam}
-					,${pkparam}
+					componentVo.getId() ,componentVo.getCode() ,componentVo.getName() ,componentVo.getDetail() ,componentVo.getCreatetime() ,componentVo.getCreator() ,componentVo.getModifytime() ,componentVo.getModifer() ,componentVo.getTs() ,componentVo.getDr() ,componentVo.getComponentid() ,componentVo.getComcategoryid()
+					,componentVo.getId()
 					};
 			System.out.println("插入数据，执行sql语句 : "+sql);
 			object = qr.update(sql, params);
@@ -217,16 +202,16 @@ public class ${daoimpl} implements ${dao} ,${constants}{
 	}
 
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}update${vo}(java.util.List)
-	 * @param ${voVar}List
+	 * @see cn.sys.md.dao.IComponentDao${sp}updateComponentVo(java.util.List)
+	 * @param componentVoList
 	 * @return
 	 */
 	@Override
-	public List<Object> update${vo}(List<${vo}> ${voVar}List) {
+	public List<Object> updateComponentVo(List<ComponentVo> componentVoList) {
 		// TODO Auto-generated method stub
 		List<Object> objects = new ArrayList<Object>();
-		for (${vo} ${voVar} : ${voVar}List) {
-			Object object = update${vo}(${voVar});
+		for (ComponentVo componentVo : componentVoList) {
+			Object object = updateComponentVo(componentVo);
 			objects.add(object);
 		}
 		return objects;
@@ -240,18 +225,18 @@ public class ${daoimpl} implements ${dao} ,${constants}{
 	/*=====================删除delete==========================*/
 
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}delete${vo}(${package}.vo.${vo})
-	 * @param ${voVar}
+	 * @see cn.sys.md.dao.IComponentDao${sp}deleteComponentVo(cn.sys.md.vo.ComponentVo)
+	 * @param componentVo
 	 * @return
 	 */
 	@Override
-	public Object delete${vo}(${vo} ${voVar}) {
+	public Object deleteComponentVo(ComponentVo componentVo) {
 		// TODO Auto-generated method stub
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 		String sql = SQL_DELETE_MULTI_BY_PKS;
 		System.out.println("删除数据，执行sql语句 : "+sql);
 		Object params[] = { 
-				${pkparam}
+				componentVo.getId()
 				};
 		Object object = null;
 		try{
@@ -263,12 +248,12 @@ public class ${daoimpl} implements ${dao} ,${constants}{
 	}
 
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}delete${vo}ByCondition(java.lang.String)
+	 * @see cn.sys.md.dao.IComponentDao${sp}deleteComponentVoByCondition(java.lang.String)
 	 * @param condition
 	 * @return
 	 */
 	@Override
-	public Object delete${vo}ByCondition(String condition) {
+	public Object deleteComponentVoByCondition(String condition) {
 		// TODO Auto-generated method stub
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 		String sql = SQL_DELETE_MULTI_BY_PKS+" "+DEFAULT_QUERY_WHERE_ENABLE+" ";
@@ -286,21 +271,21 @@ public class ${daoimpl} implements ${dao} ,${constants}{
 	/*=====================获取数目==========================*/
 	
 	/* (non-Javadoc)
-	 * @see ${package}.dao.${dao}${sp}query${vo}TotalNumber()
+	 * @see cn.sys.md.dao.IComponentDao${sp}queryComponentVoTotalNumber()
 	 * @return
 	 */
 	@Override
-	public Integer query${vo}TotalNumber() {
+	public Integer queryComponentVoTotalNumber() {
 		// TODO Auto-generated method stub
-		return query${vo}TotalNumber(null);
+		return queryComponentVoTotalNumber(null);
 	}
 
 	/**
-	 * 查询${vo}数目
+	 * 查询ComponentVo数目
 	 * @param condition
 	 * @return
 	 */
-	public Integer query${vo}TotalNumber(String condition){
+	public Integer queryComponentVoTotalNumber(String condition){
 		Long counts = new Long(0);
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 		String sql = SQL_COUNT;

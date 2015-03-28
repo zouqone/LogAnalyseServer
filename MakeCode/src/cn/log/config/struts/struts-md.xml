@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	<package name="struts2-ComponentVo" extends="struts2-spring3">
+		<action name="ComponentAction_*" method="{1}" class="cn.sys.md.action.ComponentAction">
+			<result name="list" >app/jsp/componentVo/componentVoList.jsp</result>
+			<result name="insert" >app/jsp/componentVo/componentVoInsert.jsp</result>
+			<result name="update" >app/jsp/componentVo/componentVoInsert.jsp</result>
+			<result name="detail" >app/jsp/componentVo/componentVoDetail.jsp</result>
+			<result name="error" ></result>
+			
+		</action>
+	</package>
+	
+</struts>
