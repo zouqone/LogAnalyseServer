@@ -936,6 +936,7 @@
 				url: tools.apply(setting.async.url, [setting.treeId, node], setting.async.url),
 				data: tmpParam,
 				dataType: setting.async.dataType,
+				async : setting.async.async==null?true:setting.async.async,
 				success: function(msg) {
 					if (_tmpV != data.getRoot(setting)._ver) {
 						return;

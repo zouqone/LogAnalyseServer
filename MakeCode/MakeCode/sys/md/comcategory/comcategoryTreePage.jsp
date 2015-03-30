@@ -30,6 +30,7 @@ var treeAction = baseAction+'_queryChildren';
 var queryAction = baseAction+'_queryByCode';
 var treeId = 'treeRootNode';
 var formID = 'form1';
+var freshCurrentNode = null;
 
 jQuery(document).ready(function(){
 	jQuery("#layout1").ligerLayout({ leftWidth: 230,topHeight : 30});
@@ -40,10 +41,10 @@ jQuery(document).ready(function(){
 		view: {  selectedMulti: false },  //,fontCss: setFontCss 
 		async: {  
 			enable: true,  url: treeAction+"?rk="+Math.random(),type:"GET",
-			autoParam:["id=parentCode", "name", "level"],  
+			autoParam:["id=parentCode", "name", "level"],async : false,  
 			dataFilter: filter
 		},  
-		callback: {  beforeClick: beforeClickZtree   }  
+		callback: {  beforeClick: beforeClickZtree  ,onAsyncSuccess: zTreeOnAsyncSuccess }  
 	}; 
 	var zNodes = [{
 		"checked": false,"hasChild": true,"id": "root",
@@ -67,9 +68,7 @@ jQuery(document).ready(function(){
 function beforeClickZtree(treeId, treeNode){ 
 	var saveInput = jQuery('input[name="save"]');
 	if(saveInput.hasClass('buttonDisable')){
-		var param = {code : treeNode.id};
-		var datas = ajaxData(queryAction,param);
-		var data = datas[0];
+		var data = queryDataByCode(treeNode.id)
 		loadCard(data,formID);
 	}else{
 		return false;
@@ -77,8 +76,20 @@ function beforeClickZtree(treeId, treeNode){
 	
 }
 
+function zTreeOnAsyncSuccess(event, treeId, treeNode, msg){
+	freshCurrentNode = treeNode;
+}
+
+function queryDataByCode(code){
+	var param = {code : code};
+	var datas = ajaxData(queryAction,param);
+	var data = datas[0];
+	return data;
+}
+
 function fresh(){
-	
+	var treeObj = $.fn.zTree.getZTreeObj(treeId);
+	freshTreeNode(treeObj,"fresh");
 }
 
 function savecard(){
@@ -91,11 +102,23 @@ function savecard(){
 	if(formdata.id == null||formdata.id==""){
 		urls = baseAction+'_addCategory';
 	}
-	var info = ajaxSave(urls,data);
-	$.ligerDialog.success(info);
-	if(info=="新增成功"){
-		setScanStatus();
+	
+	var callback = function(info){
+		$.ligerDialog.success(info);
+		if(info=="新增成功"||info=="修改成功"){
+			setScanStatus();
+		}
+		
+		var treeObj = $.fn.zTree.getZTreeObj(treeId);
+		if(formdata.id == null||formdata.id==""){
+			freshTreeNode(treeObj,"addSave");
+		}else{
+			freshTreeNode(treeObj,"editSave");
+		}
 	}
+	
+	ajaxSave(urls,data,false,callback);
+	
 	
 }
 
@@ -120,7 +143,10 @@ function delcard(){
 	var urls = baseAction+'_deleteByPk';
 	var info = ajaxSave(urls,data);
 	$.ligerDialog.success(info);
-	
+	if(info=="删除成功"){
+		var treeObj = $.fn.zTree.getZTreeObj(treeId);
+		freshTreeNode(treeObj,"delete");
+	}
 }
 function cancel(){
 	setScanStatus();
