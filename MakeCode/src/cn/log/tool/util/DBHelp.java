@@ -26,6 +26,13 @@ public class DBHelp {
 		return condition;
 	}
 	
+	public static String addWhereCondition(String select , String condition){
+		if(condition != null && !condition.trim().equals("")){
+			select += " where "+ condition;
+		}
+		return select;
+	}
+	
 	/**
 	 * 增加查询条件  condition+" AND "+column+" "+optType+" "+opt1+value+opt2+" "
 	 * @param condition 

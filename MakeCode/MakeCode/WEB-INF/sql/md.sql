@@ -61,7 +61,7 @@ create table comconfig
    ts                   varchar(50),
    dr                   varchar(5),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table comconfig comment '组件配置';
 
@@ -87,7 +87,7 @@ create table md_association
    ts                   varchar(50),
    dr                   varchar(5),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table md_association comment '实体关联信息';
 
@@ -110,7 +110,7 @@ create table md_class
    ts                   varchar(50),
    dr                   varchar(5),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table md_class comment '实体类';
 
@@ -140,7 +140,7 @@ create table md_column
    ts                   varchar(50),
    dr                   varchar(5),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table md_column comment '实体字段';
 
@@ -161,7 +161,7 @@ create table md_comcategory
    ts                   varchar(50),
    dr                   varchar(5),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table md_comcategory comment '组件分类';
 
@@ -182,7 +182,7 @@ create table md_component
    ts                   varchar(50),
    dr                   varchar(5),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table md_component comment '组件';
 
@@ -199,7 +199,7 @@ create table md_ormap
    ts                   varchar(50),
    dr                   varchar(5),
    primary key (id, propertyid, classid, columnid, tableid)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table md_ormap comment '实体表关系映射';
 
@@ -223,7 +223,7 @@ create table md_property
    ts                   varchar(50),
    dr                   varchar(5),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table md_property comment '实体属性';
 
@@ -244,7 +244,7 @@ create table md_table
    ts                   varchar(50),
    dr                   varchar(5),
    primary key (表id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table md_table comment '实体表';
 
@@ -260,7 +260,7 @@ create table operationlog
    operatcode           varchar(50),
    operattime           datetime,
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_group                                             */
@@ -274,7 +274,7 @@ create table sys_group
    groupdesc            varchar(200),
    createtime           datetime,
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_group_right                                       */
@@ -286,7 +286,7 @@ create table sys_group_right
    rightid              varchar(50),
    righttype            varchar(50),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_group_role                                        */
@@ -297,7 +297,7 @@ create table sys_group_role
    groupid              varchar(50) not null,
    roleid               varchar(50) not null,
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_org                                               */
@@ -310,7 +310,7 @@ create table sys_org
    parentorg            varchar(50),
    orgdesc              varchar(200),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_person                                            */
@@ -329,7 +329,7 @@ create table sys_person
    fromprovice          varchar(50),
    address              varchar(200),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_right                                             */
@@ -342,7 +342,7 @@ create table sys_right
    parentcode           varchar(50),
    rightdesc            varchar(200),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_role                                              */
@@ -355,7 +355,7 @@ create table sys_role
    parentcode           varchar(50),
    roledesc             varchar(200),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_role_right                                        */
@@ -367,7 +367,7 @@ create table sys_role_right
    rightid              varchar(50),
    righttype            varchar(50),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_user                                              */
@@ -384,7 +384,7 @@ create table sys_user
    logincount           int,
    person               varchar(50),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_user_group                                        */
@@ -395,7 +395,7 @@ create table sys_user_group
    userid               varchar(50),
    groupid              varchar(50),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_user_right                                        */
@@ -407,7 +407,7 @@ create table sys_user_right
    rightid              varchar(50),
    righttype            varchar(50),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
 /* Table: sys_user_role                                         */
@@ -418,7 +418,7 @@ create table sys_user_role
    userid               varchar(50),
    roleid               varchar(50),
    primary key (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table comconfig add constraint fk_reference_27 foreign key (componentid)
       references md_component (id) on delete restrict on update restrict;

@@ -1,8 +1,13 @@
 package cn.sys.md.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import net.sf.json.JSONArray;
+import cn.log.function.vo.FunctionVo;
+import cn.log.tool.util.DBHelp;
+import cn.log.tool.vo.TreeVo;
 import cn.sys.md.dao.IComcategoryDao;
 import cn.sys.md.service.IComcategoryService;
 import cn.sys.md.vo.ComcategoryVo;
@@ -156,5 +161,46 @@ public class ComcategoryServiceImpl implements IComcategoryService {
 		Integer count = comcategoryDao.queryComcategoryVoTotalNumber(condition);
 		return count;
 	}
+
+	@Override
+	public String queryChildren(String parentCode) {
+		// TODO Auto-generated method stub
+		String condition = DBHelp.AddCondition(null,"parentCode",parentCode,"=","'","'");
+		List<ComcategoryVo> comcategoryVos = queryComcategoryVoByCondition(condition);
+		if(comcategoryVos==null || comcategoryVos.size() == 0){
+			return null;
+		}
+		
+		List<TreeVo> treeVoList = new ArrayList<TreeVo>();
+		for (ComcategoryVo comcategoryVo : comcategoryVos) {
+			TreeVo treeVo = new TreeVo();
+			String id = comcategoryVo.getId().toString();
+			String nodeName = comcategoryVo.getName();
+			String nodeCode = comcategoryVo.getCode();
+			String nodedesc = comcategoryVo.getName();
+			Integer count = queryChildrenCount(nodeCode);
+			
+			treeVo.setUk(id);
+			treeVo.setId(nodeCode);
+			treeVo.setName(nodeName);
+			treeVo.setpId(parentCode);
+			treeVo.setInfo(nodedesc);
+			treeVo.setChecked(false);
+			treeVo.setIsParent(count>0?true:false);
+			treeVo.setHasChild(count>0?true:false);
+			treeVoList.add(treeVo);
+		}
+		JSONArray jsonArray = JSONArray.fromObject(treeVoList);
+		String treeListStr = jsonArray.toString();
+		return treeListStr;
+	}
+
+	private Integer queryChildrenCount(String parentCode) {
+		// TODO Auto-generated method stub
+		String condition = DBHelp.AddCondition(null,"parentCode",parentCode,"=","'","'");
+		
+		return queryComcategoryVoTotalNumber(condition);
+	}
+	
 	
 }

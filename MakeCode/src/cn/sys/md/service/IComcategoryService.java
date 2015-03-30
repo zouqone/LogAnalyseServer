@@ -112,5 +112,11 @@ public interface IComcategoryService {
 	 */
 	public Integer queryComcategoryVoTotalNumber(String condition);
 	
+	/**
+	 * 查询ComcategoryVo子节点
+	 * @param parentCode
+	 * @return
+	 */
+	public String queryChildren(String parentCode);
 	
 }

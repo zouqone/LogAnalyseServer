@@ -7,6 +7,7 @@ package cn.sys.md.dao.impl;
 
 
 
+import java.lang.reflect.Array;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,7 @@ import cn.sys.md.vo.ComcategoryVo;
 import cn.log.db.util.JdbcUtils;
 import cn.log.tool.util.DBHelp;
 import cn.log.tool.util.DBSquence;
+import cn.log.tool.util.StringUtils;
 import cn.sys.md.util.IComcategoryVoConstants;
 
 
@@ -54,8 +56,9 @@ public class ComcategoryDaoImpl implements IComcategoryDao ,IComcategoryVoConsta
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally{
+			return comcategoryVos;
 		}
-		return comcategoryVos;
 	}
 
 	/* (non-Javadoc)
@@ -63,13 +66,14 @@ public class ComcategoryDaoImpl implements IComcategoryDao ,IComcategoryVoConsta
 	 * @param condition
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "finally" })
 	@Override
 	public List<ComcategoryVo> queryComcategoryVoByCondition(String condition) {
 		// TODO Auto-generated method stub
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 		String sql = SQL_QUERY_ALL;
-		sql =DBHelp.AddCondition(sql, condition);
+		sql =DBHelp.addWhereCondition(sql, condition);
+		
 		System.out.println("查询数据，执行sql语句 : "+sql);
 		List<ComcategoryVo> comcategoryVos = null;
 		try {
@@ -77,8 +81,10 @@ public class ComcategoryDaoImpl implements IComcategoryDao ,IComcategoryVoConsta
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally{
+			return comcategoryVos;
 		}
-		return comcategoryVos;
+		
 	}
 
 	/* (non-Javadoc)
@@ -103,18 +109,21 @@ public class ComcategoryDaoImpl implements IComcategoryDao ,IComcategoryVoConsta
 		// TODO Auto-generated method stub
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 		String sql = SQL_FIND_BY_PK;
-		System.out.println("查询数据，执行sql语句 : "+sql);
+		
 		ComcategoryVo vo = null;
 		if(comcategoryVo.getId()== null){
 			return vo;
 		}
 		String id = comcategoryVo.getId().toString();
 		//Integer id = comcategoryVo.getId();
+		Object params[] = {id};
+		System.out.println("查询数据，执行sql语句 : "+sql+",params : "+StringUtils.join(params));
 		try {
 			vo =  (ComcategoryVo) qr.query(sql,id, new BeanHandler(ComcategoryVo.class));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return null;
 		}
 		return vo;
 	}
@@ -142,11 +151,12 @@ public class ComcategoryDaoImpl implements IComcategoryDao ,IComcategoryVoConsta
 				};
 		Object object = null;
 		
-		System.out.println("插入数据，执行sql语句 : "+sql);
+		System.out.println("插入数据，执行sql语句 : "+sql+",params : "+StringUtils.join(params));
 		try {
 			object = qr.update(sql, params);
 		} catch (Exception e) {
 			e.printStackTrace();
+			return e.getMessage();
 		}
 		
 		return object;
@@ -186,16 +196,17 @@ public class ComcategoryDaoImpl implements IComcategoryDao ,IComcategoryVoConsta
 		
 		try {
 			QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
-			String sql =SQL_INSERT;
+			String sql =SQL_UPDATE_BY_PK;
 			Object params[] = { 
 					comcategoryVo.getId() ,comcategoryVo.getParentcode() ,comcategoryVo.getCode() ,comcategoryVo.getName() ,comcategoryVo.getDetail() ,comcategoryVo.getCreatetime() ,comcategoryVo.getCreator() ,comcategoryVo.getModifytime() ,comcategoryVo.getModifer() ,comcategoryVo.getTs() ,comcategoryVo.getDr()
 					,comcategoryVo.getId()
 					};
-			System.out.println("插入数据，执行sql语句 : "+sql);
+			System.out.println("插入数据，执行sql语句 : "+sql+",params : "+StringUtils.join(params));
 			object = qr.update(sql, params);
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			return e.getMessage();
 		}
 		
 		return object;
@@ -233,16 +244,18 @@ public class ComcategoryDaoImpl implements IComcategoryDao ,IComcategoryVoConsta
 	public Object deleteComcategoryVo(ComcategoryVo comcategoryVo) {
 		// TODO Auto-generated method stub
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
-		String sql = SQL_DELETE_MULTI_BY_PKS;
-		System.out.println("删除数据，执行sql语句 : "+sql);
+		String sql = SQL_DELETE_BY_PK;
+		
 		Object params[] = { 
 				comcategoryVo.getId()
 				};
 		Object object = null;
 		try{
+			System.out.println("删除数据，执行sql语句 : "+sql+",params : "+StringUtils.join(params));
 			object = qr.update(sql,params);
 		}catch (Exception e) {
 			e.printStackTrace();
+			return e.getMessage();
 		}
 		return object;
 	}
@@ -264,6 +277,7 @@ public class ComcategoryDaoImpl implements IComcategoryDao ,IComcategoryVoConsta
 			object = qr.update(sql, null);
 		}catch (Exception e) {
 			e.printStackTrace();
+			return e.getMessage();
 		}
 		return object;
 	}
@@ -285,11 +299,12 @@ public class ComcategoryDaoImpl implements IComcategoryDao ,IComcategoryVoConsta
 	 * @param condition
 	 * @return
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Integer queryComcategoryVoTotalNumber(String condition){
 		Long counts = new Long(0);
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 		String sql = SQL_COUNT;
-		sql = DBHelp.AddCondition(sql, condition);
+		sql = DBHelp.addWhereCondition(sql, condition);
 		System.out.println("查询数据，执行sql语句 : "+sql);
 		ResultSetHandler rsh = new ScalarHandler();
 		try {

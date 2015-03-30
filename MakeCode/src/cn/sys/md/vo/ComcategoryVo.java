@@ -40,7 +40,7 @@ public class ComcategoryVo{
 	/**
 	 * 
 	 */
-	private Date createtime;
+	private String createtime;
 	
 	/**
 	 * 
@@ -50,7 +50,7 @@ public class ComcategoryVo{
 	/**
 	 * 
 	 */
-	private Date modifytime;
+	private String modifytime;
 	
 	/**
 	 * 
@@ -91,7 +91,7 @@ public class ComcategoryVo{
 	 * @param ts
 	 * @param dr
 	 */ 
-	public ComcategoryVo(String id , String parentcode , String code , String name , String detail , Date createtime , String creator , Date modifytime , String modifer , String ts , String dr){
+	public ComcategoryVo(String id , String parentcode , String code , String name , String detail , String createtime , String creator , String modifytime , String modifer , String ts , String dr){
 		this.id= id;
 		this.parentcode= parentcode;
 		this.code= code;
@@ -176,14 +176,14 @@ public class ComcategoryVo{
 	/**
 	 * @return the createtime 
 	 */
-	public Date getCreatetime () {
+	public String getCreatetime () {
 		return createtime;
 	}
 
 	/**
 	 *  @param createtime the createtime to set
 	 */
-	public void setCreatetime (Date createtime) {
+	public void setCreatetime (String createtime) {
 		this.createtime = createtime;
 	}
 	/**
@@ -202,14 +202,14 @@ public class ComcategoryVo{
 	/**
 	 * @return the modifytime 
 	 */
-	public Date getModifytime () {
+	public String getModifytime () {
 		return modifytime;
 	}
 
 	/**
 	 *  @param modifytime the modifytime to set
 	 */
-	public void setModifytime (Date modifytime) {
+	public void setModifytime (String modifytime) {
 		this.modifytime = modifytime;
 	}
 	/**

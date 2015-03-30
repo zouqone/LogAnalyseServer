@@ -689,4 +689,23 @@ public class StringUtils {
      * 
      * 
      */
+    public static String join(Object[] params){
+    	return join(params,null);
+    }
+    
+    public static String join(Object [] array,String opt){
+    	StringBuffer str = new StringBuffer();
+    	opt = opt == null?",":opt;
+    	if(array!=null){
+    		int i = 0 ; 
+    		for (Object e : array) {
+    			if(i>0){
+    				str.append(opt);
+    			}
+    			i++;
+    			str.append(e);
+			}
+    	}
+    	return str.toString();
+    }
 }

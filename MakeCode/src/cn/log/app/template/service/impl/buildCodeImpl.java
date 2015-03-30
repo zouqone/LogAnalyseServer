@@ -188,7 +188,7 @@ public class buildCodeImpl implements IBuildCode {
 				if(type.indexOf("int")>=0){
 					dataType = "Integer";
 				}else if(type.indexOf("date")>=0){
-					dataType = "Date";
+					dataType = "String";
 				}else {
 					dataType = "String";
 				}
