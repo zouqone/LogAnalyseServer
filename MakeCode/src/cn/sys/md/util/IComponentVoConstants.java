@@ -90,7 +90,7 @@ public interface IComponentVoConstants {
 	/**
 	 * 插入
 	 */
-	public final static String SQL_INSERT = "insert into md_component(md_component.id , md_component.code , md_component.name , md_component.detail , md_component.createtime , md_component.creator , md_component.modifytime , md_component.modifer , md_component.ts , md_component.dr , md_component.componentid , md_component.comcategoryid) values(? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?) ";
+	public final static String SQL_INSERT = "insert into md_component(md_component.id , md_component.code , md_component.name , md_component.detail , md_component.createtime , md_component.creator , md_component.modifytime , md_component.modifer , md_component.ts , md_component.dr ,  md_component.comcategoryid) values(? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?) ";
 	
 	/**
 	 * 通过PK删除
@@ -105,7 +105,7 @@ public interface IComponentVoConstants {
 	/**
 	 * 通过PK修改
 	 */
-	public final static String SQL_UPDATE_BY_PK = "update md_component set md_component.id = ?  ,md_component.code = ?  ,md_component.name = ?  ,md_component.detail = ?  ,md_component.createtime = ?  ,md_component.creator = ?  ,md_component.modifytime = ?  ,md_component.modifer = ?  ,md_component.ts = ?  ,md_component.dr = ?  ,md_component.componentid = ?  ,md_component.comcategoryid = ?   where Id = ?";
+	public final static String SQL_UPDATE_BY_PK = "update md_component set md_component.id = ?  ,md_component.code = ?  ,md_component.name = ?  ,md_component.detail = ?  ,md_component.createtime = ?  ,md_component.creator = ?  ,md_component.modifytime = ?  ,md_component.modifer = ?  ,md_component.ts = ?  ,md_component.dr = ?    ,md_component.comcategoryid = ?   where Id = ?";
 
 	/**
 	 * 查询记录数目
@@ -115,7 +115,7 @@ public interface IComponentVoConstants {
 	/**
 	 * 查询所有记录
 	 */
-	public final static String SQL_QUERY_ALL = "SELECT md_component.id , md_component.code , md_component.name , md_component.detail , md_component.createtime , md_component.creator , md_component.modifytime , md_component.modifer , md_component.ts , md_component.dr , md_component.componentid , md_component.comcategoryid  FROM md_component";
+	public final static String SQL_QUERY_ALL = "SELECT md_component.id , md_component.code , md_component.name , md_component.detail , md_component.createtime , md_component.creator , md_component.modifytime , md_component.modifer , md_component.ts , md_component.dr  , md_component.comcategoryid  FROM md_component";
 
 	/**
 	 * 通过PK查询

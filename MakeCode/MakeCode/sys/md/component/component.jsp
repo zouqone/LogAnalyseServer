@@ -11,6 +11,8 @@
 <link href="<%=request.getContextPath()%>/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
 
 <link href="<%=baseUrl%>/js/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="<%=baseUrl%>/js/SlickGrid/slick.grid.css" type="text/css"/>
+<link rel="stylesheet" href="<%=baseUrl%>/js/SlickGrid/css/smoothness/jquery-ui-1.8.16.custom.css" type="text/css"/>
 
 <script type="text/javascript" src="<%=baseUrl%>/js/jquery/jquery-1.10.2.js" ></script>
 <script type="text/javascript" src="<%=baseUrl%>/js/ligerUI/js/core/base.js" ></script>
@@ -22,6 +24,11 @@
 
 <script type="text/javascript" src="<%=baseUrl%>/js/common.js" ></script>
 <script type="text/javascript" src="<%=baseUrl%>/js/app/treecard.js" ></script>
+<script type="text/javascript" src="<%=baseUrl%>/js/app/grid.js" ></script>
+
+<script src="<%=baseUrl%>/js/SlickGrid/lib/jquery.event.drag-2.2.js"></script>
+<script src="<%=baseUrl%>/js/SlickGrid/slick.core.js"></script>
+<script src="<%=baseUrl%>/js/SlickGrid/slick.grid.js"></script>
 
 <script type="text/javascript">
 var baseUrl = '<%=baseUrl%>';
@@ -30,11 +37,12 @@ var treeAction = baseAction+'_queryChildren';
 var queryAction = baseAction+'_queryByCode';
 var treeId = 'treeRootNode';
 var formID = 'form1';
-var freshCurrentNode = null;
+
+var componentAction = baseUrl+'/ComponentAction';
 
 jQuery(document).ready(function(){
 	jQuery("#layout1").ligerLayout({ leftWidth: 230,topHeight : 30});
-	jQuery("form").ligerForm();
+	//jQuery("form").ligerForm();
 	initButtonStatus();
 	clearCard();
 	var setting = {  
@@ -61,18 +69,19 @@ jQuery(document).ready(function(){
 		//nodes[0].checked = true;
 		treeObj.selectNode(nodes[0],true);
 	}
+	
+	initGrid(componentAction+'_query',null);
 });
 
 
 
 //单击事件  
-function beforeClickZtree(treeId, treeNode){ 
-	var saveInput = jQuery('input[name="save"]');
-	if(saveInput.hasClass('buttonDisable')){
-		var data = queryDataByCode(treeNode.id)
-		loadCard(data,formID);
+function beforeClickZtree(treeId, treeNode){
+	if(treeNode.uk==null){
+		initGrid(componentAction+'_query');
 	}else{
-		return false;
+		var condition = " comcategoryid='"+treeNode.uk+"'";
+		initGrid(componentAction+'_query',condition);
 	}
 	
 }
@@ -122,6 +131,7 @@ function savecard(){
 	
 	
 }
+
 
 function add(){
 	setEditStatus();
@@ -191,60 +201,9 @@ body {
 			</div>
 		</div>
 		<div position="center" title="组件分类信息">
-			<form name="form1" method="post" id="form1">
-				<table cellpadding="0" cellspacing="0" class="l-table-edit" >
-					<tr>
-						<td align="right" class="l-table-edit-td" >上级编码:</td>
-						<td align="left" class="l-table-edit-td">
-						<input name="parentcode" type="text" id="txtName1" ltype="text" />
-						</td>
-						<td align="left"></td>
-					</tr>
-					<tr>
-						<td align="right" class="l-table-edit-td" valign="top">分类编码:</td>
-						<td align="left" class="l-table-edit-td">
-							<input name="code" type="text" id="txtName2" ltype="text" />
-							<input name="pk" type="hidden" id="txtName0" ltype="text" />
-						</td><td align="left"></td>
-					</tr>   
-					<tr>
-						<td align="right" class="l-table-edit-td" valign="top">分类名称:</td>
-						<td align="left" class="l-table-edit-td">
-							<input name="name" type="text" id="txtName3" ltype="text" />
-						</td><td align="left"></td>
-					</tr>  
-					<tr>
-						<td align="right" class="l-table-edit-td">创建时间:</td>
-						<td align="left" class="l-table-edit-td">
-							<input name="createtime" type="text" id="txtDate" ltype="date" />
-						</td><td align="left"></td>
-					</tr>
-					<tr>
-						<td align="right" class="l-table-edit-td" valign="top">创建人:</td>
-						<td align="left" class="l-table-edit-td">
-							<input name="creator" type="text" id="txtName4" ltype="text" />
-						</td><td align="left"></td>
-					</tr> 
-					<tr>
-						<td align="right" class="l-table-edit-td">修改时间:</td>
-						<td align="left" class="l-table-edit-td">
-							<input name="modifytime" type="text" id="txtDate" ltype="date" />
-						</td><td align="left"></td>
-					</tr>
-					<tr>
-						<td align="right" class="l-table-edit-td" valign="top">修改人:</td>
-						<td align="left" class="l-table-edit-td">
-							<input name="modifer" type="text" id="txtName5" ltype="text" />
-						</td><td align="left"></td>
-					</tr> 
-					<tr>
-						<td align="right" class="l-table-edit-td">详情:</td>
-						<td align="left" class="l-table-edit-td"> 
-						<textarea cols="100" rows="4" name="detail" class="l-textarea" style="width:400px"></textarea>
-						</td><td align="left"></td>
-					</tr>
-				</table>
-			</form>
+			<div id="myGrid" style="width:100%;height:500px;"></div>
+				
+			
 		</div>
 	</div>
 

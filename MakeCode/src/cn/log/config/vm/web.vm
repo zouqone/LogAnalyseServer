@@ -88,13 +88,13 @@ ModelDriven<${vo}> ,${constants}{
 		return LIST_PAGE;
 	}
 
-	public String update(){
+	public String find(){
 		${vo} vo = ${serviceVar}.find(${voVar});
 		request.setAttribute(BEAN, vo);
 		return UPDATE_PAGE;
 	}
 	
-	public String save(){
+	public String update(){
 		Object object = ${serviceVar}.update${vo}(${voVar});
 		request.setAttribute("count", object);
 		return LIST_PAGE;

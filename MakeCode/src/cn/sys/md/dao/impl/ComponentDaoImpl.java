@@ -69,7 +69,7 @@ public class ComponentDaoImpl implements IComponentDao ,IComponentVoConstants{
 		// TODO Auto-generated method stub
 		QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 		String sql = SQL_QUERY_ALL;
-		sql =DBHelp.AddCondition(sql, condition);
+		sql =DBHelp.addWhereCondition(sql, condition);
 		System.out.println("查询数据，执行sql语句 : "+sql);
 		List<ComponentVo> componentVos = null;
 		try {
@@ -138,7 +138,7 @@ public class ComponentDaoImpl implements IComponentDao ,IComponentVoConstants{
 		String id = componentVo.getId()==null ?DBSquence.nextId():componentVo.getId().toString();
 		componentVo.setId(id);
 		Object params[] = { 
-				componentVo.getId() ,componentVo.getCode() ,componentVo.getName() ,componentVo.getDetail() ,componentVo.getCreatetime() ,componentVo.getCreator() ,componentVo.getModifytime() ,componentVo.getModifer() ,componentVo.getTs() ,componentVo.getDr() ,componentVo.getComponentid() ,componentVo.getComcategoryid()
+				componentVo.getId() ,componentVo.getCode() ,componentVo.getName() ,componentVo.getDetail() ,componentVo.getCreatetime() ,componentVo.getCreator() ,componentVo.getModifytime() ,componentVo.getModifer() ,componentVo.getTs() ,componentVo.getDr()  ,componentVo.getComcategoryid()
 				};
 		Object object = null;
 		
@@ -188,7 +188,7 @@ public class ComponentDaoImpl implements IComponentDao ,IComponentVoConstants{
 			QueryRunner qr = new QueryRunner(JdbcUtils.getDataSource());
 			String sql =SQL_INSERT;
 			Object params[] = { 
-					componentVo.getId() ,componentVo.getCode() ,componentVo.getName() ,componentVo.getDetail() ,componentVo.getCreatetime() ,componentVo.getCreator() ,componentVo.getModifytime() ,componentVo.getModifer() ,componentVo.getTs() ,componentVo.getDr() ,componentVo.getComponentid() ,componentVo.getComcategoryid()
+					componentVo.getId() ,componentVo.getCode() ,componentVo.getName() ,componentVo.getDetail() ,componentVo.getCreatetime() ,componentVo.getCreator() ,componentVo.getModifytime() ,componentVo.getModifer() ,componentVo.getTs() ,componentVo.getDr()  ,componentVo.getComcategoryid()
 					,componentVo.getId()
 					};
 			System.out.println("插入数据，执行sql语句 : "+sql);

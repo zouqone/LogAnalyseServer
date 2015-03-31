@@ -65,11 +65,6 @@ public class ComponentVo{
 	/**
 	 * 
 	 */
-	private String componentid;
-	
-	/**
-	 * 
-	 */
 	private String comcategoryid;
 	
 
@@ -97,7 +92,7 @@ public class ComponentVo{
 	 * @param componentid
 	 * @param comcategoryid
 	 */ 
-	public ComponentVo(String id , String code , String name , String detail , Date createtime , String creator , Date modifytime , String modifer , String ts , String dr , String componentid , String comcategoryid){
+	public ComponentVo(String id , String code , String name , String detail , Date createtime , String creator , Date modifytime , String modifer , String ts , String dr , String comcategoryid){
 		this.id= id;
 		this.code= code;
 		this.name= name;
@@ -108,7 +103,6 @@ public class ComponentVo{
 		this.modifer= modifer;
 		this.ts= ts;
 		this.dr= dr;
-		this.componentid= componentid;
 		this.comcategoryid= comcategoryid;
 	}
 
@@ -245,19 +239,7 @@ public class ComponentVo{
 	public void setDr (String dr) {
 		this.dr = dr;
 	}
-	/**
-	 * @return the componentid 
-	 */
-	public String getComponentid () {
-		return componentid;
-	}
-
-	/**
-	 *  @param componentid the componentid to set
-	 */
-	public void setComponentid (String componentid) {
-		this.componentid = componentid;
-	}
+	
 	/**
 	 * @return the comcategoryid 
 	 */
