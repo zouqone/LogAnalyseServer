@@ -134,19 +134,21 @@ function savecard(){
 
 
 function add(){
-	setEditStatus();
-	clearCard();
+	
 	var selectNode = getSelectNode()[0];
-	var parentCode = "root";
-	if(selectNode != null){
-		parentCode = selectNode.id;
+	var uk = "";
+	if(selectNode != null&&selectNode.uk!=null){
+		uk = selectNode.uk;
 	}
-	var data = {parentcode : parentCode};
-	loadCard(data,formID);
+	window.location.href = "componentInsert.jsp?comcategoryid="+uk;
+	
+	
 }
 
 function edit(){
-	setEditStatus();
+	var id = jQuery();
+	window.location.href = "componentInsert.jsp?id="+id;
+	
 }
 function delcard(){
 	var selectNode = getSelectNode()[0];

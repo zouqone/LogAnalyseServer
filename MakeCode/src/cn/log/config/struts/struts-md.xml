@@ -6,10 +6,10 @@
 <struts>
 	<package name="struts2-ComponentVo" extends="struts2-spring3">
 		<action name="ComponentAction_*" method="{1}" class="cn.sys.md.action.ComponentAction">
-			<result name="list" >app/jsp/componentVo/componentVoList.jsp</result>
-			<result name="insert" >app/jsp/componentVo/componentVoInsert.jsp</result>
-			<result name="update" >app/jsp/componentVo/componentVoInsert.jsp</result>
-			<result name="detail" >app/jsp/componentVo/componentVoDetail.jsp</result>
+			<result name="list" >sys/md/component/component.jsp</result>
+			<result name="insert" >sys/md/component/componentInsert.jsp</result>
+			<result name="update" >sys/md/component/component.jsp</result>
+			<result name="detail" >sys/md/component/componentDetail.jsp</result>
 			<result name="error" ></result>
 			
 		</action>
