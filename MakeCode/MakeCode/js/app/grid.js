@@ -28,7 +28,6 @@ function initGrid(url,condition){
 	}
 	var data = ajaxData(url,param);
     grid = new Slick.Grid("#myGrid", data, columns, options);
-	grid.setSelectionModel(new Slick.RowSelectionModel());
-	
+  
 }
 
